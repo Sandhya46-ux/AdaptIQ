@@ -58,7 +58,7 @@ function Dashboard() {
           <div>
 
             <p className="welcome-label">
-              Welcome back 👋
+              Welcome back to AdaptIQ👋
             </p>
 
             <h1>
