@@ -1,4 +1,13 @@
-A linear equation is an equation in which the highest power of the variable is always 1. 
-It is also known as a one-degree equation. The standard form of a linear equation in one variable is of the form Ax + B = 0. 
-Here, x is a variable, A is a coefficient and B is constant. 
-To solve for x, you must isolate the variable by performing the same mathematical operations on both sides of the equals sign.
+# Core Algebra Concepts
+
+## 1. Fundamentals of Algebra
+Algebra is a branch of mathematics in which letters and symbols are used to represent numbers and quantities in formulas and equations. The letters are called variables (such as x, y, or z) because their values can change, while the fixed numbers are called constants. An algebraic expression consists of variables, constants, and mathematical operations (addition, subtraction, multiplication, and division).
+
+## 2. Linear Equations
+A linear equation is an equation of degree 1, meaning the highest power of the variable is 1. The standard form of a linear equation in one variable is Ax + B = 0, where x is the variable, A is a coefficient, and B is a constant. To solve for x, the variable must be isolated on one side of the equals sign. This is achieved by performing the exact same mathematical operations on both sides of the equation to maintain balance. Linear equations are a fundamental prerequisite for solving more complex polynomial equations.
+
+## 3. Transposition of Terms and Misconceptions
+Transposition is the process of moving a term from one side of an equation to the other to isolate a variable. A highly common mistake students make is the incorrect transposition of terms. When a term is moved across the equals sign, its mathematical operation must be inverted. If a term is being added, it must be subtracted on the other side. If a term is multiplied, it must be divided. Failing to invert the sign or operation will result in an incorrect solution.
+
+## 4. Quadratic Equations
+A quadratic equation is a second-order polynomial equation in a single variable. Its standard form is Ax^2 + Bx + C = 0, where A, B, and C are known numbers, and A is not equal to 0. Because it contains a squared term, a quadratic equation typically has two solutions. Students must master basic algebraic operations and linear equations before attempting quadratics.
