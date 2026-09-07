@@ -1,0 +1,4 @@
+A linear equation is an equation in which the highest power of the variable is always 1. 
+It is also known as a one-degree equation. The standard form of a linear equation in one variable is of the form Ax + B = 0. 
+Here, x is a variable, A is a coefficient and B is constant. 
+To solve for x, you must isolate the variable by performing the same mathematical operations on both sides of the equals sign.
