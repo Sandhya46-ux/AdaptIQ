@@ -13,9 +13,7 @@
     "topic": "Algebra",
     "concept": "Algebraic Expressions",
     "description": "Understanding variables, constants, coefficients, like terms, and simplifying algebraic expressions.",
-    "prerequisites": [
-      "C001"
-    ]
+    "prerequisites": ["C001"]
   },
   {
     "concept_id": "C003",
@@ -23,9 +21,7 @@
     "topic": "Algebra",
     "concept": "Linear Equations",
     "description": "Solving equations containing variables with the goal of finding the unknown value.",
-    "prerequisites": [
-      "C002"
-    ]
+    "prerequisites": ["C002"]
   },
   {
     "concept_id": "C004",
@@ -33,8 +29,6 @@
     "topic": "Algebra",
     "concept": "Quadratic Equations",
     "description": "Understanding and solving equations in which the highest power of the variable is two.",
-    "prerequisites": [
-      "C003"
-    ]
+    "prerequisites": ["C003"]
   }
 ]

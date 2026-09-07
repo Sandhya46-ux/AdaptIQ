@@ -1,262 +1,202 @@
 [
   {
     "question_id": "Q001",
+    "concept_id": "C001",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C001",
     "concept": "Fractions",
     "prerequisite": "Basic Arithmetic",
     "difficulty": "Easy",
     "question": "What is 1/2 + 1/4?",
-    "options": [
-      "2/6",
-      "3/4",
-      "1/6",
-      "2/4"
-    ],
+    "options": ["1/4", "2/4", "3/4", "4/4"],
     "correct_answer": "3/4",
     "misconception_id": "M001",
-    "misconception": "Student adds the numerator and denominator directly instead of finding a common denominator.",
-    "intervention": "Ask the student whether the denominators are the same and guide them to find a common denominator."
+    "misconception": "Adding numerators and denominators directly.",
+    "intervention": "Explain that fractions must have a common denominator before addition."
   },
   {
     "question_id": "Q002",
+    "concept_id": "C001",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C001",
     "concept": "Fractions",
     "prerequisite": "Basic Arithmetic",
     "difficulty": "Easy",
     "question": "What is 3/4 × 2/3?",
-    "options": [
-      "1/2",
-      "6/7",
-      "5/12",
-      "2/3"
-    ],
+    "options": ["1/2", "2/3", "3/4", "1"],
     "correct_answer": "1/2",
     "misconception_id": "M002",
-    "misconception": "Student multiplies the fractions incorrectly or fails to simplify the result.",
-    "intervention": "Guide the student to multiply numerators together and denominators together, then simplify."
+    "misconception": "Incorrect multiplication or cancellation of fractions.",
+    "intervention": "Multiply numerators together and denominators together, then simplify."
   },
   {
     "question_id": "Q003",
+    "concept_id": "C001",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C001",
     "concept": "Fractions",
-    "prerequisite": "Fractions",
+    "prerequisite": "Basic Arithmetic",
     "difficulty": "Medium",
-    "question": "Simplify 5/6 - 1/4.",
-    "options": [
-      "4/2",
-      "7/12",
-      "4/10",
-      "1/2"
-    ],
+    "question": "What is 5/6 - 1/4?",
+    "options": ["4/10", "7/12", "2/12", "5/12"],
     "correct_answer": "7/12",
     "misconception_id": "M003",
-    "misconception": "Student subtracts the denominators directly instead of converting the fractions to a common denominator.",
-    "intervention": "Ask the student to find the least common denominator before subtracting."
+    "misconception": "Subtracting fractions without finding a common denominator.",
+    "intervention": "Convert both fractions to equivalent fractions with a common denominator."
   },
   {
     "question_id": "Q004",
+    "concept_id": "C002",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C002",
     "concept": "Algebraic Expressions",
     "prerequisite": "Fractions",
     "difficulty": "Easy",
-    "question": "Simplify 3x + 2x.",
-    "options": [
-      "5x",
-      "6x",
-      "5x²",
-      "x"
-    ],
+    "question": "Simplify: 3x + 2x",
+    "options": ["5x", "6x", "5", "x"],
     "correct_answer": "5x",
     "misconception_id": "M004",
-    "misconception": "Student multiplies the coefficients instead of combining like terms.",
-    "intervention": "Ask the student to identify which terms have the same variable and explain how like terms are combined."
+    "misconception": "Multiplying coefficients instead of combining like terms.",
+    "intervention": "Explain that coefficients of like terms are added."
   },
   {
     "question_id": "Q005",
+    "concept_id": "C002",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C002",
     "concept": "Algebraic Expressions",
-    "prerequisite": "Algebraic Expressions",
+    "prerequisite": "Fractions",
     "difficulty": "Easy",
-    "question": "Simplify 7a - 3a + 2.",
-    "options": [
-      "4a + 2",
-      "10a + 2",
-      "4a - 2",
-      "7a - 5"
-    ],
+    "question": "Simplify: 7a - 3a + 2",
+    "options": ["4a + 2", "4a - 2", "10a + 2", "7a - 5"],
     "correct_answer": "4a + 2",
     "misconception_id": "M005",
-    "misconception": "Student combines unlike terms or incorrectly changes the constant term.",
-    "intervention": "Guide the student to separate like variable terms from constants before simplifying."
+    "misconception": "Combining constants with variable terms.",
+    "intervention": "Combine only like terms. Keep the constant 2 separate."
   },
   {
     "question_id": "Q006",
+    "concept_id": "C002",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C002",
     "concept": "Algebraic Expressions",
-    "prerequisite": "Algebraic Expressions",
+    "prerequisite": "Fractions",
     "difficulty": "Medium",
-    "question": "If x = 3, what is the value of 2x² + 1?",
-    "options": [
-      "7",
-      "19",
-      "13",
-      "11"
-    ],
+    "question": "If x = 3, what is 2x² + 1?",
+    "options": ["7", "19", "13", "11"],
     "correct_answer": "19",
     "misconception_id": "M006",
-    "misconception": "Student calculates (2x)² instead of 2x² or evaluates the expression in the wrong order.",
-    "intervention": "Ask the student which operation should be performed first and distinguish 2x² from (2x)²."
+    "misconception": "Incorrect order of operations when substituting values.",
+    "intervention": "Substitute x first, calculate the exponent, then multiply and add."
   },
   {
     "question_id": "Q007",
+    "concept_id": "C003",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C003",
     "concept": "Linear Equations",
     "prerequisite": "Algebraic Expressions",
     "difficulty": "Easy",
-    "question": "Solve x + 7 = 12.",
-    "options": [
-      "3",
-      "4",
-      "5",
-      "6"
-    ],
+    "question": "Solve: x + 7 = 12",
+    "options": ["3", "5", "7", "19"],
     "correct_answer": "5",
     "misconception_id": "M007",
-    "misconception": "Student adds 7 to 12 instead of subtracting 7 from both sides.",
-    "intervention": "Ask what operation can remove +7 while keeping both sides of the equation balanced."
+    "misconception": "Adding instead of subtracting the constant from both sides.",
+    "intervention": "Subtract 7 from both sides of the equation."
   },
   {
     "question_id": "Q008",
+    "concept_id": "C003",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C003",
     "concept": "Linear Equations",
     "prerequisite": "Algebraic Expressions",
     "difficulty": "Easy",
-    "question": "Solve 2x + 5 = 15.",
-    "options": [
-      "3",
-      "5",
-      "7",
-      "10"
-    ],
+    "question": "Solve: 2x + 5 = 15",
+    "options": ["5", "10", "7.5", "20"],
     "correct_answer": "5",
     "misconception_id": "M008",
-    "misconception": "Student divides by 2 before removing the constant term or performs the operations in the wrong order.",
-    "intervention": "Ask the student what should be done first to isolate 2x."
+    "misconception": "Forgetting to subtract the constant before dividing by the coefficient.",
+    "intervention": "First subtract 5 from both sides, then divide by 2."
   },
   {
     "question_id": "Q009",
+    "concept_id": "C003",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C003",
     "concept": "Linear Equations",
     "prerequisite": "Algebraic Expressions",
     "difficulty": "Medium",
-    "question": "Solve 3x - 4 = 11.",
-    "options": [
-      "3",
-      "4",
-      "5",
-      "7"
-    ],
+    "question": "Solve: 3x - 4 = 11",
+    "options": ["3", "5", "7", "15"],
     "correct_answer": "5",
     "misconception_id": "M009",
-    "misconception": "Student makes a sign error when moving or eliminating the -4 term.",
-    "intervention": "Ask what operation will cancel -4 and remind the student that the same operation must be applied to both sides."
+    "misconception": "Incorrectly handling a negative constant.",
+    "intervention": "Add 4 to both sides before dividing by 3."
   },
   {
     "question_id": "Q010",
+    "concept_id": "C003",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C003",
     "concept": "Linear Equations",
     "prerequisite": "Algebraic Expressions",
     "difficulty": "Hard",
-    "question": "Solve 2(x + 3) = 14.",
-    "options": [
-      "4",
-      "5",
-      "6",
-      "7"
-    ],
+    "question": "Solve: 2(x + 3) = 14",
+    "options": ["4", "5", "7", "11"],
     "correct_answer": "4",
     "misconception_id": "M010",
-    "misconception": "Student divides 14 by 2 but forgets to subtract 3 afterward.",
-    "intervention": "Ask the student to first remove the coefficient 2 and then determine how to isolate x."
+    "misconception": "Incorrectly applying the distributive property.",
+    "intervention": "Either distribute 2 or divide both sides by 2 before subtracting 3."
   },
   {
     "question_id": "Q011",
+    "concept_id": "C004",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C004",
     "concept": "Quadratic Equations",
     "prerequisite": "Linear Equations",
     "difficulty": "Easy",
     "question": "Which of the following is a quadratic equation?",
     "options": [
-      "2x + 3 = 5",
+      "x + 3 = 0",
       "x² + 3x + 2 = 0",
-      "5x - 1 = 0",
-      "x + 2 = 7"
+      "2x + 5 = 0",
+      "x - 7 = 0"
     ],
     "correct_answer": "x² + 3x + 2 = 0",
     "misconception_id": "M011",
-    "misconception": "Student assumes that any equation containing x is quadratic.",
-    "intervention": "Ask the student what is the highest power of x in a quadratic equation."
+    "misconception": "Not identifying an equation based on its highest power.",
+    "intervention": "A quadratic equation has degree 2, meaning the highest power of the variable is 2."
   },
   {
     "question_id": "Q012",
+    "concept_id": "C004",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C004",
     "concept": "Quadratic Equations",
     "prerequisite": "Linear Equations",
     "difficulty": "Medium",
-    "question": "Solve x² - 5x + 6 = 0.",
-    "options": [
-      "x = 1, 6",
-      "x = 2, 3",
-      "x = -2, -3",
-      "x = 3, 4"
-    ],
-    "correct_answer": "x = 2, 3",
+    "question": "Solve: x² - 5x + 6 = 0",
+    "options": ["1, 6", "2, 3", "-2, -3", "3, 4"],
+    "correct_answer": "2, 3",
     "misconception_id": "M012",
-    "misconception": "Student makes an error while factorizing the quadratic expression or selecting signs.",
-    "intervention": "Guide the student to find two numbers whose product is 6 and whose sum is -5."
+    "misconception": "Incorrect factorization of a quadratic equation.",
+    "intervention": "Find two numbers whose product is 6 and whose sum is -5."
   },
   {
     "question_id": "Q013",
+    "concept_id": "C004",
     "subject": "Mathematics",
     "topic": "Algebra",
-    "concept_id": "C004",
     "concept": "Quadratic Equations",
     "prerequisite": "Linear Equations",
     "difficulty": "Hard",
-    "question": "Solve x² - 9 = 0.",
-    "options": [
-      "x = 9",
-      "x = -9",
-      "x = ±3",
-      "x = 3"
-    ],
-    "correct_answer": "x = ±3",
+    "question": "Solve: x² - 9 = 0",
+    "options": ["3", "-3", "±3", "9"],
+    "correct_answer": "±3",
     "misconception_id": "M013",
-    "misconception": "Student finds only the positive root and misses the negative solution.",
-    "intervention": "Ask the student which two numbers have a square equal to 9."
+    "misconception": "Missing the negative root when solving a quadratic equation.",
+    "intervention": "Use the difference of squares: x² - 9 = (x - 3)(x + 3)."
   }
 ]

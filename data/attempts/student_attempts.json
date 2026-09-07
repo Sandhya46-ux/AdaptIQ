@@ -110,10 +110,10 @@
     "concept_id": "C001",
     "correct": true,
     "selected_answer": "3/4",
-    "response_time_seconds": 14,
+    "response_time_seconds": 20,
     "attempt_number": 1,
     "hint_used": false,
-    "confidence": 95,
+    "confidence": 90,
     "misconception_id": null
   },
   {
@@ -123,10 +123,10 @@
     "concept_id": "C001",
     "correct": true,
     "selected_answer": "1/2",
-    "response_time_seconds": 17,
+    "response_time_seconds": 23,
     "attempt_number": 1,
     "hint_used": false,
-    "confidence": 90,
+    "confidence": 85,
     "misconception_id": null
   },
   {
@@ -138,7 +138,7 @@
     "selected_answer": "6x",
     "response_time_seconds": 28,
     "attempt_number": 1,
-    "hint_used": true,
+    "hint_used": false,
     "confidence": 65,
     "misconception_id": "M004"
   },
@@ -149,10 +149,10 @@
     "concept_id": "C002",
     "correct": false,
     "selected_answer": "4",
-    "response_time_seconds": 35,
+    "response_time_seconds": 30,
     "attempt_number": 1,
     "hint_used": true,
-    "confidence": 55,
+    "confidence": 60,
     "misconception_id": "M005"
   },
   {
@@ -165,7 +165,7 @@
     "response_time_seconds": 19,
     "attempt_number": 1,
     "hint_used": false,
-    "confidence": 85,
+    "confidence": 90,
     "misconception_id": null
   },
   {
@@ -175,10 +175,10 @@
     "concept_id": "C003",
     "correct": false,
     "selected_answer": "10",
-    "response_time_seconds": 43,
+    "response_time_seconds": 36,
     "attempt_number": 1,
-    "hint_used": true,
-    "confidence": 50,
+    "hint_used": false,
+    "confidence": 55,
     "misconception_id": "M008"
   },
   {
@@ -188,10 +188,10 @@
     "concept_id": "C004",
     "correct": true,
     "selected_answer": "x² + 3x + 2 = 0",
-    "response_time_seconds": 22,
+    "response_time_seconds": 25,
     "attempt_number": 1,
     "hint_used": false,
-    "confidence": 80,
+    "confidence": 88,
     "misconception_id": null
   }
 ]
