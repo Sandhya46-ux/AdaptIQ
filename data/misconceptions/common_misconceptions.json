@@ -1,0 +1,132 @@
+[
+  {
+    "misconception_id": "M001",
+    "concept_id": "C001",
+    "concept": "Fractions",
+    "error_pattern": "Adding numerators and denominators directly",
+    "example_error": "1/2 + 1/4 = 2/6",
+    "description": "Student adds the numerator and denominator independently without using a common denominator.",
+    "intervention": "Explain how to find a common denominator and convert fractions before addition.",
+    "severity": "Medium"
+  },
+  {
+    "misconception_id": "M002",
+    "concept_id": "C001",
+    "concept": "Fractions",
+    "error_pattern": "Incorrect multiplication or cancellation",
+    "example_error": "3/4 × 2/3 = 6/12 without simplification",
+    "description": "Student has difficulty multiplying and simplifying fractions.",
+    "intervention": "Multiply numerators and denominators and then simplify the result.",
+    "severity": "Low"
+  },
+  {
+    "misconception_id": "M003",
+    "concept_id": "C001",
+    "concept": "Fractions",
+    "error_pattern": "Subtracting fractions without common denominator",
+    "example_error": "5/6 - 1/4 = 4/2",
+    "description": "Student subtracts fractions directly instead of converting them to equivalent fractions.",
+    "intervention": "Teach the common denominator method using equivalent fractions.",
+    "severity": "Medium"
+  },
+  {
+    "misconception_id": "M004",
+    "concept_id": "C002",
+    "concept": "Algebraic Expressions",
+    "error_pattern": "Multiplying instead of combining like terms",
+    "example_error": "3x + 2x = 6x",
+    "description": "Student multiplies coefficients instead of adding coefficients of like terms.",
+    "intervention": "Explain that like terms are combined by adding or subtracting their coefficients.",
+    "severity": "Medium"
+  },
+  {
+    "misconception_id": "M005",
+    "concept_id": "C002",
+    "concept": "Algebraic Expressions",
+    "error_pattern": "Combining unlike terms",
+    "example_error": "7a - 3a + 2 = 4a",
+    "description": "Student incorrectly combines a variable term with a constant.",
+    "intervention": "Separate variable terms and constants before simplifying.",
+    "severity": "Medium"
+  },
+  {
+    "misconception_id": "M006",
+    "concept_id": "C002",
+    "concept": "Algebraic Expressions",
+    "error_pattern": "Incorrect order of operations",
+    "example_error": "2(3²) + 1 = 37",
+    "description": "Student performs multiplication before evaluating the exponent.",
+    "intervention": "Review the order of operations: parentheses, exponents, multiplication/division, addition/subtraction.",
+    "severity": "Medium"
+  },
+  {
+    "misconception_id": "M007",
+    "concept_id": "C003",
+    "concept": "Linear Equations",
+    "error_pattern": "Wrong operation on constant",
+    "example_error": "x + 7 = 12 → x = 19",
+    "description": "Student adds the constant instead of subtracting it from both sides.",
+    "intervention": "Demonstrate maintaining equality by performing the same operation on both sides.",
+    "severity": "High"
+  },
+  {
+    "misconception_id": "M008",
+    "concept_id": "C003",
+    "concept": "Linear Equations",
+    "error_pattern": "Incorrect equation-solving order",
+    "example_error": "2x + 5 = 15 → x = 10",
+    "description": "Student divides before removing the constant.",
+    "intervention": "First isolate the variable term, then divide by its coefficient.",
+    "severity": "High"
+  },
+  {
+    "misconception_id": "M009",
+    "concept_id": "C003",
+    "concept": "Linear Equations",
+    "error_pattern": "Incorrect handling of negative constants",
+    "example_error": "3x - 4 = 11 → x = 7",
+    "description": "Student incorrectly handles the negative constant when isolating the variable.",
+    "intervention": "Add 4 to both sides before dividing by 3.",
+    "severity": "Medium"
+  },
+  {
+    "misconception_id": "M010",
+    "concept_id": "C003",
+    "concept": "Linear Equations",
+    "error_pattern": "Distributive property error",
+    "example_error": "2(x + 3) = 14 → x = 5",
+    "description": "Student incorrectly distributes or removes the coefficient.",
+    "intervention": "Practice distributing the coefficient to every term inside parentheses.",
+    "severity": "High"
+  },
+  {
+    "misconception_id": "M011",
+    "concept_id": "C004",
+    "concept": "Quadratic Equations",
+    "error_pattern": "Incorrect degree identification",
+    "example_error": "x + 3 = 0 identified as quadratic",
+    "description": "Student does not identify a quadratic equation by its highest exponent.",
+    "intervention": "Teach that a quadratic equation has highest power 2.",
+    "severity": "Medium"
+  },
+  {
+    "misconception_id": "M012",
+    "concept_id": "C004",
+    "concept": "Quadratic Equations",
+    "error_pattern": "Incorrect factorization",
+    "example_error": "x² - 5x + 6 = 0 → x = 1, 6",
+    "description": "Student selects factors without checking both their product and sum.",
+    "intervention": "Find two numbers whose product is 6 and sum is -5.",
+    "severity": "High"
+  },
+  {
+    "misconception_id": "M013",
+    "concept_id": "C004",
+    "concept": "Quadratic Equations",
+    "error_pattern": "Missing negative root",
+    "example_error": "x² - 9 = 0 → x = 3",
+    "description": "Student gives only the positive root.",
+    "intervention": "Explain that taking the square root gives both positive and negative solutions.",
+    "severity": "High"
+  }
+]

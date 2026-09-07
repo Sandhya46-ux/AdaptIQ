@@ -1,0 +1,34 @@
+[
+  {
+    "concept_id": "C001",
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "concept": "Fractions",
+    "description": "Understanding and performing basic operations with fractions.",
+    "prerequisites": []
+  },
+  {
+    "concept_id": "C002",
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "concept": "Algebraic Expressions",
+    "description": "Understanding variables, constants, coefficients, like terms, and simplifying algebraic expressions.",
+    "prerequisites": ["C001"]
+  },
+  {
+    "concept_id": "C003",
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "concept": "Linear Equations",
+    "description": "Solving equations containing variables with the goal of finding the unknown value.",
+    "prerequisites": ["C002"]
+  },
+  {
+    "concept_id": "C004",
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "concept": "Quadratic Equations",
+    "description": "Understanding and solving equations in which the highest power of the variable is two.",
+    "prerequisites": ["C003"]
+  }
+]
