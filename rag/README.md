@@ -1,19 +1,19 @@
-Implemented rag/ingest.py for chunking markdown/text documents and saving embeddings to ChromaDB.
+# AdaptIQ - Grounded AI Knowledge Layer (`rag/`)
 
-Built rag/retrieval/retrieval.py for semantic similarity search using all-MiniLM-L6-v2.
+This directory implements Retrieval-Augmented Generation (RAG) to power the AI Tutor with grounded educational content[cite: 3, 4].
 
-Created rag/retrieval/generator.py to formulate grounded prompts and return structured JSON context/answers.
+## Directory Structure
+* `documents/`: Raw curated educational text files.
+* `embeddings/`: Local ChromaDB vector database[cite: 3].
+* `retrieval/`: Semantic search engine (`retrieval.py`) and prompt generator (`generator.py`)[cite: 3].
+* `ingest.py`: Document loader and vector store generation script[cite: 3].
 
-How to Test:
+## Usage for Backend Integration
+Import `generate_grounded_answer` in `backend/routers/tutor.py`:
 
-Activate venv and run pip install -r requirements.txt.
-
-Run python rag/ingest.py (verify rag/embeddings/ populates).
-
-Run python rag/retrieval/generator.py (verify retrieved context output).
-
-# How to call the RAG pipeline inside FastAPI routers:
+```python
 from rag.retrieval.generator import generate_grounded_answer
 
-response_dict = generate_grounded_answer("What is a linear equation?")
-# Returns: {"query": ..., "context_used": ..., "answer": ...}
+# Call RAG pipeline
+response = generate_grounded_answer("How do I solve a quadratic equation?")
+# Returns dict: {"query": ..., "context_used": ..., "answer": ...}

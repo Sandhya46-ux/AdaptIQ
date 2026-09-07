@@ -1,0 +1,3 @@
+A quadratic equation is a second-order polynomial equation in a single variable x, written in standard form as Ax^2 + Bx + C = 0, where A is not equal to 0. 
+Quadratic equations can be solved using factoring, completing the square, or the quadratic formula: x = (-B ± √(B^2 - 4AC)) / (2A). 
+Linear equations serve as a direct prerequisite to understanding quadratic equations.

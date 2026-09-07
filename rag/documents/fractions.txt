@@ -1,0 +1,3 @@
+A fraction represents a part of a whole or any number of equal parts. It consists of a numerator (top number) and a denominator (bottom number). 
+To add or subtract fractions, they must have a common denominator. If denominators are different, find the Least Common Multiple (LCM) to convert them. 
+When multiplying fractions, multiply the numerators together and denominators together. When dividing, multiply by the reciprocal of the second fraction.

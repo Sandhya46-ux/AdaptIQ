@@ -1,0 +1,3 @@
+A linear equation is an equation of degree 1, written in the form Ax + B = 0. 
+To solve for x, isolate the variable on one side by balancing operations (addition/subtraction and multiplication/division on both sides). 
+A common misconception is changing signs incorrectly when transposing terms across the equals sign. Always invert the operation when moving a term to the opposite side.
