@@ -1,105 +1,56 @@
-import pytest
+from fastapi.testclient import TestClient
 
-QUESTIONS = [
-    {
-        "question_id": "Q001",
-        "concept": "Fractions",
-        "difficulty": "easy",
-        "options": ["1/2", "1/3", "2/3", "3/4"],
-        "correct_answer": "1/2",
-    },
-    {
-        "question_id": "Q002",
-        "concept": "Fractions",
-        "difficulty": "medium",
-        "options": ["2/3", "1/4", "3/4", "1/2"],
-        "correct_answer": "2/3",
-    },
-]
+from app.main import app
 
 
-def test_questions_are_available():
-    """TC007: quiz should have questions available."""
-    assert len(QUESTIONS) > 0
+client = TestClient(app)
 
 
-def test_question_has_options():
-    """TC003: every question should have options."""
-    for question in QUESTIONS:
-        assert question["options"]
-        assert len(question["options"]) >= 2
+def test_get_quiz_questions():
+    response = client.get(
+        "/quiz/questions",
+        params={
+            "concept_id": "C003"
+        }
+    )
+
+    assert response.status_code == 200
+
+    data = response.json()
+
+    assert len(data) > 0
+
+    for question in data:
+        assert question["concept_id"] == "C003"
 
 
-def test_correct_answer_exists_in_options():
-    """TC004: correct answer must be one of the options."""
-    for question in QUESTIONS:
-        assert question["correct_answer"] in question["options"]
+def test_submit_quiz():
+    payload = {
+        "student_id": "TEST002",
+        "concept_id": "C003",
+        "answers": [
+            {
+                "question_id": "Q007",
+                "answer": "5"
+            },
+            {
+                "question_id": "Q008",
+                "answer": "5"
+            }
+        ]
+    }
 
+    response = client.post(
+        "/quiz/submit",
+        json=payload
+    )
 
-def test_correct_answer_evaluation():
-    """TC008: correct answer should be marked correct."""
-    question = QUESTIONS[0]
-    selected = "1/2"
-    assert selected == question["correct_answer"]
+    assert response.status_code == 200
 
+    data = response.json()
 
-def test_incorrect_answer_evaluation():
-    """TC009: incorrect answer should be marked incorrect."""
-    question = QUESTIONS[0]
-    selected = "2/3"
-    assert selected != question["correct_answer"]
-
-
-def test_no_answer_validation():
-    """TC010: empty answer should be rejected."""
-    selected = None
-    assert selected is None
-
-
-def test_score_calculation():
-    """TC011: score should be calculated correctly."""
-    results = [True, True, False, True]
-    score = sum(results)
-    percentage = score / len(results) * 100
-
-    assert score == 3
-    assert percentage == 75.0
-
-
-def test_attempt_number_increments():
-    """TC012: repeated attempts should increment attempt number."""
-    attempt_number = 1
-    attempt_number += 1
-    assert attempt_number == 2
-
-
-def test_response_time_is_recorded():
-    """TC013: response time should be a non-negative number."""
-    response_time_seconds = 18
-    assert response_time_seconds >= 0
-
-
-def test_poor_performance_reduces_difficulty():
-    """TC026: poor performance should select an easier difficulty."""
-    current_difficulty = "medium"
-    accuracy = 0.30
-
-    if accuracy < 0.50:
-        next_difficulty = "easy"
-    else:
-        next_difficulty = current_difficulty
-
-    assert next_difficulty == "easy"
-
-
-def test_strong_performance_increases_difficulty():
-    """TC027: strong performance should select a harder difficulty."""
-    current_difficulty = "medium"
-    accuracy = 0.90
-
-    if accuracy >= 0.80:
-        next_difficulty = "hard"
-    else:
-        next_difficulty = current_difficulty
-
-    assert next_difficulty == "hard"
+    assert data["correct"] == 2
+    assert data["total"] == 4
+    assert data["percentage"] == 50.0
+    assert "new_mastery" in data
+    assert "next_difficulty" in data
