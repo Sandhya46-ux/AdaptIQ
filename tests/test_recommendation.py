@@ -53,7 +53,7 @@ def test_recommendation_has_reason():
 def test_different_learners_can_get_different_recommendations():
     """TC021/TC022: recommendations should depend on learner mastery."""
     student_a = {"C001": 0.90, "C002": 0.90, "C003": 0.40}
-    student_b = {"C001": 0.90, "C002": 0.40, "C003": 0.30}
+    student_b = {"C001": 0.90, "C002": 0.30, "C003": 0.40}
 
     rec_a = min(student_a, key=student_a.get)
     rec_b = min(student_b, key=student_b.get)
