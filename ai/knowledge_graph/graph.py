@@ -57,7 +57,7 @@ def get_missing_prerequisites(graph: nx.DiGraph, target_concept: str, user_maste
     return missing'''
     
     
-    from collections import defaultdict
+from collections import defaultdict
 
 
 class KnowledgeGraph:

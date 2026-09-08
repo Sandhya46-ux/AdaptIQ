@@ -1,17 +1,17 @@
 import traceback
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import DataLoader, TensorDataset
 
 try:
     import pandas as pd
     from sklearn.model_selection import train_test_split
     from sklearn.preprocessing import StandardScaler
-    import torch
-    import torch.nn as nn
-    import torch.optim as optim
-    from torch.utils.data import DataLoader, TensorDataset
-
+    
     print("1. Loading dataset...")
     # Absolute path directly to your network logs CSV
-    df = pd.read_csv(r'C:\Users\Abhishek Shakya\Desktop\SIH\AdaptiIQ\ai\data\network_logs.csv')
+    df = pd.read_csv('../data/network_logs.csv')
 
     print("2. Processing features...")
     feature_cols = ['packet_size', 'flow_duration', 'src_port', 'dst_port', 'packet_count']
