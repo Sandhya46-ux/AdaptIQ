@@ -1,4 +1,4 @@
-import json
+'''import json
 import networkx as nx
 
 def build_prerequisite_graph(json_path: str) -> nx.DiGraph:
@@ -54,4 +54,59 @@ def get_missing_prerequisites(graph: nx.DiGraph, target_concept: str, user_maste
     
     prereqs = list(graph.predecessors(target_concept))
     missing = [p for p in prereqs if user_mastery.get(p, 0.0) < threshold]
-    return missing
+    return missing'''
+    
+    
+    from collections import defaultdict
+
+
+class KnowledgeGraph:
+
+    def __init__(self, concepts):
+
+        self.graph = defaultdict(list)
+
+        for concept in concepts:
+
+            concept_id = concept["concept_id"]
+
+            prerequisites = concept.get(
+                "prerequisites",
+                []
+            )
+
+            for prerequisite in prerequisites:
+
+                self.graph[concept_id].append(
+                    prerequisite
+                )
+
+
+    def get_prerequisites(self, concept_id):
+
+        return self.graph.get(
+            concept_id,
+            []
+        )
+
+
+    def get_all_prerequisites(self, concept_id):
+
+        visited = set()
+
+        def dfs(current):
+
+            if current in visited:
+                return
+
+            visited.add(current)
+
+            for prerequisite in self.get_prerequisites(current):
+
+                dfs(prerequisite)
+
+        dfs(concept_id)
+
+        visited.discard(concept_id)
+
+        return list(visited)
