@@ -39,10 +39,59 @@ async function apiRequest(endpoint, options = {}) {
 /* =====================================================
    HEALTH CHECK
 ===================================================== */
-
 export async function checkBackend() {
   return apiRequest("/health");
 }
+
+export async function submitDiagnostic(data) {
+  return apiRequest("/diagnostic/submit", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+}
+
+export async function getQuizQuestions(
+  conceptId,
+  difficulty = ""
+) {
+  let endpoint =
+    `/quiz/questions?concept_id=${encodeURIComponent(conceptId)}`;
+
+  if (difficulty) {
+    endpoint +=
+      `&difficulty=${encodeURIComponent(difficulty)}`;
+  }
+
+  return apiRequest(endpoint);
+}
+
+export async function submitQuiz(data) {
+  return apiRequest("/quiz/submit", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+}
+
+export async function getLearningPath(studentId) {
+  return apiRequest(
+    `/learning-path/${encodeURIComponent(studentId)}`
+  );
+}
+
+export async function getProgress(studentId) {
+  return apiRequest(
+    `/progress/${encodeURIComponent(studentId)}`
+  );
+}
+
+export async function askTutor(data) {
+  return apiRequest("/tutor/ask", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+}
+
+
 
 
 /* =====================================================
