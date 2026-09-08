@@ -1,8 +1,14 @@
 import json
+import re
 from pathlib import Path
 
 
-CURRICULUM_DIR = Path("data/curriculum")
+# ============================================================
+# ADAPTIQ CURRICULUM VALIDATOR
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+CURRICULUM_DIR = BASE_DIR / "data" / "curriculum"
 
 VALID_CLASSES = [9, 10, 11, 12]
 
@@ -13,214 +19,166 @@ VALID_SUBJECTS = [
     "Biology"
 ]
 
-REQUIRED_TOP_LEVEL_FIELDS = [
-    "curriculum_version",
-    "board",
-    "class",
-    "subject",
-    "source",
-    "chapters"
-]
+# Only directories such as:
+# 2026-27
+# 2027-28
+# 2028-29
+# will be treated as curriculum versions.
+VERSION_PATTERN = re.compile(r"^\d{4}-\d{2}$")
 
-REQUIRED_CONCEPT_FIELDS = [
-    "concept_id",
-    "concept",
-    "prerequisites",
-    "learning_outcomes"
-]
 
+# ============================================================
+# HELPERS
+# ============================================================
+
+def load_json(file_path):
+    """Load JSON file safely."""
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            return json.load(file)
+
+    except json.JSONDecodeError as error:
+        raise ValueError(
+            f"Invalid JSON: {error}"
+        )
+
+    except Exception as error:
+        raise ValueError(
+            f"Could not read file: {error}"
+        )
+
+
+def validate_required_fields(data, required_fields):
+    """Check whether required fields exist."""
+    errors = []
+
+    for field in required_fields:
+        if field not in data:
+            errors.append(
+                f"Missing required field '{field}'"
+            )
+
+    return errors
+
+
+# ============================================================
+# VALIDATE ONE CURRICULUM FILE
+# ============================================================
 
 def validate_file(file_path):
+    """Validate one curriculum JSON file."""
 
     errors = []
 
     try:
+        data = load_json(file_path)
+    except ValueError as error:
+        return [str(error)]
 
-        with open(
-            file_path,
-            "r",
-            encoding="utf-8"
-        ) as file:
+    # --------------------------------------------------------
+    # Required top-level fields
+    # --------------------------------------------------------
 
-            data = json.load(file)
+    required_fields = [
+        "curriculum_version",
+        "board",
+        "class",
+        "subject",
+        "source",
+        "chapters"
+    ]
 
-    except json.JSONDecodeError as error:
-
-        return [f"Invalid JSON: {error}"]
-
-    except Exception as error:
-
-        return [f"Could not read file: {error}"]
-
-    # -----------------------------------------
-    # Top-level fields
-    # -----------------------------------------
-
-    for field in REQUIRED_TOP_LEVEL_FIELDS:
-
-        if field not in data:
-
-            errors.append(
-                f"Missing top-level field: {field}"
-            )
+    errors.extend(
+        validate_required_fields(
+            data,
+            required_fields
+        )
+    )
 
     if errors:
         return errors
 
-    # -----------------------------------------
-    # Class
-    # -----------------------------------------
+    # --------------------------------------------------------
+    # Basic information
+    # --------------------------------------------------------
 
-    if data["class"] not in VALID_CLASSES:
+    curriculum_version = data["curriculum_version"]
+    class_number = data["class"]
+    subject = data["subject"]
+    chapters = data["chapters"]
 
+    # --------------------------------------------------------
+    # Version validation
+    # --------------------------------------------------------
+
+    if not VERSION_PATTERN.match(
+        str(curriculum_version)
+    ):
         errors.append(
-            f"Invalid class: {data['class']}"
+            f"Invalid curriculum_version "
+            f"'{curriculum_version}'. "
+            f"Expected format YYYY-YY."
         )
 
-    # -----------------------------------------
-    # Subject
-    # -----------------------------------------
+    # --------------------------------------------------------
+    # Class validation
+    # --------------------------------------------------------
 
-    if data["subject"] not in VALID_SUBJECTS:
-
+    if class_number not in VALID_CLASSES:
         errors.append(
-            f"Invalid subject: {data['subject']}"
+            f"Invalid class '{class_number}'. "
+            f"Allowed classes: {VALID_CLASSES}"
         )
 
-    # -----------------------------------------
-    # Source
-    # -----------------------------------------
+    # --------------------------------------------------------
+    # Subject validation
+    # --------------------------------------------------------
 
-    if not isinstance(data["source"], dict):
-
+    if subject not in VALID_SUBJECTS:
         errors.append(
-            "source must be an object"
+            f"Invalid subject '{subject}'. "
+            f"Allowed subjects: {VALID_SUBJECTS}"
         )
 
-    # -----------------------------------------
-    # Chapters
-    # -----------------------------------------
+    # --------------------------------------------------------
+    # Chapters validation
+    # --------------------------------------------------------
 
-    if not isinstance(data["chapters"], list):
-
+    if not isinstance(chapters, list):
         errors.append(
-            "chapters must be a list"
+            "'chapters' must be a list."
         )
-
         return errors
 
-    chapter_ids = set()
-    concept_ids = set()
+    if len(chapters) == 0:
+        errors.append(
+            "Curriculum contains no chapters."
+        )
+        return errors
 
-    # -----------------------------------------
+    # --------------------------------------------------------
     # First pass:
-    # Collect all chapter and concept IDs
-    # -----------------------------------------
+    # Collect every concept ID in this curriculum file.
+    #
+    # This allows a concept to use another concept as a
+    # prerequisite even if that prerequisite appears later
+    # in the JSON file.
+    # --------------------------------------------------------
 
-    for chapter_index, chapter in enumerate(
-        data["chapters"],
-        start=1
-    ):
+    all_concept_ids = set()
+
+    for chapter in chapters:
 
         if not isinstance(chapter, dict):
-
-            errors.append(
-                f"Chapter {chapter_index} "
-                f"must be an object"
-            )
-
             continue
-
-        chapter_id = chapter.get("chapter_id")
-
-        if not chapter_id:
-
-            errors.append(
-                f"Chapter {chapter_index}: "
-                f"missing chapter_id"
-            )
-
-        else:
-
-            if chapter_id in chapter_ids:
-
-                errors.append(
-                    f"Duplicate chapter_id: "
-                    f"{chapter_id}"
-                )
-
-            chapter_ids.add(chapter_id)
-
-        if "chapter" not in chapter:
-
-            errors.append(
-                f"Chapter {chapter_index}: "
-                f"missing chapter name"
-            )
-
-        if "concepts" not in chapter:
-
-            errors.append(
-                f"Chapter {chapter_id}: "
-                f"missing concepts"
-            )
-
-            continue
-
-        if not isinstance(
-            chapter["concepts"],
-            list
-        ):
-
-            errors.append(
-                f"Chapter {chapter_id}: "
-                f"concepts must be a list"
-            )
-
-            continue
-
-        for concept in chapter["concepts"]:
-
-            if not isinstance(concept, dict):
-
-                errors.append(
-                    f"Invalid concept in "
-                    f"chapter {chapter_id}"
-                )
-
-                continue
-
-            concept_id = concept.get(
-                "concept_id"
-            )
-
-            if concept_id:
-
-                if concept_id in concept_ids:
-
-                    errors.append(
-                        f"Duplicate concept_id: "
-                        f"{concept_id}"
-                    )
-
-                concept_ids.add(concept_id)
-
-    # -----------------------------------------
-    # Second pass:
-    # Validate concepts
-    # -----------------------------------------
-
-    for chapter in data["chapters"]:
-
-        chapter_id = chapter.get(
-            "chapter_id",
-            "UNKNOWN"
-        )
 
         concepts = chapter.get(
             "concepts",
             []
         )
+
+        if not isinstance(concepts, list):
+            continue
 
         for concept in concepts:
 
@@ -228,49 +186,200 @@ def validate_file(file_path):
                 continue
 
             concept_id = concept.get(
-                "concept_id",
-                "UNKNOWN"
+                "concept_id"
             )
 
-            # Required fields
+            if concept_id:
+                all_concept_ids.add(
+                    concept_id
+                )
 
-            for field in REQUIRED_CONCEPT_FIELDS:
+    # --------------------------------------------------------
+    # Duplicate tracking
+    # --------------------------------------------------------
+
+    chapter_ids = set()
+    concept_ids = set()
+
+    # --------------------------------------------------------
+    # Second pass:
+    # Validate chapters and concepts
+    # --------------------------------------------------------
+
+    for chapter_index, chapter in enumerate(chapters):
+
+        if not isinstance(chapter, dict):
+
+            errors.append(
+                f"Chapter {chapter_index + 1} "
+                f"must be an object."
+            )
+
+            continue
+
+        # ----------------------------------------------------
+        # Chapter required fields
+        # ----------------------------------------------------
+
+        chapter_required = [
+            "chapter_id",
+            "chapter",
+            "concepts"
+        ]
+
+        for field in chapter_required:
+
+            if field not in chapter:
+
+                errors.append(
+                    f"Chapter {chapter_index + 1}: "
+                    f"missing '{field}'."
+                )
+
+        chapter_id = chapter.get(
+            "chapter_id"
+        )
+
+        chapter_name = chapter.get(
+            "chapter"
+        )
+
+        concepts = chapter.get(
+            "concepts"
+        )
+
+        # ----------------------------------------------------
+        # Chapter ID
+        # ----------------------------------------------------
+
+        if chapter_id:
+
+            if chapter_id in chapter_ids:
+
+                errors.append(
+                    f"Duplicate chapter_id "
+                    f"'{chapter_id}'."
+                )
+
+            chapter_ids.add(
+                chapter_id
+            )
+
+        # ----------------------------------------------------
+        # Chapter name
+        # ----------------------------------------------------
+
+        if not chapter_name:
+
+            errors.append(
+                f"Chapter {chapter_index + 1}: "
+                f"chapter name cannot be empty."
+            )
+
+        # ----------------------------------------------------
+        # Concepts
+        # ----------------------------------------------------
+
+        if not isinstance(concepts, list):
+
+            errors.append(
+                f"Chapter '{chapter_name}': "
+                f"'concepts' must be a list."
+            )
+
+            continue
+
+        if len(concepts) == 0:
+
+            errors.append(
+                f"Chapter '{chapter_name}': "
+                f"no concepts found."
+            )
+
+            continue
+
+        # ----------------------------------------------------
+        # Validate each concept
+        # ----------------------------------------------------
+
+        for concept_index, concept in enumerate(
+            concepts
+        ):
+
+            if not isinstance(concept, dict):
+
+                errors.append(
+                    f"Chapter '{chapter_name}', "
+                    f"concept {concept_index + 1}: "
+                    f"must be an object."
+                )
+
+                continue
+
+            concept_required = [
+                "concept_id",
+                "concept",
+                "prerequisites",
+                "learning_outcomes"
+            ]
+
+            for field in concept_required:
 
                 if field not in concept:
 
                     errors.append(
-                        f"Concept {concept_id}: "
-                        f"missing field '{field}'"
+                        f"Chapter '{chapter_name}', "
+                        f"concept {concept_index + 1}: "
+                        f"missing '{field}'."
                     )
 
-            # Concept name
+            concept_id = concept.get(
+                "concept_id"
+            )
 
             concept_name = concept.get(
                 "concept"
             )
 
-            if not isinstance(
-                concept_name,
-                str
-            ):
-
-                errors.append(
-                    f"Concept {concept_id}: "
-                    f"concept must be text"
-                )
-
-            elif not concept_name.strip():
-
-                errors.append(
-                    f"Concept {concept_id}: "
-                    f"concept cannot be empty"
-                )
-
-            # Prerequisites
-
             prerequisites = concept.get(
                 "prerequisites"
             )
+
+            learning_outcomes = concept.get(
+                "learning_outcomes"
+            )
+
+            # ------------------------------------------------
+            # Concept ID
+            # ------------------------------------------------
+
+            if concept_id:
+
+                if concept_id in concept_ids:
+
+                    errors.append(
+                        f"Duplicate concept_id "
+                        f"'{concept_id}'."
+                    )
+
+                concept_ids.add(
+                    concept_id
+                )
+
+            # ------------------------------------------------
+            # Concept name
+            # ------------------------------------------------
+
+            if not concept_name:
+
+                errors.append(
+                    f"Concept '{concept_id}': "
+                    f"concept name cannot be empty."
+                )
+
+            # ------------------------------------------------
+            # Prerequisites
+            # ------------------------------------------------
 
             if not isinstance(
                 prerequisites,
@@ -278,28 +387,26 @@ def validate_file(file_path):
             ):
 
                 errors.append(
-                    f"Concept {concept_id}: "
-                    f"prerequisites must be a list"
+                    f"Concept '{concept_id}': "
+                    f"'prerequisites' must be a list."
                 )
 
             else:
 
-                for prerequisite_id in prerequisites:
+                for prerequisite in prerequisites:
 
-                    if prerequisite_id not in concept_ids:
+                    if prerequisite not in all_concept_ids:
 
                         errors.append(
-                            f"Concept {concept_id}: "
+                            f"Concept '{concept_id}': "
                             f"prerequisite "
-                            f"'{prerequisite_id}' "
-                            f"does not exist"
+                            f"'{prerequisite}' "
+                            f"does not exist."
                         )
 
+            # ------------------------------------------------
             # Learning outcomes
-
-            learning_outcomes = concept.get(
-                "learning_outcomes"
-            )
+            # ------------------------------------------------
 
             if not isinstance(
                 learning_outcomes,
@@ -307,136 +414,261 @@ def validate_file(file_path):
             ):
 
                 errors.append(
-                    f"Concept {concept_id}: "
-                    f"learning_outcomes must be a list"
+                    f"Concept '{concept_id}': "
+                    f"'learning_outcomes' "
+                    f"must be a list."
                 )
 
     return errors
 
 
+# ============================================================
+# FIND CURRICULUM VERSIONS
+# ============================================================
+
+def find_versions():
+    """
+    Find only valid curriculum version directories.
+
+    Valid:
+        2026-27
+        2027-28
+
+    Ignored:
+        class_9
+        class_10
+        class_11
+        class_12
+        drafts
+        reports
+    """
+
+    if not CURRICULUM_DIR.exists():
+        return []
+
+    versions = []
+
+    for directory in CURRICULUM_DIR.iterdir():
+
+        if not directory.is_dir():
+            continue
+
+        if VERSION_PATTERN.match(
+            directory.name
+        ):
+            versions.append(
+                directory
+            )
+
+    return sorted(
+        versions,
+        key=lambda path: path.name
+    )
+
+
+# ============================================================
+# FIND CURRICULUM FILES
+# ============================================================
+
+def find_curriculum_files(version_dir):
+    """Find curriculum JSON files under class folders."""
+
+    files = []
+
+    for class_dir in sorted(
+        version_dir.glob("class_*")
+    ):
+
+        if not class_dir.is_dir():
+            continue
+
+        # Only class_9 to class_12
+        class_name = class_dir.name
+
+        if not re.match(
+            r"^class_(9|10|11|12)$",
+            class_name
+        ):
+            continue
+
+        for json_file in sorted(
+            class_dir.glob("*.json")
+        ):
+
+            files.append(
+                json_file
+            )
+
+    return files
+
+
+# ============================================================
+# VALIDATE VERSION
+# ============================================================
+
+def validate_version(version_dir):
+
+    print()
+    print(
+        f"CURRICULUM VERSION: "
+        f"{version_dir.name}"
+    )
+    print("-" * 40)
+
+    files = find_curriculum_files(
+        version_dir
+    )
+
+    if not files:
+
+        print(
+            "WARNING: No curriculum files found."
+        )
+
+        return 0, 0
+
+    passed = 0
+    failed = 0
+
+    for file_path in files:
+
+        errors = validate_file(
+            file_path
+        )
+
+        if errors:
+
+            failed += 1
+
+            print(
+                f"FAIL: {file_path}"
+            )
+
+            for error in errors:
+
+                print(
+                    f"  - {error}"
+                )
+
+        else:
+
+            passed += 1
+
+            print(
+                f"PASS: {file_path}"
+            )
+
+    return passed, failed
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
 def main():
+
+    print()
+    print("=" * 40)
+    print(
+        "      ADAPTIQ CURRICULUM VALIDATOR"
+    )
+    print("=" * 40)
 
     if not CURRICULUM_DIR.exists():
 
+        print()
         print(
-            "ERROR: Curriculum directory not found."
+            "ERROR: Curriculum directory "
+            "does not exist:"
+        )
+
+        print(
+            CURRICULUM_DIR
         )
 
         return 1
 
-    version_dirs = [
-        path
-        for path in CURRICULUM_DIR.iterdir()
-        if path.is_dir()
-        and path.name != "reports"
-        and path.name != "drafts"
-    ]
+    versions = find_versions()
 
-    if not version_dirs:
+    if not versions:
 
+        print()
         print(
             "ERROR: No curriculum versions found."
+        )
+
+        print(
+            "Expected folders such as:"
+        )
+
+        print(
+            "  data/curriculum/2026-27/"
         )
 
         return 1
 
     total_files = 0
-    passed_files = 0
-    failed_files = 0
+    total_passed = 0
+    total_failed = 0
 
-    print("\n========================================")
-    print("      ADAPTIQ CURRICULUM VALIDATOR")
-    print("========================================\n")
+    for version_dir in versions:
 
-    for version_dir in sorted(version_dirs):
-
-        print(
-            f"CURRICULUM VERSION: "
-            f"{version_dir.name}"
+        passed, failed = validate_version(
+            version_dir
         )
 
-        print("-" * 40)
+        total_passed += passed
+        total_failed += failed
 
-        json_files = sorted(
-            version_dir.glob(
-                "class_*/*.json"
-            )
+        total_files += (
+            passed + failed
         )
 
-        if not json_files:
+    # --------------------------------------------------------
+    # Summary
+    # --------------------------------------------------------
 
-            print(
-                "WARNING: No curriculum files found.\n"
-            )
-
-            continue
-
-        for file_path in json_files:
-
-            total_files += 1
-
-            errors = validate_file(
-                file_path
-            )
-
-            if errors:
-
-                failed_files += 1
-
-                print(
-                    f"FAIL: {file_path}"
-                )
-
-                for error in errors:
-
-                    print(
-                        f"  - {error}"
-                    )
-
-            else:
-
-                passed_files += 1
-
-                print(
-                    f"PASS: {file_path}"
-                )
-
-        print()
-
-    print("========================================")
+    print()
+    print("=" * 40)
     print("VALIDATION SUMMARY")
-    print("========================================")
+    print("=" * 40)
 
     print(
         f"Total files : {total_files}"
     )
 
     print(
-        f"Passed      : {passed_files}"
+        f"Passed      : {total_passed}"
     )
 
     print(
-        f"Failed      : {failed_files}"
+        f"Failed      : {total_failed}"
     )
 
-    if (
-        failed_files == 0
-        and total_files > 0
-    ):
+    print()
+
+    if total_failed == 0:
 
         print(
-            "\nCURRICULUM VALIDATION PASSED"
+            "CURRICULUM VALIDATION PASSED"
         )
 
         return 0
 
-    print(
-        "\nCURRICULUM VALIDATION FAILED"
-    )
+    else:
 
-    return 1
+        print(
+            "CURRICULUM VALIDATION FAILED"
+        )
 
+        return 1
+
+
+# ============================================================
+# ENTRY POINT
+# ============================================================
 
 if __name__ == "__main__":
-
-    raise SystemExit(main())
+    raise SystemExit(
+        main()
+    )
