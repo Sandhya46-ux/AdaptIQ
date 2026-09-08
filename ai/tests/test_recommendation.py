@@ -1,5 +1,5 @@
 from ai.knowledge_graph.graph import build_prerequisite_graph
-from ai.recommendation.engine import get_next_recommendations
+from AdaptIQ.ai.recommendation.recommendation_engine import get_next_recommendations
 
 def t_path():
     return "data/concepts/math_concepts.json"

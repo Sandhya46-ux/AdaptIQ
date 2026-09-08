@@ -1,6 +1,6 @@
 from ai.knowledge_graph.graph import build_prerequisite_graph, get_missing_prerequisites
 from ai.learner_model.mastery import update_mastery
-from ai.recommendation.engine import get_next_recommendations
+from AdaptIQ.ai.recommendation.recommendation_engine import get_next_recommendations
 
 class AdaptiveLearningService:
     def __init__(self, concepts_path: str):
