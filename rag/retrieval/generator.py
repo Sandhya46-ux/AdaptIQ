@@ -1,4 +1,9 @@
+from dotenv import load_dotenv
 import os
+
+# Load the GEMINI_API_KEY from the .env file
+load_dotenv()
+
 from rag.retrieval.retrieval import retrieve_context
 
 def generate_grounded_answer(student_query: str) -> dict:
