@@ -1,6 +1,13 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
 
-import Login from "./pages/Login";
+import Login from "./pages/login";
+import Onboarding from "./pages/Onboarding";
+import LearnerProfile from "./pages/LearnerProfile";
+
 import Dashboard from "./pages/Dashboard";
 import Diagnostic from "./pages/Diagnostic";
 import Results from "./pages/Results";
@@ -12,36 +19,96 @@ import Progress from "./pages/Progress";
 import Tutor from "./pages/Tutor";
 
 function App() {
+
   return (
+
     <Routes>
 
-      <Route path="/" element={<Login />} />
+      {/* Authentication */}
 
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route
+        path="/"
+        element={<Login />}
+      />
 
-      <Route path="/diagnostic" element={<Diagnostic />} />
 
-      <Route path="/results" element={<Results />} />
+      {/* Personalization */}
 
-      <Route path="/learning-path" element={<LearningPath />} />
+      <Route
+        path="/onboarding"
+        element={<Onboarding />}
+      />
 
-      <Route path="/lesson/:id" element={<Lesson />} />
+      <Route
+        path="/learner-profile"
+        element={<LearnerProfile />}
+      />
 
-      <Route path="/quiz" element={<Quiz />} />
 
-      <Route path="/quiz-result" element={<QuizResult />} />
+      {/* Main Application */}
 
-      <Route path="/progress" element={<Progress />} />
+      <Route
+        path="/dashboard"
+        element={<Dashboard />}
+      />
 
-      <Route path="/tutor" element={<Tutor />} />
+      <Route
+        path="/diagnostic"
+        element={<Diagnostic />}
+      />
+
+      <Route
+        path="/results"
+        element={<Results />}
+      />
+
+      <Route
+        path="/learning-path"
+        element={<LearningPath />}
+      />
+
+      <Route
+        path="/lesson/:id"
+        element={<Lesson />}
+      />
+
+      <Route
+        path="/quiz"
+        element={<Quiz />}
+      />
+
+      <Route
+        path="/quiz-result"
+        element={<QuizResult />}
+      />
+
+      <Route
+        path="/progress"
+        element={<Progress />}
+      />
+
+      <Route
+        path="/tutor"
+        element={<Tutor />}
+      />
+
+
+      {/* Fallback */}
 
       <Route
         path="*"
-        element={<Navigate to="/dashboard" replace />}
+        element={
+          <Navigate
+            to="/"
+            replace
+          />
+        }
       />
 
     </Routes>
+
   );
+
 }
 
 export default App;
