@@ -1,0 +1,354 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 12,
+  "subject": "Mathematics",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 12 Mathematics"
+  },
+  "chapters": [
+    {
+      "chapter_id": "MATH12_CH01",
+      "chapter": "Relations and Functions",
+      "concepts": [
+        {
+          "concept_id": "MATH12_RELATIONS",
+          "concept": "Relations",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand different types of relations",
+            "Determine properties of relations"
+          ]
+        },
+        {
+          "concept_id": "MATH12_FUNCTIONS",
+          "concept": "Functions",
+          "prerequisites": [
+            "MATH12_RELATIONS"
+          ],
+          "learning_outcomes": [
+            "Understand types of functions",
+            "Determine domain, range and composition of functions"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH02",
+      "chapter": "Inverse Trigonometric Functions",
+      "concepts": [
+        {
+          "concept_id": "MATH12_INVERSE_TRIG",
+          "concept": "Inverse Trigonometric Functions",
+          "prerequisites": [
+            "MATH12_FUNCTIONS"
+          ],
+          "learning_outcomes": [
+            "Understand inverse trigonometric functions",
+            "Evaluate basic inverse trigonometric expressions"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH03",
+      "chapter": "Matrices",
+      "concepts": [
+        {
+          "concept_id": "MATH12_MATRICES",
+          "concept": "Matrices",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand different types of matrices",
+            "Perform basic matrix operations"
+          ]
+        },
+        {
+          "concept_id": "MATH12_MATRIX_OPERATIONS",
+          "concept": "Operations on Matrices",
+          "prerequisites": [
+            "MATH12_MATRICES"
+          ],
+          "learning_outcomes": [
+            "Add and multiply matrices",
+            "Apply matrix operations to problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH04",
+      "chapter": "Determinants",
+      "concepts": [
+        {
+          "concept_id": "MATH12_DETERMINANTS",
+          "concept": "Determinants",
+          "prerequisites": [
+            "MATH12_MATRICES"
+          ],
+          "learning_outcomes": [
+            "Calculate determinants",
+            "Apply determinant properties"
+          ]
+        },
+        {
+          "concept_id": "MATH12_AREA_DETERMINANTS",
+          "concept": "Applications of Determinants",
+          "prerequisites": [
+            "MATH12_DETERMINANTS"
+          ],
+          "learning_outcomes": [
+            "Use determinants to calculate areas",
+            "Solve simple determinant-based problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH05",
+      "chapter": "Continuity and Differentiability",
+      "concepts": [
+        {
+          "concept_id": "MATH12_CONTINUITY",
+          "concept": "Continuity",
+          "prerequisites": [
+            "MATH12_FUNCTIONS"
+          ],
+          "learning_outcomes": [
+            "Understand continuity of functions",
+            "Determine whether a function is continuous"
+          ]
+        },
+        {
+          "concept_id": "MATH12_DIFFERENTIABILITY",
+          "concept": "Differentiability",
+          "prerequisites": [
+            "MATH12_CONTINUITY"
+          ],
+          "learning_outcomes": [
+            "Understand differentiability",
+            "Determine derivatives of functions"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH06",
+      "chapter": "Applications of Derivatives",
+      "concepts": [
+        {
+          "concept_id": "MATH12_RATE_CHANGE",
+          "concept": "Rate of Change",
+          "prerequisites": [
+            "MATH12_DIFFERENTIABILITY"
+          ],
+          "learning_outcomes": [
+            "Understand derivatives as rates of change",
+            "Apply derivatives to practical problems"
+          ]
+        },
+        {
+          "concept_id": "MATH12_MAX_MIN",
+          "concept": "Maxima and Minima",
+          "prerequisites": [
+            "MATH12_DIFFERENTIABILITY"
+          ],
+          "learning_outcomes": [
+            "Identify maxima and minima",
+            "Solve optimization problems using derivatives"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH07",
+      "chapter": "Integrals",
+      "concepts": [
+        {
+          "concept_id": "MATH12_INTEGRATION",
+          "concept": "Integration",
+          "prerequisites": [
+            "MATH12_DIFFERENTIABILITY"
+          ],
+          "learning_outcomes": [
+            "Understand integration as inverse differentiation",
+            "Evaluate basic indefinite integrals"
+          ]
+        },
+        {
+          "concept_id": "MATH12_DEFINITE_INTEGRALS",
+          "concept": "Definite Integrals",
+          "prerequisites": [
+            "MATH12_INTEGRATION"
+          ],
+          "learning_outcomes": [
+            "Evaluate definite integrals",
+            "Apply properties of definite integrals"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH08",
+      "chapter": "Applications of Integrals",
+      "concepts": [
+        {
+          "concept_id": "MATH12_AREA_CURVES",
+          "concept": "Area Under Curves",
+          "prerequisites": [
+            "MATH12_DEFINITE_INTEGRALS"
+          ],
+          "learning_outcomes": [
+            "Calculate areas bounded by curves",
+            "Apply definite integration to area problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH09",
+      "chapter": "Differential Equations",
+      "concepts": [
+        {
+          "concept_id": "MATH12_DIFFERENTIAL_EQUATIONS",
+          "concept": "Differential Equations",
+          "prerequisites": [
+            "MATH12_DIFFERENTIABILITY"
+          ],
+          "learning_outcomes": [
+            "Understand differential equations",
+            "Identify order and degree"
+          ]
+        },
+        {
+          "concept_id": "MATH12_FIRST_ORDER_DE",
+          "concept": "First Order Differential Equations",
+          "prerequisites": [
+            "MATH12_DIFFERENTIAL_EQUATIONS"
+          ],
+          "learning_outcomes": [
+            "Solve basic first-order differential equations"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH10",
+      "chapter": "Vector Algebra",
+      "concepts": [
+        {
+          "concept_id": "MATH12_VECTORS",
+          "concept": "Vectors",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand vector quantities",
+            "Perform basic vector operations"
+          ]
+        },
+        {
+          "concept_id": "MATH12_VECTOR_PRODUCT",
+          "concept": "Scalar and Vector Products",
+          "prerequisites": [
+            "MATH12_VECTORS"
+          ],
+          "learning_outcomes": [
+            "Calculate scalar and vector products",
+            "Apply vector products to geometric problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH11",
+      "chapter": "Three Dimensional Geometry",
+      "concepts": [
+        {
+          "concept_id": "MATH12_3D_LINES",
+          "concept": "Lines in Three Dimensions",
+          "prerequisites": [
+            "MATH12_VECTORS"
+          ],
+          "learning_outcomes": [
+            "Represent lines in three-dimensional space",
+            "Solve basic problems involving lines"
+          ]
+        },
+        {
+          "concept_id": "MATH12_3D_DISTANCE",
+          "concept": "Distance and Angles in Three Dimensions",
+          "prerequisites": [
+            "MATH12_3D_LINES"
+          ],
+          "learning_outcomes": [
+            "Calculate distances in three dimensions",
+            "Calculate angles between lines"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH12",
+      "chapter": "Linear Programming",
+      "concepts": [
+        {
+          "concept_id": "MATH12_LINEAR_PROGRAMMING",
+          "concept": "Linear Programming",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand linear programming problems",
+            "Formulate objective functions and constraints"
+          ]
+        },
+        {
+          "concept_id": "MATH12_GRAPHICAL_LPP",
+          "concept": "Graphical Method",
+          "prerequisites": [
+            "MATH12_LINEAR_PROGRAMMING"
+          ],
+          "learning_outcomes": [
+            "Solve simple linear programming problems graphically",
+            "Identify feasible regions"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH12_CH13",
+      "chapter": "Probability",
+      "concepts": [
+        {
+          "concept_id": "MATH12_CONDITIONAL_PROBABILITY",
+          "concept": "Conditional Probability",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand conditional probability",
+            "Calculate conditional probabilities"
+          ]
+        },
+        {
+          "concept_id": "MATH12_BAYES_THEOREM",
+          "concept": "Bayes' Theorem",
+          "prerequisites": [
+            "MATH12_CONDITIONAL_PROBABILITY"
+          ],
+          "learning_outcomes": [
+            "Understand Bayes' theorem",
+            "Apply Bayes' theorem to probability problems"
+          ]
+        },
+        {
+          "concept_id": "MATH12_RANDOM_VARIABLE",
+          "concept": "Random Variables",
+          "prerequisites": [
+            "MATH12_CONDITIONAL_PROBABILITY"
+          ],
+          "learning_outcomes": [
+            "Understand random variables",
+            "Calculate basic probability distributions"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 12,
+  "subject": "Chemistry",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 12 Chemistry"
+  },
+  "chapters": [
+    {
+      "chapter_id": "CHEM12_CH01",
+      "chapter": "Solutions",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_SOLUTIONS",
+          "concept": "Types of Solutions",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_CONCENTRATION",
+          "concept": "Concentration of Solutions",
+          "prerequisites": ["CHEM12_SOLUTIONS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_HENRYS_LAW",
+          "concept": "Henry's Law",
+          "prerequisites": ["CHEM12_CONCENTRATION"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_COLLIGATIVE",
+          "concept": "Colligative Properties",
+          "prerequisites": ["CHEM12_CONCENTRATION"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM12_CH02",
+      "chapter": "Electrochemistry",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_ELECTROCHEMICAL_CELLS",
+          "concept": "Electrochemical Cells",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_ELECTRODE_POTENTIAL",
+          "concept": "Electrode Potential",
+          "prerequisites": ["CHEM12_ELECTROCHEMICAL_CELLS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_NERNST",
+          "concept": "Nernst Equation",
+          "prerequisites": ["CHEM12_ELECTRODE_POTENTIAL"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_CONDUCTANCE",
+          "concept": "Conductance of Electrolytic Solutions",
+          "prerequisites": ["CHEM12_ELECTROCHEMICAL_CELLS"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM12_CH03",
+      "chapter": "Chemical Kinetics",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_REACTION_RATE",
+          "concept": "Rate of Chemical Reaction",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_RATE_LAW",
+          "concept": "Rate Law",
+          "prerequisites": ["CHEM12_REACTION_RATE"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_ORDER_REACTION",
+          "concept": "Order of Reaction",
+          "prerequisites": ["CHEM12_RATE_LAW"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_ARRHENIUS",
+          "concept": "Arrhenius Equation",
+          "prerequisites": ["CHEM12_RATE_LAW"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM12_CH04",
+      "chapter": "The d- and f-Block Elements",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_TRANSITION_ELEMENTS",
+          "concept": "Transition Elements",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_OXIDATION_STATES",
+          "concept": "Variable Oxidation States",
+          "prerequisites": ["CHEM12_TRANSITION_ELEMENTS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_TRANSITION_PROPERTIES",
+          "concept": "Properties of Transition Elements",
+          "prerequisites": ["CHEM12_TRANSITION_ELEMENTS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_LANTHANOIDS_ACTINOIDS",
+          "concept": "Lanthanoids and Actinoids",
+          "prerequisites": ["CHEM12_TRANSITION_ELEMENTS"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM12_CH05",
+      "chapter": "Coordination Compounds",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_COORDINATION",
+          "concept": "Coordination Compounds",
+          "prerequisites": ["CHEM12_TRANSITION_ELEMENTS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_LIGANDS",
+          "concept": "Ligands and Coordination Number",
+          "prerequisites": ["CHEM12_COORDINATION"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_NOMENCLATURE",
+          "concept": "Nomenclature of Coordination Compounds",
+          "prerequisites": ["CHEM12_LIGANDS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_COORDINATION_ISOMERISM",
+          "concept": "Isomerism in Coordination Compounds",
+          "prerequisites": ["CHEM12_COORDINATION"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM12_CH06",
+      "chapter": "Haloalkanes and Haloarenes",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_HALOGEN_COMPOUNDS",
+          "concept": "Haloalkanes and Haloarenes",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_CARBON_HALOGEN_BOND",
+          "concept": "Carbon-Halogen Bond",
+          "prerequisites": ["CHEM12_HALOGEN_COMPOUNDS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_NUCLEOPHILIC_SUBSTITUTION",
+          "concept": "Nucleophilic Substitution Reactions",
+          "prerequisites": ["CHEM12_CARBON_HALOGEN_BOND"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_ELIMINATION",
+          "concept": "Elimination Reactions",
+          "prerequisites": ["CHEM12_CARBON_HALOGEN_BOND"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM12_CH07",
+      "chapter": "Alcohols, Phenols and Ethers",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_ALCOHOLS",
+          "concept": "Alcohols",
+          "prerequisites": ["CHEM12_HALOGEN_COMPOUNDS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_PHENOLS",
+          "concept": "Phenols",
+          "prerequisites": ["CHEM12_ALCOHOLS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_ETHERS",
+          "concept": "Ethers",
+          "prerequisites": ["CHEM12_ALCOHOLS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_ALCOHOL_REACTIONS",
+          "concept": "Reactions of Alcohols and Phenols",
+          "prerequisites": ["CHEM12_ALCOHOLS", "CHEM12_PHENOLS"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM12_CH08",
+      "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_ALDEHYDES",
+          "concept": "Aldehydes",
+          "prerequisites": ["CHEM12_ALCOHOLS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_KETONES",
+          "concept": "Ketones",
+          "prerequisites": ["CHEM12_ALCOHOLS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_CARBOXYLIC_ACIDS",
+          "concept": "Carboxylic Acids",
+          "prerequisites": ["CHEM12_ALDEHYDES"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_CARBONYL_REACTIONS",
+          "concept": "Reactions of Carbonyl Compounds",
+          "prerequisites": ["CHEM12_ALDEHYDES", "CHEM12_KETONES"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM12_CH09",
+      "chapter": "Amines",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_AMINES",
+          "concept": "Amines",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_CLASSIFICATION_AMINES",
+          "concept": "Classification and Nomenclature of Amines",
+          "prerequisites": ["CHEM12_AMINES"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_BASICITY_AMINES",
+          "concept": "Basicity of Amines",
+          "prerequisites": ["CHEM12_AMINES"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_DIAZONIUM",
+          "concept": "Diazonium Salts",
+          "prerequisites": ["CHEM12_AMINES"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM12_CH10",
+      "chapter": "Biomolecules",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_CARBOHYDRATES",
+          "concept": "Carbohydrates",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_PROTEINS",
+          "concept": "Proteins and Amino Acids",
+          "prerequisites": ["CHEM12_AMINES"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_ENZYMES",
+          "concept": "Enzymes",
+          "prerequisites": ["CHEM12_PROTEINS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_NUCLEIC_ACIDS",
+          "concept": "Nucleic Acids",
+          "prerequisites": ["CHEM12_CARBOHYDRATES"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM12_CH11",
+      "chapter": "Polymers",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_POLYMERS",
+          "concept": "Polymers",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_ADDITION_POLYMER",
+          "concept": "Addition Polymerisation",
+          "prerequisites": ["CHEM12_POLYMERS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_CONDENSATION_POLYMER",
+          "concept": "Condensation Polymerisation",
+          "prerequisites": ["CHEM12_POLYMERS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_BIODEGRADABLE_POLYMERS",
+          "concept": "Biodegradable Polymers",
+          "prerequisites": ["CHEM12_POLYMERS"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM12_CH12",
+      "chapter": "Chemistry in Everyday Life",
+      "concepts": [
+        {
+          "concept_id": "CHEM12_DRUGS",
+          "concept": "Drugs and Their Classification",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_ANTACIDS",
+          "concept": "Antacids and Antihistamines",
+          "prerequisites": ["CHEM12_DRUGS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_ANTIBIOTICS",
+          "concept": "Antibiotics",
+          "prerequisites": ["CHEM12_DRUGS"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "CHEM12_CHEMICALS_FOOD",
+          "concept": "Chemicals in Food",
+          "prerequisites": ["CHEM12_DRUGS"],
+          "learning_outcomes": []
+        }
+      ]
+    }
+  ]
+}

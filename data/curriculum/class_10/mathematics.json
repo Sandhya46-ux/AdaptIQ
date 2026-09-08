@@ -1,0 +1,327 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "Mathematics",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 10 Mathematics"
+  },
+  "chapters": [
+    {
+      "chapter_id": "MATH10_CH01",
+      "chapter": "Real Numbers",
+      "concepts": [
+        {
+          "concept_id": "MATH10_REAL_NUMBERS",
+          "concept": "Real Numbers",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the properties of real numbers",
+            "Apply the fundamental theorem of arithmetic"
+          ]
+        },
+        {
+          "concept_id": "MATH10_EUCLID_ALGORITHM",
+          "concept": "Euclid's Division Algorithm",
+          "prerequisites": [
+            "MATH10_REAL_NUMBERS"
+          ],
+          "learning_outcomes": [
+            "Apply Euclid's division algorithm",
+            "Find the HCF of two positive integers"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH02",
+      "chapter": "Polynomials",
+      "concepts": [
+        {
+          "concept_id": "MATH10_POLYNOMIALS",
+          "concept": "Polynomials",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand polynomial expressions",
+            "Identify degree and coefficients of polynomials"
+          ]
+        },
+        {
+          "concept_id": "MATH10_ZEROES",
+          "concept": "Zeroes of a Polynomial",
+          "prerequisites": [
+            "MATH10_POLYNOMIALS"
+          ],
+          "learning_outcomes": [
+            "Find zeroes of polynomials",
+            "Relate zeroes and coefficients"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH03",
+      "chapter": "Pair of Linear Equations in Two Variables",
+      "concepts": [
+        {
+          "concept_id": "MATH10_LINEAR_EQUATIONS",
+          "concept": "Pair of Linear Equations",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand linear equations in two variables",
+            "Represent pairs of equations algebraically"
+          ]
+        },
+        {
+          "concept_id": "MATH10_GRAPHICAL_METHOD",
+          "concept": "Graphical Method",
+          "prerequisites": [
+            "MATH10_LINEAR_EQUATIONS"
+          ],
+          "learning_outcomes": [
+            "Solve equations graphically",
+            "Interpret the intersection of two lines"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH04",
+      "chapter": "Quadratic Equations",
+      "concepts": [
+        {
+          "concept_id": "MATH10_QUADRATIC_EQUATIONS",
+          "concept": "Quadratic Equations",
+          "prerequisites": [
+            "MATH10_POLYNOMIALS"
+          ],
+          "learning_outcomes": [
+            "Identify quadratic equations",
+            "Solve quadratic equations using standard methods"
+          ]
+        },
+        {
+          "concept_id": "MATH10_QUADRATIC_FORMULA",
+          "concept": "Quadratic Formula",
+          "prerequisites": [
+            "MATH10_QUADRATIC_EQUATIONS"
+          ],
+          "learning_outcomes": [
+            "Apply the quadratic formula",
+            "Determine the roots of a quadratic equation"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH05",
+      "chapter": "Arithmetic Progressions",
+      "concepts": [
+        {
+          "concept_id": "MATH10_AP",
+          "concept": "Arithmetic Progressions",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Identify arithmetic progressions",
+            "Find the common difference"
+          ]
+        },
+        {
+          "concept_id": "MATH10_AP_NTH_TERM",
+          "concept": "nth Term of an Arithmetic Progression",
+          "prerequisites": [
+            "MATH10_AP"
+          ],
+          "learning_outcomes": [
+            "Calculate the nth term of an AP",
+            "Apply the nth-term formula"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH06",
+      "chapter": "Triangles",
+      "concepts": [
+        {
+          "concept_id": "MATH10_TRIANGLES",
+          "concept": "Similarity of Triangles",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand similarity of triangles",
+            "Apply similarity criteria"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH07",
+      "chapter": "Coordinate Geometry",
+      "concepts": [
+        {
+          "concept_id": "MATH10_COORDINATE",
+          "concept": "Coordinate Geometry",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand coordinates in a plane",
+            "Calculate distances between points"
+          ]
+        },
+        {
+          "concept_id": "MATH10_DISTANCE_FORMULA",
+          "concept": "Distance Formula",
+          "prerequisites": [
+            "MATH10_COORDINATE"
+          ],
+          "learning_outcomes": [
+            "Apply the distance formula",
+            "Calculate the distance between two points"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH08",
+      "chapter": "Introduction to Trigonometry",
+      "concepts": [
+        {
+          "concept_id": "MATH10_TRIGONOMETRY",
+          "concept": "Trigonometric Ratios",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand basic trigonometric ratios",
+            "Calculate sine, cosine and tangent"
+          ]
+        },
+        {
+          "concept_id": "MATH10_TRIG_IDENTITIES",
+          "concept": "Trigonometric Identities",
+          "prerequisites": [
+            "MATH10_TRIGONOMETRY"
+          ],
+          "learning_outcomes": [
+            "Understand basic trigonometric identities",
+            "Apply identities to solve problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH09",
+      "chapter": "Applications of Trigonometry",
+      "concepts": [
+        {
+          "concept_id": "MATH10_HEIGHT_DISTANCE",
+          "concept": "Heights and Distances",
+          "prerequisites": [
+            "MATH10_TRIGONOMETRY"
+          ],
+          "learning_outcomes": [
+            "Apply trigonometric ratios to real-world problems",
+            "Solve problems involving heights and distances"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH10",
+      "chapter": "Circles",
+      "concepts": [
+        {
+          "concept_id": "MATH10_CIRCLES",
+          "concept": "Circles",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand properties of circles",
+            "Apply theorems related to tangents"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH11",
+      "chapter": "Areas Related to Circles",
+      "concepts": [
+        {
+          "concept_id": "MATH10_CIRCLE_AREA",
+          "concept": "Area and Circumference of Circles",
+          "prerequisites": [
+            "MATH10_CIRCLES"
+          ],
+          "learning_outcomes": [
+            "Calculate circumference and area",
+            "Solve problems involving sectors and segments"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH12",
+      "chapter": "Surface Areas and Volumes",
+      "concepts": [
+        {
+          "concept_id": "MATH10_SURFACE_AREA",
+          "concept": "Surface Areas",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Calculate surface areas of solid figures",
+            "Apply appropriate geometric formulas"
+          ]
+        },
+        {
+          "concept_id": "MATH10_VOLUME",
+          "concept": "Volumes",
+          "prerequisites": [
+            "MATH10_SURFACE_AREA"
+          ],
+          "learning_outcomes": [
+            "Calculate volumes of standard solids",
+            "Solve real-world volume problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH13",
+      "chapter": "Statistics",
+      "concepts": [
+        {
+          "concept_id": "MATH10_STATISTICS",
+          "concept": "Statistics",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand statistical data",
+            "Calculate measures of central tendency"
+          ]
+        },
+        {
+          "concept_id": "MATH10_MEAN_MEDIAN_MODE",
+          "concept": "Mean, Median and Mode",
+          "prerequisites": [
+            "MATH10_STATISTICS"
+          ],
+          "learning_outcomes": [
+            "Calculate mean, median and mode",
+            "Interpret statistical results"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH10_CH14",
+      "chapter": "Probability",
+      "concepts": [
+        {
+          "concept_id": "MATH10_PROBABILITY",
+          "concept": "Probability",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand probability of events",
+            "Calculate probability using basic principles"
+          ]
+        }
+      ]
+    }
+  ]
+}

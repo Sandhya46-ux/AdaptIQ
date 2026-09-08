@@ -1,0 +1,438 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 12,
+  "subject": "Biology",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 12 Biology"
+  },
+  "chapters": [
+    {
+      "chapter_id": "BIO12_CH01",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "concepts": [
+        {
+          "concept_id": "BIO12_FLOWER_REPRODUCTION",
+          "concept": "Sexual Reproduction in Flowering Plants",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_GAMETOPHYTES",
+          "concept": "Male and Female Gametophytes",
+          "prerequisites": ["BIO12_FLOWER_REPRODUCTION"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_POLLINATION",
+          "concept": "Pollination",
+          "prerequisites": ["BIO12_GAMETOPHYTES"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_FERTILISATION",
+          "concept": "Fertilisation and Double Fertilisation",
+          "prerequisites": ["BIO12_POLLINATION"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH02",
+      "chapter": "Human Reproduction",
+      "concepts": [
+        {
+          "concept_id": "BIO12_MALE_REPRODUCTIVE",
+          "concept": "Male Reproductive System",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_FEMALE_REPRODUCTIVE",
+          "concept": "Female Reproductive System",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_GAMETOGENESIS",
+          "concept": "Gametogenesis",
+          "prerequisites": [
+            "BIO12_MALE_REPRODUCTIVE",
+            "BIO12_FEMALE_REPRODUCTIVE"
+          ],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_MENSTRUAL_CYCLE",
+          "concept": "Menstrual Cycle",
+          "prerequisites": ["BIO12_FEMALE_REPRODUCTIVE"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH03",
+      "chapter": "Reproductive Health",
+      "concepts": [
+        {
+          "concept_id": "BIO12_REPRODUCTIVE_HEALTH",
+          "concept": "Reproductive Health",
+          "prerequisites": [
+            "BIO12_MALE_REPRODUCTIVE",
+            "BIO12_FEMALE_REPRODUCTIVE"
+          ],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_CONTRACEPTION",
+          "concept": "Contraceptive Methods",
+          "prerequisites": ["BIO12_REPRODUCTIVE_HEALTH"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_ASSISTED_REPRODUCTION",
+          "concept": "Assisted Reproductive Technologies",
+          "prerequisites": ["BIO12_REPRODUCTIVE_HEALTH"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_STIS",
+          "concept": "Sexually Transmitted Infections",
+          "prerequisites": ["BIO12_REPRODUCTIVE_HEALTH"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH04",
+      "chapter": "Principles of Inheritance and Variation",
+      "concepts": [
+        {
+          "concept_id": "BIO12_MENDEL",
+          "concept": "Mendel's Laws of Inheritance",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_INHERITANCE_PATTERNS",
+          "concept": "Patterns of Inheritance",
+          "prerequisites": ["BIO12_MENDEL"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_CHROMOSOMAL_THEORY",
+          "concept": "Chromosomal Theory of Inheritance",
+          "prerequisites": ["BIO12_MENDEL"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_MUTATION",
+          "concept": "Mutation and Genetic Variation",
+          "prerequisites": ["BIO12_INHERITANCE_PATTERNS"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH05",
+      "chapter": "Molecular Basis of Inheritance",
+      "concepts": [
+        {
+          "concept_id": "BIO12_DNA_STRUCTURE",
+          "concept": "DNA Structure",
+          "prerequisites": ["BIO12_MUTATION"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_DNA_REPLICATION",
+          "concept": "DNA Replication",
+          "prerequisites": ["BIO12_DNA_STRUCTURE"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_TRANSCRIPTION",
+          "concept": "Transcription",
+          "prerequisites": ["BIO12_DNA_STRUCTURE"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_TRANSLATION",
+          "concept": "Translation",
+          "prerequisites": ["BIO12_TRANSCRIPTION"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH06",
+      "chapter": "Evolution",
+      "concepts": [
+        {
+          "concept_id": "BIO12_ORIGIN_LIFE",
+          "concept": "Origin of Life",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_EVIDENCE_EVOLUTION",
+          "concept": "Evidence for Evolution",
+          "prerequisites": ["BIO12_ORIGIN_LIFE"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_DARWIN",
+          "concept": "Darwin's Theory of Evolution",
+          "prerequisites": ["BIO12_EVIDENCE_EVOLUTION"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_HUMAN_EVOLUTION",
+          "concept": "Human Evolution",
+          "prerequisites": ["BIO12_DARWIN"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH07",
+      "chapter": "Human Health and Disease",
+      "concepts": [
+        {
+          "concept_id": "BIO12_HEALTH_DISEASE",
+          "concept": "Health and Disease",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_IMMUNITY",
+          "concept": "Immune System and Immunity",
+          "prerequisites": ["BIO12_HEALTH_DISEASE"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_INFECTIOUS_DISEASE",
+          "concept": "Infectious Diseases",
+          "prerequisites": ["BIO12_HEALTH_DISEASE"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_CANCER",
+          "concept": "Cancer",
+          "prerequisites": ["BIO12_HEALTH_DISEASE"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH08",
+      "chapter": "Microbes in Human Welfare",
+      "concepts": [
+        {
+          "concept_id": "BIO12_MICROBES",
+          "concept": "Microbes and Human Welfare",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_FOOD_MICROBES",
+          "concept": "Microbes in Food Production",
+          "prerequisites": ["BIO12_MICROBES"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_INDUSTRIAL_MICROBES",
+          "concept": "Microbes in Industrial Production",
+          "prerequisites": ["BIO12_MICROBES"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_WASTE_TREATMENT",
+          "concept": "Microbes in Sewage Treatment",
+          "prerequisites": ["BIO12_MICROBES"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH09",
+      "chapter": "Biotechnology: Principles and Processes",
+      "concepts": [
+        {
+          "concept_id": "BIO12_BIOTECHNOLOGY",
+          "concept": "Principles of Biotechnology",
+          "prerequisites": ["BIO12_DNA_STRUCTURE"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_RECOMBINANT_DNA",
+          "concept": "Recombinant DNA Technology",
+          "prerequisites": ["BIO12_BIOTECHNOLOGY"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_GENE_CLONING",
+          "concept": "Gene Cloning",
+          "prerequisites": ["BIO12_RECOMBINANT_DNA"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_PCR",
+          "concept": "Polymerase Chain Reaction",
+          "prerequisites": ["BIO12_RECOMBINANT_DNA"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH10",
+      "chapter": "Biotechnology and its Applications",
+      "concepts": [
+        {
+          "concept_id": "BIO12_GM_CROPS",
+          "concept": "Genetically Modified Organisms",
+          "prerequisites": ["BIO12_RECOMBINANT_DNA"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_GENE_THERAPY",
+          "concept": "Gene Therapy",
+          "prerequisites": ["BIO12_GENE_CLONING"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_BIOTECH_MEDICINE",
+          "concept": "Biotechnology in Medicine",
+          "prerequisites": ["BIO12_BIOTECHNOLOGY"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_BIOETHICS",
+          "concept": "Biotechnology and Bioethics",
+          "prerequisites": ["BIO12_BIOTECHNOLOGY"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH11",
+      "chapter": "Organisms and Populations",
+      "concepts": [
+        {
+          "concept_id": "BIO12_ORGANISM_ENVIRONMENT",
+          "concept": "Organisms and Environment",
+          "prerequisites": [],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_POPULATION",
+          "concept": "Population Attributes",
+          "prerequisites": ["BIO12_ORGANISM_ENVIRONMENT"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_POPULATION_GROWTH",
+          "concept": "Population Growth",
+          "prerequisites": ["BIO12_POPULATION"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_ADAPTATION",
+          "concept": "Adaptations",
+          "prerequisites": ["BIO12_ORGANISM_ENVIRONMENT"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH12",
+      "chapter": "Ecosystem",
+      "concepts": [
+        {
+          "concept_id": "BIO12_ECOSYSTEM",
+          "concept": "Ecosystem Structure",
+          "prerequisites": ["BIO12_ORGANISM_ENVIRONMENT"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_PRODUCTIVITY",
+          "concept": "Productivity",
+          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_DECOMPOSITION",
+          "concept": "Decomposition",
+          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_ENERGY_FLOW",
+          "concept": "Energy Flow in Ecosystem",
+          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH13",
+      "chapter": "Biodiversity and Conservation",
+      "concepts": [
+        {
+          "concept_id": "BIO12_BIODIVERSITY",
+          "concept": "Biodiversity",
+          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_BIODIVERSITY_PATTERNS",
+          "concept": "Patterns of Biodiversity",
+          "prerequisites": ["BIO12_BIODIVERSITY"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_BIODIVERSITY_LOSS",
+          "concept": "Biodiversity Loss",
+          "prerequisites": ["BIO12_BIODIVERSITY"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_CONSERVATION",
+          "concept": "Biodiversity Conservation",
+          "prerequisites": ["BIO12_BIODIVERSITY_LOSS"],
+          "learning_outcomes": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO12_CH14",
+      "chapter": "Environmental Issues",
+      "concepts": [
+        {
+          "concept_id": "BIO12_AIR_POLLUTION",
+          "concept": "Air Pollution",
+          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_WATER_POLLUTION",
+          "concept": "Water Pollution",
+          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_SOLID_WASTE",
+          "concept": "Solid Waste Management",
+          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "learning_outcomes": []
+        },
+        {
+          "concept_id": "BIO12_GLOBAL_WARMING",
+          "concept": "Global Warming and Ozone Depletion",
+          "prerequisites": ["BIO12_AIR_POLLUTION"],
+          "learning_outcomes": []
+        }
+      ]
+    }
+  ]
+}

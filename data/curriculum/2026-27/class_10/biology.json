@@ -1,0 +1,208 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "Biology",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 10 Science - Biology"
+  },
+  "chapters": [
+    {
+      "chapter_id": "BIO10_CH01",
+      "chapter": "Life Processes",
+      "concepts": [
+        {
+          "concept_id": "BIO10_NUTRITION",
+          "concept": "Nutrition",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand different modes of nutrition",
+            "Explain the process of nutrition in organisms"
+          ]
+        },
+        {
+          "concept_id": "BIO10_RESPIRATION",
+          "concept": "Respiration",
+          "prerequisites": [
+            "BIO10_NUTRITION"
+          ],
+          "learning_outcomes": [
+            "Understand aerobic and anaerobic respiration",
+            "Explain the importance of respiration"
+          ]
+        },
+        {
+          "concept_id": "BIO10_TRANSPORT",
+          "concept": "Transportation",
+          "prerequisites": [
+            "BIO10_NUTRITION"
+          ],
+          "learning_outcomes": [
+            "Understand transportation in plants and animals",
+            "Explain the role of blood and blood vessels"
+          ]
+        },
+        {
+          "concept_id": "BIO10_EXCRETION",
+          "concept": "Excretion",
+          "prerequisites": [
+            "BIO10_TRANSPORT"
+          ],
+          "learning_outcomes": [
+            "Understand excretion in humans",
+            "Explain the role of kidneys in excretion"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO10_CH02",
+      "chapter": "Control and Coordination",
+      "concepts": [
+        {
+          "concept_id": "BIO10_NERVOUS_SYSTEM",
+          "concept": "Nervous System",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the organization of the nervous system",
+            "Explain how organisms respond to stimuli"
+          ]
+        },
+        {
+          "concept_id": "BIO10_REFLEX_ACTION",
+          "concept": "Reflex Action",
+          "prerequisites": [
+            "BIO10_NERVOUS_SYSTEM"
+          ],
+          "learning_outcomes": [
+            "Understand reflex actions",
+            "Explain the role of the reflex arc"
+          ]
+        },
+        {
+          "concept_id": "BIO10_HORMONES",
+          "concept": "Hormonal Coordination",
+          "prerequisites": [
+            "BIO10_NERVOUS_SYSTEM"
+          ],
+          "learning_outcomes": [
+            "Understand hormonal coordination",
+            "Identify major endocrine hormones"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO10_CH03",
+      "chapter": "How Do Organisms Reproduce?",
+      "concepts": [
+        {
+          "concept_id": "BIO10_REPRODUCTION",
+          "concept": "Reproduction",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the importance of reproduction",
+            "Differentiate between asexual and sexual reproduction"
+          ]
+        },
+        {
+          "concept_id": "BIO10_ASEXUAL",
+          "concept": "Asexual Reproduction",
+          "prerequisites": [
+            "BIO10_REPRODUCTION"
+          ],
+          "learning_outcomes": [
+            "Identify different methods of asexual reproduction",
+            "Understand reproduction through single organisms"
+          ]
+        },
+        {
+          "concept_id": "BIO10_SEXUAL",
+          "concept": "Sexual Reproduction",
+          "prerequisites": [
+            "BIO10_REPRODUCTION"
+          ],
+          "learning_outcomes": [
+            "Understand sexual reproduction",
+            "Explain the role of reproductive organs"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO10_CH04",
+      "chapter": "Heredity",
+      "concepts": [
+        {
+          "concept_id": "BIO10_HEREDITY",
+          "concept": "Heredity",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand transmission of traits",
+            "Explain the basic principles of heredity"
+          ]
+        },
+        {
+          "concept_id": "BIO10_MENDEL",
+          "concept": "Mendel's Laws",
+          "prerequisites": [
+            "BIO10_HEREDITY"
+          ],
+          "learning_outcomes": [
+            "Understand Mendelian inheritance",
+            "Apply basic inheritance principles"
+          ]
+        },
+        {
+          "concept_id": "BIO10_VARIATION",
+          "concept": "Variation",
+          "prerequisites": [
+            "BIO10_HEREDITY"
+          ],
+          "learning_outcomes": [
+            "Understand variation among organisms",
+            "Explain the importance of variation"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO10_CH05",
+      "chapter": "Our Environment",
+      "concepts": [
+        {
+          "concept_id": "BIO10_ECOSYSTEM",
+          "concept": "Ecosystem",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand components of an ecosystem",
+            "Identify biotic and abiotic components"
+          ]
+        },
+        {
+          "concept_id": "BIO10_FOOD_CHAIN",
+          "concept": "Food Chains and Food Webs",
+          "prerequisites": [
+            "BIO10_ECOSYSTEM"
+          ],
+          "learning_outcomes": [
+            "Understand food chains",
+            "Explain relationships between organisms"
+          ]
+        },
+        {
+          "concept_id": "BIO10_BIODEGRADABLE",
+          "concept": "Biodegradable and Non-biodegradable Materials",
+          "prerequisites": [
+            "BIO10_ECOSYSTEM"
+          ],
+          "learning_outcomes": [
+            "Differentiate biodegradable and non-biodegradable materials",
+            "Understand their environmental impact"
+          ]
+        }
+      ]
+    }
+  ]
+}

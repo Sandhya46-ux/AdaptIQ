@@ -1,0 +1,158 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "Chemistry",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 10 Science - Chemistry"
+  },
+  "chapters": [
+    {
+      "chapter_id": "CHEM10_CH01",
+      "chapter": "Chemical Reactions and Equations",
+      "concepts": [
+        {
+          "concept_id": "CHEM10_REACTIONS",
+          "concept": "Chemical Reactions",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Identify chemical reactions",
+            "Understand signs of a chemical reaction"
+          ]
+        },
+        {
+          "concept_id": "CHEM10_EQUATIONS",
+          "concept": "Writing and Balancing Chemical Equations",
+          "prerequisites": [
+            "CHEM10_REACTIONS"
+          ],
+          "learning_outcomes": [
+            "Write chemical equations",
+            "Balance chemical equations"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM10_CH02",
+      "chapter": "Acids, Bases and Salts",
+      "concepts": [
+        {
+          "concept_id": "CHEM10_ACIDS",
+          "concept": "Acids and Their Properties",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand properties of acids",
+            "Identify acidic substances"
+          ]
+        },
+        {
+          "concept_id": "CHEM10_BASES",
+          "concept": "Bases and Their Properties",
+          "prerequisites": [
+            "CHEM10_ACIDS"
+          ],
+          "learning_outcomes": [
+            "Understand properties of bases",
+            "Identify basic substances"
+          ]
+        },
+        {
+          "concept_id": "CHEM10_PH",
+          "concept": "pH Scale",
+          "prerequisites": [
+            "CHEM10_ACIDS",
+            "CHEM10_BASES"
+          ],
+          "learning_outcomes": [
+            "Understand the pH scale",
+            "Compare acidic and basic solutions"
+          ]
+        },
+        {
+          "concept_id": "CHEM10_SALTS",
+          "concept": "Salts",
+          "prerequisites": [
+            "CHEM10_ACIDS",
+            "CHEM10_BASES"
+          ],
+          "learning_outcomes": [
+            "Understand formation of salts",
+            "Identify common salts and their uses"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM10_CH03",
+      "chapter": "Metals and Non-metals",
+      "concepts": [
+        {
+          "concept_id": "CHEM10_METALS",
+          "concept": "Properties of Metals",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand physical and chemical properties of metals"
+          ]
+        },
+        {
+          "concept_id": "CHEM10_NONMETALS",
+          "concept": "Properties of Non-metals",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand physical and chemical properties of non-metals"
+          ]
+        },
+        {
+          "concept_id": "CHEM10_REACTIVITY",
+          "concept": "Reactivity Series",
+          "prerequisites": [
+            "CHEM10_METALS"
+          ],
+          "learning_outcomes": [
+            "Understand the reactivity series",
+            "Compare reactivity of metals"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM10_CH04",
+      "chapter": "Carbon and Its Compounds",
+      "concepts": [
+        {
+          "concept_id": "CHEM10_CARBON",
+          "concept": "Carbon and Its Bonding",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the bonding nature of carbon",
+            "Explain the tetravalency of carbon"
+          ]
+        },
+        {
+          "concept_id": "CHEM10_HYDROCARBONS",
+          "concept": "Hydrocarbons",
+          "prerequisites": [
+            "CHEM10_CARBON"
+          ],
+          "learning_outcomes": [
+            "Identify common hydrocarbons",
+            "Understand saturated and unsaturated compounds"
+          ]
+        },
+        {
+          "concept_id": "CHEM10_FUNCTIONAL_GROUPS",
+          "concept": "Functional Groups",
+          "prerequisites": [
+            "CHEM10_CARBON"
+          ],
+          "learning_outcomes": [
+            "Identify common functional groups",
+            "Recognize functional groups in organic compounds"
+          ]
+        }
+      ]
+    }
+  ]
+}

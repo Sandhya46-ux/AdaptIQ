@@ -1,0 +1,123 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 10,
+  "subject": "Physics",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 10 Science - Physics"
+  },
+  "chapters": [
+    {
+      "chapter_id": "PHY10_CH01",
+      "chapter": "Light - Reflection and Refraction",
+      "concepts": [
+        {
+          "concept_id": "PHY10_LIGHT_REFLECTION",
+          "concept": "Reflection of Light",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the laws of reflection",
+            "Apply reflection principles to simple problems"
+          ]
+        },
+        {
+          "concept_id": "PHY10_LIGHT_REFRACTION",
+          "concept": "Refraction of Light",
+          "prerequisites": [
+            "PHY10_LIGHT_REFLECTION"
+          ],
+          "learning_outcomes": [
+            "Understand refraction",
+            "Explain bending of light between different media"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY10_CH02",
+      "chapter": "Human Eye and the Colourful World",
+      "concepts": [
+        {
+          "concept_id": "PHY10_EYE",
+          "concept": "Human Eye",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the structure and function of the human eye"
+          ]
+        },
+        {
+          "concept_id": "PHY10_EYE_DEFECTS",
+          "concept": "Defects of Vision",
+          "prerequisites": [
+            "PHY10_EYE"
+          ],
+          "learning_outcomes": [
+            "Identify common defects of vision",
+            "Understand their correction"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY10_CH03",
+      "chapter": "Electricity",
+      "concepts": [
+        {
+          "concept_id": "PHY10_ELEC_CURRENT",
+          "concept": "Electric Current",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Define electric current",
+            "Understand its SI unit"
+          ]
+        },
+        {
+          "concept_id": "PHY10_ELEC_POTENTIAL",
+          "concept": "Electric Potential Difference",
+          "prerequisites": [
+            "PHY10_ELEC_CURRENT"
+          ],
+          "learning_outcomes": [
+            "Understand potential difference",
+            "Relate voltage to electrical circuits"
+          ]
+        },
+        {
+          "concept_id": "PHY10_ELEC_OHM",
+          "concept": "Ohm's Law",
+          "prerequisites": [
+            "PHY10_ELEC_CURRENT",
+            "PHY10_ELEC_POTENTIAL"
+          ],
+          "learning_outcomes": [
+            "State Ohm's law",
+            "Apply Ohm's law to simple circuits"
+          ]
+        },
+        {
+          "concept_id": "PHY10_ELEC_RESISTANCE",
+          "concept": "Resistance",
+          "prerequisites": [
+            "PHY10_ELEC_OHM"
+          ],
+          "learning_outcomes": [
+            "Understand electrical resistance",
+            "Identify factors affecting resistance"
+          ]
+        },
+        {
+          "concept_id": "PHY10_ELEC_POWER",
+          "concept": "Electric Power",
+          "prerequisites": [
+            "PHY10_ELEC_OHM"
+          ],
+          "learning_outcomes": [
+            "Understand electric power",
+            "Use basic electrical power formulas"
+          ]
+        }
+      ]
+    }
+  ]
+}

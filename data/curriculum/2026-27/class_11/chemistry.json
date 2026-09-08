@@ -1,0 +1,355 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 11,
+  "subject": "Chemistry",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 11 Chemistry"
+  },
+  "chapters": [
+    {
+      "chapter_id": "CHEM11_CH01",
+      "chapter": "Some Basic Concepts of Chemistry",
+      "concepts": [
+        {
+          "concept_id": "CHEM11_MOLE_CONCEPT",
+          "concept": "Mole Concept",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the mole as a counting unit",
+            "Calculate the number of particles using the mole concept"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_MOLAR_MASS",
+          "concept": "Molar Mass",
+          "prerequisites": [
+            "CHEM11_MOLE_CONCEPT"
+          ],
+          "learning_outcomes": [
+            "Calculate molar mass",
+            "Convert between mass and amount of substance"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_STOICHIOMETRY",
+          "concept": "Stoichiometry",
+          "prerequisites": [
+            "CHEM11_MOLE_CONCEPT"
+          ],
+          "learning_outcomes": [
+            "Understand quantitative relationships in chemical reactions",
+            "Solve basic stoichiometric problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM11_CH02",
+      "chapter": "Structure of Atom",
+      "concepts": [
+        {
+          "concept_id": "CHEM11_ATOMIC_STRUCTURE",
+          "concept": "Atomic Structure",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the structure of an atom",
+            "Identify subatomic particles"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_QUANTUM_NUMBERS",
+          "concept": "Quantum Numbers",
+          "prerequisites": [
+            "CHEM11_ATOMIC_STRUCTURE"
+          ],
+          "learning_outcomes": [
+            "Understand the four quantum numbers",
+            "Describe the state of an electron"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_ELECTRONIC_CONFIGURATION",
+          "concept": "Electronic Configuration",
+          "prerequisites": [
+            "CHEM11_QUANTUM_NUMBERS"
+          ],
+          "learning_outcomes": [
+            "Write electronic configurations",
+            "Apply rules governing electron distribution"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM11_CH03",
+      "chapter": "Classification of Elements and Periodicity in Properties",
+      "concepts": [
+        {
+          "concept_id": "CHEM11_PERIODIC_TABLE",
+          "concept": "Periodic Table",
+          "prerequisites": [
+            "CHEM11_ELECTRONIC_CONFIGURATION"
+          ],
+          "learning_outcomes": [
+            "Understand the modern periodic table",
+            "Locate elements using groups and periods"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_PERIODIC_TRENDS",
+          "concept": "Periodic Trends",
+          "prerequisites": [
+            "CHEM11_PERIODIC_TABLE"
+          ],
+          "learning_outcomes": [
+            "Understand periodic trends",
+            "Compare atomic properties across the periodic table"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM11_CH04",
+      "chapter": "Chemical Bonding and Molecular Structure",
+      "concepts": [
+        {
+          "concept_id": "CHEM11_IONIC_BOND",
+          "concept": "Ionic Bond",
+          "prerequisites": [
+            "CHEM11_PERIODIC_TABLE"
+          ],
+          "learning_outcomes": [
+            "Understand ionic bonding",
+            "Explain formation of ionic compounds"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_COVALENT_BOND",
+          "concept": "Covalent Bond",
+          "prerequisites": [
+            "CHEM11_ELECTRONIC_CONFIGURATION"
+          ],
+          "learning_outcomes": [
+            "Understand covalent bonding",
+            "Explain sharing of electrons"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_VSEPR",
+          "concept": "VSEPR Theory",
+          "prerequisites": [
+            "CHEM11_COVALENT_BOND"
+          ],
+          "learning_outcomes": [
+            "Understand molecular shapes",
+            "Predict basic molecular geometry"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_HYBRIDISATION",
+          "concept": "Hybridisation",
+          "prerequisites": [
+            "CHEM11_COVALENT_BOND"
+          ],
+          "learning_outcomes": [
+            "Understand hybridisation",
+            "Identify common types of hybridisation"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM11_CH05",
+      "chapter": "Thermodynamics",
+      "concepts": [
+        {
+          "concept_id": "CHEM11_SYSTEM_SURROUNDINGS",
+          "concept": "System and Surroundings",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand chemical systems and surroundings",
+            "Differentiate open, closed and isolated systems"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_ENTHALPY",
+          "concept": "Enthalpy",
+          "prerequisites": [
+            "CHEM11_SYSTEM_SURROUNDINGS"
+          ],
+          "learning_outcomes": [
+            "Understand enthalpy changes",
+            "Calculate basic enthalpy changes"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_HESS_LAW",
+          "concept": "Hess's Law",
+          "prerequisites": [
+            "CHEM11_ENTHALPY"
+          ],
+          "learning_outcomes": [
+            "Understand Hess's law",
+            "Apply Hess's law to chemical reactions"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM11_CH06",
+      "chapter": "Equilibrium",
+      "concepts": [
+        {
+          "concept_id": "CHEM11_CHEMICAL_EQUILIBRIUM",
+          "concept": "Chemical Equilibrium",
+          "prerequisites": [
+            "CHEM11_STOICHIOMETRY"
+          ],
+          "learning_outcomes": [
+            "Understand dynamic equilibrium",
+            "Identify characteristics of equilibrium"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_EQUILIBRIUM_CONSTANT",
+          "concept": "Equilibrium Constant",
+          "prerequisites": [
+            "CHEM11_CHEMICAL_EQUILIBRIUM"
+          ],
+          "learning_outcomes": [
+            "Understand equilibrium constants",
+            "Calculate simple equilibrium constants"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_LE_CHATELIER",
+          "concept": "Le Chatelier's Principle",
+          "prerequisites": [
+            "CHEM11_CHEMICAL_EQUILIBRIUM"
+          ],
+          "learning_outcomes": [
+            "Understand factors affecting equilibrium",
+            "Predict equilibrium shifts"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM11_CH07",
+      "chapter": "Redox Reactions",
+      "concepts": [
+        {
+          "concept_id": "CHEM11_OXIDATION_REDUCTION",
+          "concept": "Oxidation and Reduction",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand oxidation and reduction",
+            "Identify oxidizing and reducing agents"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_OXIDATION_NUMBER",
+          "concept": "Oxidation Number",
+          "prerequisites": [
+            "CHEM11_OXIDATION_REDUCTION"
+          ],
+          "learning_outcomes": [
+            "Calculate oxidation numbers",
+            "Use oxidation numbers to identify redox changes"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM11_CH08",
+      "chapter": "Organic Chemistry - Some Basic Principles and Techniques",
+      "concepts": [
+        {
+          "concept_id": "CHEM11_ORGANIC_BASICS",
+          "concept": "Introduction to Organic Chemistry",
+          "prerequisites": [
+            "CHEM11_COVALENT_BOND"
+          ],
+          "learning_outcomes": [
+            "Understand the basic principles of organic chemistry",
+            "Identify common organic compounds"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_NOMENCLATURE",
+          "concept": "Organic Nomenclature",
+          "prerequisites": [
+            "CHEM11_ORGANIC_BASICS"
+          ],
+          "learning_outcomes": [
+            "Understand basic IUPAC nomenclature",
+            "Name simple organic compounds"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_ISOMERISM",
+          "concept": "Isomerism",
+          "prerequisites": [
+            "CHEM11_ORGANIC_BASICS"
+          ],
+          "learning_outcomes": [
+            "Understand structural isomerism",
+            "Identify simple isomers"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM11_CH09",
+      "chapter": "Hydrocarbons",
+      "concepts": [
+        {
+          "concept_id": "CHEM11_ALKANES",
+          "concept": "Alkanes",
+          "prerequisites": [
+            "CHEM11_ORGANIC_BASICS"
+          ],
+          "learning_outcomes": [
+            "Understand saturated hydrocarbons",
+            "Identify and name simple alkanes"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_ALKENES",
+          "concept": "Alkenes",
+          "prerequisites": [
+            "CHEM11_ORGANIC_BASICS"
+          ],
+          "learning_outcomes": [
+            "Understand unsaturated hydrocarbons",
+            "Identify and name simple alkenes"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_ALKYNES",
+          "concept": "Alkynes",
+          "prerequisites": [
+            "CHEM11_ORGANIC_BASICS"
+          ],
+          "learning_outcomes": [
+            "Understand alkynes",
+            "Identify and name simple alkynes"
+          ]
+        },
+        {
+          "concept_id": "CHEM11_AROMATIC_HYDROCARBONS",
+          "concept": "Aromatic Hydrocarbons",
+          "prerequisites": [
+            "CHEM11_ORGANIC_BASICS"
+          ],
+          "learning_outcomes": [
+            "Understand aromatic hydrocarbons",
+            "Identify basic properties of benzene"
+          ]
+        }
+      ]
+    }
+  ]
+}

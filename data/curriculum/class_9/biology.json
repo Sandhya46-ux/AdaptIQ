@@ -1,0 +1,197 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 9,
+  "subject": "Biology",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 9 Science - Biology"
+  },
+  "chapters": [
+    {
+      "chapter_id": "BIO9_CH01",
+      "chapter": "The Fundamental Unit of Life",
+      "concepts": [
+        {
+          "concept_id": "BIO9_CELL",
+          "concept": "Cell",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the cell as the basic unit of life",
+            "Identify major structures of a cell"
+          ]
+        },
+        {
+          "concept_id": "BIO9_CELL_ORGANELLES",
+          "concept": "Cell Organelles",
+          "prerequisites": [
+            "BIO9_CELL"
+          ],
+          "learning_outcomes": [
+            "Identify major cell organelles",
+            "Understand the functions of cell organelles"
+          ]
+        },
+        {
+          "concept_id": "BIO9_PLANT_ANIMAL_CELL",
+          "concept": "Plant and Animal Cells",
+          "prerequisites": [
+            "BIO9_CELL",
+            "BIO9_CELL_ORGANELLES"
+          ],
+          "learning_outcomes": [
+            "Differentiate plant and animal cells",
+            "Identify structures unique to plant cells"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO9_CH02",
+      "chapter": "Tissues",
+      "concepts": [
+        {
+          "concept_id": "BIO9_PLANT_TISSUES",
+          "concept": "Plant Tissues",
+          "prerequisites": [
+            "BIO9_CELL"
+          ],
+          "learning_outcomes": [
+            "Understand the different types of plant tissues",
+            "Relate tissue structure to function"
+          ]
+        },
+        {
+          "concept_id": "BIO9_ANIMAL_TISSUES",
+          "concept": "Animal Tissues",
+          "prerequisites": [
+            "BIO9_CELL"
+          ],
+          "learning_outcomes": [
+            "Identify major types of animal tissues",
+            "Understand their functions"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO9_CH03",
+      "chapter": "Diversity in Living Organisms",
+      "concepts": [
+        {
+          "concept_id": "BIO9_CLASSIFICATION",
+          "concept": "Biological Classification",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the need for classification",
+            "Classify organisms based on common characteristics"
+          ]
+        },
+        {
+          "concept_id": "BIO9_PLANT_GROUPS",
+          "concept": "Plant Groups",
+          "prerequisites": [
+            "BIO9_CLASSIFICATION"
+          ],
+          "learning_outcomes": [
+            "Identify major plant groups",
+            "Understand characteristics of different plant groups"
+          ]
+        },
+        {
+          "concept_id": "BIO9_ANIMAL_GROUPS",
+          "concept": "Animal Groups",
+          "prerequisites": [
+            "BIO9_CLASSIFICATION"
+          ],
+          "learning_outcomes": [
+            "Identify major animal groups",
+            "Understand characteristics used for classification"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO9_CH04",
+      "chapter": "Why Do We Fall Ill?",
+      "concepts": [
+        {
+          "concept_id": "BIO9_HEALTH",
+          "concept": "Health and Disease",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the meaning of health",
+            "Differentiate between healthy and diseased conditions"
+          ]
+        },
+        {
+          "concept_id": "BIO9_INFECTIOUS_DISEASES",
+          "concept": "Infectious Diseases",
+          "prerequisites": [
+            "BIO9_HEALTH"
+          ],
+          "learning_outcomes": [
+            "Understand infectious diseases",
+            "Identify common causes of infectious diseases"
+          ]
+        },
+        {
+          "concept_id": "BIO9_DISEASE_PREVENTION",
+          "concept": "Disease Prevention",
+          "prerequisites": [
+            "BIO9_INFECTIOUS_DISEASES"
+          ],
+          "learning_outcomes": [
+            "Understand methods of disease prevention",
+            "Explain the importance of hygiene and vaccination"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO9_CH05",
+      "chapter": "Natural Resources",
+      "concepts": [
+        {
+          "concept_id": "BIO9_AIR",
+          "concept": "Air",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the importance and composition of air",
+            "Explain the role of air in supporting life"
+          ]
+        },
+        {
+          "concept_id": "BIO9_WATER",
+          "concept": "Water",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the importance of water",
+            "Explain the water cycle"
+          ]
+        },
+        {
+          "concept_id": "BIO9_SOIL",
+          "concept": "Soil",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the importance of soil",
+            "Explain the role of soil in supporting life"
+          ]
+        },
+        {
+          "concept_id": "BIO9_NATURAL_CYCLES",
+          "concept": "Natural Cycles",
+          "prerequisites": [
+            "BIO9_AIR",
+            "BIO9_WATER"
+          ],
+          "learning_outcomes": [
+            "Understand important natural cycles",
+            "Explain the importance of maintaining ecological balance"
+          ]
+        }
+      ]
+    }
+  ]
+}
