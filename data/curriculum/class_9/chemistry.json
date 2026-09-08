@@ -1,0 +1,199 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 9,
+  "subject": "Chemistry",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 9 Science - Chemistry"
+  },
+  "chapters": [
+    {
+      "chapter_id": "CHEM9_CH01",
+      "chapter": "Matter in Our Surroundings",
+      "concepts": [
+        {
+          "concept_id": "CHEM9_MATTER",
+          "concept": "Nature of Matter",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand matter and its physical nature",
+            "Identify different states of matter"
+          ]
+        },
+        {
+          "concept_id": "CHEM9_STATES",
+          "concept": "States of Matter",
+          "prerequisites": [
+            "CHEM9_MATTER"
+          ],
+          "learning_outcomes": [
+            "Compare solids, liquids and gases",
+            "Understand characteristics of different states"
+          ]
+        },
+        {
+          "concept_id": "CHEM9_CHANGE_STATE",
+          "concept": "Change of State",
+          "prerequisites": [
+            "CHEM9_STATES"
+          ],
+          "learning_outcomes": [
+            "Understand melting, freezing and boiling",
+            "Explain changes of state using particle motion"
+          ]
+        },
+        {
+          "concept_id": "CHEM9_EVAPORATION",
+          "concept": "Evaporation",
+          "prerequisites": [
+            "CHEM9_STATES"
+          ],
+          "learning_outcomes": [
+            "Understand evaporation",
+            "Identify factors affecting evaporation"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM9_CH02",
+      "chapter": "Is Matter Around Us Pure",
+      "concepts": [
+        {
+          "concept_id": "CHEM9_PURE_SUBSTANCES",
+          "concept": "Pure Substances",
+          "prerequisites": [
+            "CHEM9_MATTER"
+          ],
+          "learning_outcomes": [
+            "Understand the meaning of a pure substance",
+            "Differentiate substances based on composition"
+          ]
+        },
+        {
+          "concept_id": "CHEM9_MIXTURES",
+          "concept": "Mixtures",
+          "prerequisites": [
+            "CHEM9_PURE_SUBSTANCES"
+          ],
+          "learning_outcomes": [
+            "Differentiate homogeneous and heterogeneous mixtures",
+            "Identify mixtures in everyday situations"
+          ]
+        },
+        {
+          "concept_id": "CHEM9_SEPARATION",
+          "concept": "Separation of Mixtures",
+          "prerequisites": [
+            "CHEM9_MIXTURES"
+          ],
+          "learning_outcomes": [
+            "Understand common separation techniques",
+            "Select an appropriate method for separating a mixture"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM9_CH03",
+      "chapter": "Atoms and Molecules",
+      "concepts": [
+        {
+          "concept_id": "CHEM9_ATOMS",
+          "concept": "Atoms",
+          "prerequisites": [
+            "CHEM9_PURE_SUBSTANCES"
+          ],
+          "learning_outcomes": [
+            "Understand the concept of atoms",
+            "Recognize atoms as basic units of matter"
+          ]
+        },
+        {
+          "concept_id": "CHEM9_MOLECULES",
+          "concept": "Molecules",
+          "prerequisites": [
+            "CHEM9_ATOMS"
+          ],
+          "learning_outcomes": [
+            "Understand molecules",
+            "Differentiate atoms and molecules"
+          ]
+        },
+        {
+          "concept_id": "CHEM9_CHEMICAL_FORMULAE",
+          "concept": "Chemical Formulae",
+          "prerequisites": [
+            "CHEM9_MOLECULES"
+          ],
+          "learning_outcomes": [
+            "Write simple chemical formulae",
+            "Interpret chemical formulae"
+          ]
+        },
+        {
+          "concept_id": "CHEM9_MOLE_CONCEPT",
+          "concept": "Mole Concept",
+          "prerequisites": [
+            "CHEM9_MOLECULES"
+          ],
+          "learning_outcomes": [
+            "Understand the mole as a counting unit",
+            "Solve simple mole-related problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "CHEM9_CH04",
+      "chapter": "Structure of the Atom",
+      "concepts": [
+        {
+          "concept_id": "CHEM9_SUBATOMIC_PARTICLES",
+          "concept": "Subatomic Particles",
+          "prerequisites": [
+            "CHEM9_ATOMS"
+          ],
+          "learning_outcomes": [
+            "Identify electrons, protons and neutrons",
+            "Understand their basic properties"
+          ]
+        },
+        {
+          "concept_id": "CHEM9_ATOMIC_MODELS",
+          "concept": "Atomic Models",
+          "prerequisites": [
+            "CHEM9_SUBATOMIC_PARTICLES"
+          ],
+          "learning_outcomes": [
+            "Understand basic atomic models",
+            "Compare major developments in atomic structure"
+          ]
+        },
+        {
+          "concept_id": "CHEM9_ELECTRONIC_CONFIGURATION",
+          "concept": "Electronic Configuration",
+          "prerequisites": [
+            "CHEM9_SUBATOMIC_PARTICLES"
+          ],
+          "learning_outcomes": [
+            "Understand distribution of electrons",
+            "Write simple electronic configurations"
+          ]
+        },
+        {
+          "concept_id": "CHEM9_VALENCY",
+          "concept": "Valency",
+          "prerequisites": [
+            "CHEM9_ELECTRONIC_CONFIGURATION"
+          ],
+          "learning_outcomes": [
+            "Understand valency",
+            "Determine valency from electronic configuration"
+          ]
+        }
+      ]
+    }
+  ]
+}

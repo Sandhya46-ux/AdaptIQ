@@ -1,0 +1,246 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 9,
+  "subject": "Physics",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 9 Science - Physics"
+  },
+  "chapters": [
+    {
+      "chapter_id": "PHY9_CH01",
+      "chapter": "Motion",
+      "concepts": [
+        {
+          "concept_id": "PHY9_DISTANCE_DISPLACEMENT",
+          "concept": "Distance and Displacement",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Differentiate between distance and displacement",
+            "Calculate distance and displacement in simple situations"
+          ]
+        },
+        {
+          "concept_id": "PHY9_SPEED_VELOCITY",
+          "concept": "Speed and Velocity",
+          "prerequisites": [
+            "PHY9_DISTANCE_DISPLACEMENT"
+          ],
+          "learning_outcomes": [
+            "Define speed and velocity",
+            "Calculate average speed and velocity"
+          ]
+        },
+        {
+          "concept_id": "PHY9_ACCELERATION",
+          "concept": "Acceleration",
+          "prerequisites": [
+            "PHY9_SPEED_VELOCITY"
+          ],
+          "learning_outcomes": [
+            "Understand acceleration",
+            "Calculate acceleration using its formula"
+          ]
+        },
+        {
+          "concept_id": "PHY9_MOTION_GRAPHS",
+          "concept": "Motion Graphs",
+          "prerequisites": [
+            "PHY9_SPEED_VELOCITY",
+            "PHY9_ACCELERATION"
+          ],
+          "learning_outcomes": [
+            "Interpret distance-time graphs",
+            "Interpret velocity-time graphs"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY9_CH02",
+      "chapter": "Force and Laws of Motion",
+      "concepts": [
+        {
+          "concept_id": "PHY9_FORCE",
+          "concept": "Force",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the concept of force",
+            "Identify effects of force on objects"
+          ]
+        },
+        {
+          "concept_id": "PHY9_NEWTON_FIRST",
+          "concept": "Newton's First Law",
+          "prerequisites": [
+            "PHY9_FORCE"
+          ],
+          "learning_outcomes": [
+            "Understand inertia",
+            "Explain Newton's first law using examples"
+          ]
+        },
+        {
+          "concept_id": "PHY9_NEWTON_SECOND",
+          "concept": "Newton's Second Law",
+          "prerequisites": [
+            "PHY9_FORCE"
+          ],
+          "learning_outcomes": [
+            "Understand the relationship between force, mass and acceleration",
+            "Apply F = ma to simple problems"
+          ]
+        },
+        {
+          "concept_id": "PHY9_NEWTON_THIRD",
+          "concept": "Newton's Third Law",
+          "prerequisites": [
+            "PHY9_FORCE"
+          ],
+          "learning_outcomes": [
+            "Understand action and reaction forces",
+            "Identify action-reaction pairs"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY9_CH03",
+      "chapter": "Gravitation",
+      "concepts": [
+        {
+          "concept_id": "PHY9_GRAVITATION",
+          "concept": "Universal Law of Gravitation",
+          "prerequisites": [
+            "PHY9_FORCE"
+          ],
+          "learning_outcomes": [
+            "Understand universal gravitation",
+            "Apply the basic gravitational relationship"
+          ]
+        },
+        {
+          "concept_id": "PHY9_MASS_WEIGHT",
+          "concept": "Mass and Weight",
+          "prerequisites": [
+            "PHY9_GRAVITATION"
+          ],
+          "learning_outcomes": [
+            "Differentiate mass and weight",
+            "Calculate weight using W = mg"
+          ]
+        },
+        {
+          "concept_id": "PHY9_FREE_FALL",
+          "concept": "Free Fall",
+          "prerequisites": [
+            "PHY9_GRAVITATION"
+          ],
+          "learning_outcomes": [
+            "Understand free fall",
+            "Use acceleration due to gravity in simple problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY9_CH04",
+      "chapter": "Work and Energy",
+      "concepts": [
+        {
+          "concept_id": "PHY9_WORK",
+          "concept": "Work",
+          "prerequisites": [
+            "PHY9_FORCE"
+          ],
+          "learning_outcomes": [
+            "Understand when work is done",
+            "Calculate work in simple situations"
+          ]
+        },
+        {
+          "concept_id": "PHY9_KINETIC_ENERGY",
+          "concept": "Kinetic Energy",
+          "prerequisites": [
+            "PHY9_WORK"
+          ],
+          "learning_outcomes": [
+            "Understand kinetic energy",
+            "Calculate kinetic energy"
+          ]
+        },
+        {
+          "concept_id": "PHY9_POTENTIAL_ENERGY",
+          "concept": "Potential Energy",
+          "prerequisites": [
+            "PHY9_WORK"
+          ],
+          "learning_outcomes": [
+            "Understand potential energy",
+            "Calculate gravitational potential energy"
+          ]
+        },
+        {
+          "concept_id": "PHY9_POWER",
+          "concept": "Power",
+          "prerequisites": [
+            "PHY9_WORK"
+          ],
+          "learning_outcomes": [
+            "Understand power",
+            "Calculate power using work and time"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY9_CH05",
+      "chapter": "Sound",
+      "concepts": [
+        {
+          "concept_id": "PHY9_SOUND_PRODUCTION",
+          "concept": "Production of Sound",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand how sound is produced",
+            "Relate sound production to vibrations"
+          ]
+        },
+        {
+          "concept_id": "PHY9_SOUND_PROPAGATION",
+          "concept": "Propagation of Sound",
+          "prerequisites": [
+            "PHY9_SOUND_PRODUCTION"
+          ],
+          "learning_outcomes": [
+            "Understand how sound travels through a medium",
+            "Explain the need for a medium for sound propagation"
+          ]
+        },
+        {
+          "concept_id": "PHY9_SOUND_CHARACTERISTICS",
+          "concept": "Characteristics of Sound",
+          "prerequisites": [
+            "PHY9_SOUND_PROPAGATION"
+          ],
+          "learning_outcomes": [
+            "Understand amplitude, frequency and time period",
+            "Relate frequency to pitch and amplitude to loudness"
+          ]
+        },
+        {
+          "concept_id": "PHY9_HUMAN_EAR",
+          "concept": "Human Ear",
+          "prerequisites": [
+            "PHY9_SOUND_CHARACTERISTICS"
+          ],
+          "learning_outcomes": [
+            "Understand the basic structure of the human ear",
+            "Explain how humans hear sound"
+          ]
+        }
+      ]
+    }
+  ]
+}

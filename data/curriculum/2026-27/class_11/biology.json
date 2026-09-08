@@ -1,0 +1,643 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 11,
+  "subject": "Biology",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 11 Biology"
+  },
+  "chapters": [
+    {
+      "chapter_id": "BIO11_CH01",
+      "chapter": "The Living World",
+      "concepts": [
+        {
+          "concept_id": "BIO11_LIVING_WORLD",
+          "concept": "Characteristics of Living Organisms",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Identify characteristics of living organisms",
+            "Understand the diversity of living organisms"
+          ]
+        },
+        {
+          "concept_id": "BIO11_TAXONOMY",
+          "concept": "Taxonomy and Classification",
+          "prerequisites": [
+            "BIO11_LIVING_WORLD"
+          ],
+          "learning_outcomes": [
+            "Understand the need for biological classification",
+            "Understand basic taxonomic categories"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH02",
+      "chapter": "Biological Classification",
+      "concepts": [
+        {
+          "concept_id": "BIO11_FIVE_KINGDOM",
+          "concept": "Five Kingdom Classification",
+          "prerequisites": [
+            "BIO11_TAXONOMY"
+          ],
+          "learning_outcomes": [
+            "Understand the five kingdom classification system",
+            "Compare major groups of organisms"
+          ]
+        },
+        {
+          "concept_id": "BIO11_MONERA",
+          "concept": "Kingdom Monera",
+          "prerequisites": [
+            "BIO11_FIVE_KINGDOM"
+          ],
+          "learning_outcomes": [
+            "Understand characteristics of bacteria",
+            "Identify major groups within Monera"
+          ]
+        },
+        {
+          "concept_id": "BIO11_PROTISTA",
+          "concept": "Kingdom Protista",
+          "prerequisites": [
+            "BIO11_FIVE_KINGDOM"
+          ],
+          "learning_outcomes": [
+            "Understand characteristics of protists",
+            "Identify major examples of protists"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH03",
+      "chapter": "Plant Kingdom",
+      "concepts": [
+        {
+          "concept_id": "BIO11_ALGAE",
+          "concept": "Algae",
+          "prerequisites": [
+            "BIO11_FIVE_KINGDOM"
+          ],
+          "learning_outcomes": [
+            "Understand characteristics of algae",
+            "Identify major groups of algae"
+          ]
+        },
+        {
+          "concept_id": "BIO11_BR bryophytes",
+          "concept": "Bryophytes",
+          "prerequisites": [
+            "BIO11_ALGAE"
+          ],
+          "learning_outcomes": [
+            "Understand characteristics of bryophytes",
+            "Identify common examples"
+          ]
+        },
+        {
+          "concept_id": "BIO11_PTERIDOPHYTES",
+          "concept": "Pteridophytes",
+          "prerequisites": [
+            "BIO11_BR bryophytes"
+          ],
+          "learning_outcomes": [
+            "Understand characteristics of pteridophytes",
+            "Understand their reproductive features"
+          ]
+        },
+        {
+          "concept_id": "BIO11_GYMNOSPERMS",
+          "concept": "Gymnosperms",
+          "prerequisites": [
+            "BIO11_PTERIDOPHYTES"
+          ],
+          "learning_outcomes": [
+            "Understand characteristics of gymnosperms",
+            "Identify common examples"
+          ]
+        },
+        {
+          "concept_id": "BIO11_ANGIOSPERMS",
+          "concept": "Angiosperms",
+          "prerequisites": [
+            "BIO11_GYMNOSPERMS"
+          ],
+          "learning_outcomes": [
+            "Understand characteristics of flowering plants",
+            "Differentiate major features of angiosperms"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH04",
+      "chapter": "Animal Kingdom",
+      "concepts": [
+        {
+          "concept_id": "BIO11_ANIMAL_CLASSIFICATION",
+          "concept": "Animal Classification",
+          "prerequisites": [
+            "BIO11_TAXONOMY"
+          ],
+          "learning_outcomes": [
+            "Understand principles of animal classification",
+            "Identify major animal groups"
+          ]
+        },
+        {
+          "concept_id": "BIO11_NON_CHORDATES",
+          "concept": "Non-chordates",
+          "prerequisites": [
+            "BIO11_ANIMAL_CLASSIFICATION"
+          ],
+          "learning_outcomes": [
+            "Identify major non-chordate phyla",
+            "Compare their basic characteristics"
+          ]
+        },
+        {
+          "concept_id": "BIO11_CHORDATES",
+          "concept": "Chordates",
+          "prerequisites": [
+            "BIO11_ANIMAL_CLASSIFICATION"
+          ],
+          "learning_outcomes": [
+            "Understand characteristics of chordates",
+            "Identify major chordate groups"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH05",
+      "chapter": "Morphology of Flowering Plants",
+      "concepts": [
+        {
+          "concept_id": "BIO11_ROOT",
+          "concept": "Root",
+          "prerequisites": [
+            "BIO11_ANGIOSPERMS"
+          ],
+          "learning_outcomes": [
+            "Understand root structure",
+            "Identify different types of roots"
+          ]
+        },
+        {
+          "concept_id": "BIO11_STEM",
+          "concept": "Stem",
+          "prerequisites": [
+            "BIO11_ANGIOSPERMS"
+          ],
+          "learning_outcomes": [
+            "Understand stem structure and functions"
+          ]
+        },
+        {
+          "concept_id": "BIO11_LEAF",
+          "concept": "Leaf",
+          "prerequisites": [
+            "BIO11_ANGIOSPERMS"
+          ],
+          "learning_outcomes": [
+            "Understand leaf structure",
+            "Explain functions of leaves"
+          ]
+        },
+        {
+          "concept_id": "BIO11_FLOWER",
+          "concept": "Flower",
+          "prerequisites": [
+            "BIO11_ANGIOSPERMS"
+          ],
+          "learning_outcomes": [
+            "Identify parts of a flower",
+            "Understand their functions"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH06",
+      "chapter": "Anatomy of Flowering Plants",
+      "concepts": [
+        {
+          "concept_id": "BIO11_PLANT_TISSUES",
+          "concept": "Plant Tissues",
+          "prerequisites": [
+            "BIO11_ANGIOSPERMS"
+          ],
+          "learning_outcomes": [
+            "Identify major plant tissues",
+            "Understand tissue functions"
+          ]
+        },
+        {
+          "concept_id": "BIO11_XYLEM_PHLOEM",
+          "concept": "Xylem and Phloem",
+          "prerequisites": [
+            "BIO11_PLANT_TISSUES"
+          ],
+          "learning_outcomes": [
+            "Understand vascular tissues",
+            "Differentiate xylem and phloem"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH07",
+      "chapter": "Cell: The Unit of Life",
+      "concepts": [
+        {
+          "concept_id": "BIO11_CELL_STRUCTURE",
+          "concept": "Cell Structure",
+          "prerequisites": [
+            "BIO11_CELL"
+          ],
+          "learning_outcomes": [
+            "Understand the basic structure of cells",
+            "Differentiate prokaryotic and eukaryotic cells"
+          ]
+        },
+        {
+          "concept_id": "BIO11_CELL_ORGANELLES",
+          "concept": "Cell Organelles",
+          "prerequisites": [
+            "BIO11_CELL_STRUCTURE"
+          ],
+          "learning_outcomes": [
+            "Identify major cell organelles",
+            "Explain their functions"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH08",
+      "chapter": "Biomolecules",
+      "concepts": [
+        {
+          "concept_id": "BIO11_CARBOHYDRATES",
+          "concept": "Carbohydrates",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the structure and functions of carbohydrates"
+          ]
+        },
+        {
+          "concept_id": "BIO11_PROTEINS",
+          "concept": "Proteins",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the structure and functions of proteins"
+          ]
+        },
+        {
+          "concept_id": "BIO11_NUCLEIC_ACIDS",
+          "concept": "Nucleic Acids",
+          "prerequisites": [
+            "BIO11_PROTEINS"
+          ],
+          "learning_outcomes": [
+            "Understand DNA and RNA",
+            "Differentiate major types of nucleic acids"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH09",
+      "chapter": "Cell Cycle and Cell Division",
+      "concepts": [
+        {
+          "concept_id": "BIO11_CELL_CYCLE",
+          "concept": "Cell Cycle",
+          "prerequisites": [
+            "BIO11_CELL_STRUCTURE"
+          ],
+          "learning_outcomes": [
+            "Understand stages of the cell cycle"
+          ]
+        },
+        {
+          "concept_id": "BIO11_MITOSIS",
+          "concept": "Mitosis",
+          "prerequisites": [
+            "BIO11_CELL_CYCLE"
+          ],
+          "learning_outcomes": [
+            "Understand stages of mitosis",
+            "Explain the importance of mitotic division"
+          ]
+        },
+        {
+          "concept_id": "BIO11_MEIOSIS",
+          "concept": "Meiosis",
+          "prerequisites": [
+            "BIO11_CELL_CYCLE"
+          ],
+          "learning_outcomes": [
+            "Understand stages of meiosis",
+            "Explain the importance of meiotic division"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH10",
+      "chapter": "Photosynthesis in Plants",
+      "concepts": [
+        {
+          "concept_id": "BIO11_PHOTOSYNTHESIS",
+          "concept": "Photosynthesis",
+          "prerequisites": [
+            "BIO11_CARBOHYDRATES"
+          ],
+          "learning_outcomes": [
+            "Understand the process of photosynthesis",
+            "Identify factors affecting photosynthesis"
+          ]
+        },
+        {
+          "concept_id": "BIO11_LIGHT_REACTION",
+          "concept": "Light Reaction",
+          "prerequisites": [
+            "BIO11_PHOTOSYNTHESIS"
+          ],
+          "learning_outcomes": [
+            "Understand the light-dependent reactions",
+            "Explain the role of chlorophyll"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH11",
+      "chapter": "Respiration in Plants",
+      "concepts": [
+        {
+          "concept_id": "BIO11_PLANT_RESPIRATION",
+          "concept": "Respiration in Plants",
+          "prerequisites": [
+            "BIO11_PHOTOSYNTHESIS"
+          ],
+          "learning_outcomes": [
+            "Understand cellular respiration",
+            "Differentiate aerobic and anaerobic respiration"
+          ]
+        },
+        {
+          "concept_id": "BIO11_GLYCOLYSIS",
+          "concept": "Glycolysis",
+          "prerequisites": [
+            "BIO11_PLANT_RESPIRATION"
+          ],
+          "learning_outcomes": [
+            "Understand the basic stages of glycolysis"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH12",
+      "chapter": "Plant Growth and Development",
+      "concepts": [
+        {
+          "concept_id": "BIO11_PLANT_GROWTH",
+          "concept": "Plant Growth",
+          "prerequisites": [
+            "BIO11_PLANT_TISSUES"
+          ],
+          "learning_outcomes": [
+            "Understand plant growth",
+            "Identify factors affecting plant growth"
+          ]
+        },
+        {
+          "concept_id": "BIO11_PLANT_HORMONES",
+          "concept": "Plant Growth Regulators",
+          "prerequisites": [
+            "BIO11_PLANT_GROWTH"
+          ],
+          "learning_outcomes": [
+            "Understand major plant hormones",
+            "Explain their roles in plant development"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH13",
+      "chapter": "Digestion and Absorption",
+      "concepts": [
+        {
+          "concept_id": "BIO11_DIGESTION",
+          "concept": "Human Digestive System",
+          "prerequisites": [
+            "BIO11_CARBOHYDRATES",
+            "BIO11_PROTEINS"
+          ],
+          "learning_outcomes": [
+            "Understand the human digestive system",
+            "Explain major stages of digestion"
+          ]
+        },
+        {
+          "concept_id": "BIO11_ABSORPTION",
+          "concept": "Absorption of Nutrients",
+          "prerequisites": [
+            "BIO11_DIGESTION"
+          ],
+          "learning_outcomes": [
+            "Understand absorption of digested nutrients",
+            "Explain the role of intestinal structures"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH14",
+      "chapter": "Breathing and Exchange of Gases",
+      "concepts": [
+        {
+          "concept_id": "BIO11_BREATHING",
+          "concept": "Breathing Mechanism",
+          "prerequisites": [
+            "BIO11_PLANT_RESPIRATION"
+          ],
+          "learning_outcomes": [
+            "Understand the mechanism of breathing",
+            "Identify major respiratory structures"
+          ]
+        },
+        {
+          "concept_id": "BIO11_GAS_EXCHANGE",
+          "concept": "Exchange of Gases",
+          "prerequisites": [
+            "BIO11_BREATHING"
+          ],
+          "learning_outcomes": [
+            "Understand gas exchange in lungs",
+            "Explain oxygen and carbon dioxide transport"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH15",
+      "chapter": "Body Fluids and Circulation",
+      "concepts": [
+        {
+          "concept_id": "BIO11_BLOOD",
+          "concept": "Blood",
+          "prerequisites": [
+            "BIO11_DIGESTION"
+          ],
+          "learning_outcomes": [
+            "Understand components of blood",
+            "Explain functions of blood"
+          ]
+        },
+        {
+          "concept_id": "BIO11_HEART",
+          "concept": "Human Heart",
+          "prerequisites": [
+            "BIO11_BLOOD"
+          ],
+          "learning_outcomes": [
+            "Understand the structure of the human heart",
+            "Explain the basic pathway of blood circulation"
+          ]
+        },
+        {
+          "concept_id": "BIO11_CIRCULATION",
+          "concept": "Circulation",
+          "prerequisites": [
+            "BIO11_HEART"
+          ],
+          "learning_outcomes": [
+            "Understand systemic and pulmonary circulation"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH16",
+      "chapter": "Excretory Products and Their Elimination",
+      "concepts": [
+        {
+          "concept_id": "BIO11_EXCRETION",
+          "concept": "Human Excretory System",
+          "prerequisites": [
+            "BIO11_BLOOD"
+          ],
+          "learning_outcomes": [
+            "Understand the human excretory system",
+            "Identify major excretory organs"
+          ]
+        },
+        {
+          "concept_id": "BIO11_URINE_FORMATION",
+          "concept": "Urine Formation",
+          "prerequisites": [
+            "BIO11_EXCRETION"
+          ],
+          "learning_outcomes": [
+            "Understand basic urine formation",
+            "Explain filtration and reabsorption"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH17",
+      "chapter": "Locomotion and Movement",
+      "concepts": [
+        {
+          "concept_id": "BIO11_SKELETAL_SYSTEM",
+          "concept": "Skeletal System",
+          "prerequisites": [
+            "BIO11_ANIMAL_CLASSIFICATION"
+          ],
+          "learning_outcomes": [
+            "Understand the human skeletal system",
+            "Identify major types of bones and joints"
+          ]
+        },
+        {
+          "concept_id": "BIO11_MUSCLE",
+          "concept": "Muscle Structure and Movement",
+          "prerequisites": [
+            "BIO11_SKELETAL_SYSTEM"
+          ],
+          "learning_outcomes": [
+            "Understand muscle structure",
+            "Explain the basic mechanism of muscle contraction"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH18",
+      "chapter": "Neural Control and Coordination",
+      "concepts": [
+        {
+          "concept_id": "BIO11_NEURON",
+          "concept": "Neuron",
+          "prerequisites": [
+            "BIO11_CELL_STRUCTURE"
+          ],
+          "learning_outcomes": [
+            "Understand neuron structure",
+            "Explain transmission of nerve impulses"
+          ]
+        },
+        {
+          "concept_id": "BIO11_NERVOUS_SYSTEM",
+          "concept": "Human Nervous System",
+          "prerequisites": [
+            "BIO11_NEURON"
+          ],
+          "learning_outcomes": [
+            "Understand organization of the nervous system",
+            "Identify major divisions of the nervous system"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "BIO11_CH19",
+      "chapter": "Chemical Coordination and Integration",
+      "concepts": [
+        {
+          "concept_id": "BIO11_ENDOCRINE",
+          "concept": "Endocrine System",
+          "prerequisites": [
+            "BIO11_NERVOUS_SYSTEM"
+          ],
+          "learning_outcomes": [
+            "Understand the endocrine system",
+            "Identify major endocrine glands"
+          ]
+        },
+        {
+          "concept_id": "BIO11_HORMONES",
+          "concept": "Hormones",
+          "prerequisites": [
+            "BIO11_ENDOCRINE"
+          ],
+          "learning_outcomes": [
+            "Understand major hormones",
+            "Explain their role in coordination"
+          ]
+        }
+      ]
+    }
+  ]
+}

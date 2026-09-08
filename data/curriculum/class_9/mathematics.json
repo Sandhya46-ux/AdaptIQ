@@ -1,0 +1,297 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 9,
+  "subject": "Mathematics",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 9 Mathematics"
+  },
+  "chapters": [
+    {
+      "chapter_id": "MATH9_CH01",
+      "chapter": "Number Systems",
+      "concepts": [
+        {
+          "concept_id": "MATH9_REAL_NUMBERS",
+          "concept": "Real Numbers",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand rational and irrational numbers",
+            "Represent real numbers on the number line"
+          ]
+        },
+        {
+          "concept_id": "MATH9_IRRATIONAL_NUMBERS",
+          "concept": "Irrational Numbers",
+          "prerequisites": [
+            "MATH9_REAL_NUMBERS"
+          ],
+          "learning_outcomes": [
+            "Identify irrational numbers",
+            "Differentiate rational and irrational numbers"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH9_CH02",
+      "chapter": "Polynomials",
+      "concepts": [
+        {
+          "concept_id": "MATH9_POLYNOMIALS",
+          "concept": "Polynomials",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand polynomial expressions",
+            "Identify coefficients and degree"
+          ]
+        },
+        {
+          "concept_id": "MATH9_ZEROES",
+          "concept": "Zeroes of a Polynomial",
+          "prerequisites": [
+            "MATH9_POLYNOMIALS"
+          ],
+          "learning_outcomes": [
+            "Identify zeroes of a polynomial",
+            "Understand the relationship between zeroes and graphs"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH9_CH03",
+      "chapter": "Coordinate Geometry",
+      "concepts": [
+        {
+          "concept_id": "MATH9_COORDINATE_PLANE",
+          "concept": "Coordinate Plane",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand Cartesian coordinates",
+            "Locate points on the coordinate plane"
+          ]
+        },
+        {
+          "concept_id": "MATH9_QUADRANTS",
+          "concept": "Quadrants",
+          "prerequisites": [
+            "MATH9_COORDINATE_PLANE"
+          ],
+          "learning_outcomes": [
+            "Identify the four quadrants",
+            "Determine the quadrant of a given point"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH9_CH04",
+      "chapter": "Linear Equations in Two Variables",
+      "concepts": [
+        {
+          "concept_id": "MATH9_LINEAR_EQUATIONS",
+          "concept": "Linear Equations in Two Variables",
+          "prerequisites": [
+            "MATH9_COORDINATE_PLANE"
+          ],
+          "learning_outcomes": [
+            "Understand linear equations in two variables",
+            "Find solutions of linear equations"
+          ]
+        },
+        {
+          "concept_id": "MATH9_GRAPH_LINEAR",
+          "concept": "Graph of a Linear Equation",
+          "prerequisites": [
+            "MATH9_LINEAR_EQUATIONS"
+          ],
+          "learning_outcomes": [
+            "Represent linear equations graphically",
+            "Interpret points on a linear graph"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH9_CH05",
+      "chapter": "Lines and Angles",
+      "concepts": [
+        {
+          "concept_id": "MATH9_LINES_ANGLES",
+          "concept": "Lines and Angles",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand different types of angles",
+            "Apply basic angle relationships"
+          ]
+        },
+        {
+          "concept_id": "MATH9_PARALLEL_LINES",
+          "concept": "Parallel Lines and Transversals",
+          "prerequisites": [
+            "MATH9_LINES_ANGLES"
+          ],
+          "learning_outcomes": [
+            "Understand angle relationships formed by parallel lines",
+            "Apply corresponding and alternate angle properties"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH9_CH06",
+      "chapter": "Triangles",
+      "concepts": [
+        {
+          "concept_id": "MATH9_TRIANGLES",
+          "concept": "Properties of Triangles",
+          "prerequisites": [
+            "MATH9_LINES_ANGLES"
+          ],
+          "learning_outcomes": [
+            "Understand basic properties of triangles",
+            "Apply triangle angle properties"
+          ]
+        },
+        {
+          "concept_id": "MATH9_CONGRUENCE",
+          "concept": "Congruence of Triangles",
+          "prerequisites": [
+            "MATH9_TRIANGLES"
+          ],
+          "learning_outcomes": [
+            "Understand congruent triangles",
+            "Apply congruence criteria"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH9_CH07",
+      "chapter": "Quadrilaterals",
+      "concepts": [
+        {
+          "concept_id": "MATH9_QUADRILATERALS",
+          "concept": "Properties of Quadrilaterals",
+          "prerequisites": [
+            "MATH9_TRIANGLES"
+          ],
+          "learning_outcomes": [
+            "Understand properties of quadrilaterals",
+            "Identify different types of quadrilaterals"
+          ]
+        },
+        {
+          "concept_id": "MATH9_PARALLELOGRAM",
+          "concept": "Parallelogram",
+          "prerequisites": [
+            "MATH9_QUADRILATERALS"
+          ],
+          "learning_outcomes": [
+            "Understand properties of parallelograms",
+            "Apply parallelogram theorems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH9_CH08",
+      "chapter": "Circles",
+      "concepts": [
+        {
+          "concept_id": "MATH9_CIRCLES",
+          "concept": "Circles",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand basic terminology of circles",
+            "Apply basic properties of circles"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH9_CH09",
+      "chapter": "Heron's Formula",
+      "concepts": [
+        {
+          "concept_id": "MATH9_HERON",
+          "concept": "Heron's Formula",
+          "prerequisites": [
+            "MATH9_TRIANGLES"
+          ],
+          "learning_outcomes": [
+            "Calculate the area of a triangle using Heron's formula",
+            "Apply the formula to numerical problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH9_CH10",
+      "chapter": "Surface Areas and Volumes",
+      "concepts": [
+        {
+          "concept_id": "MATH9_SURFACE_AREA",
+          "concept": "Surface Areas",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Calculate surface areas of basic solids"
+          ]
+        },
+        {
+          "concept_id": "MATH9_VOLUME",
+          "concept": "Volume",
+          "prerequisites": [
+            "MATH9_SURFACE_AREA"
+          ],
+          "learning_outcomes": [
+            "Calculate volumes of basic solids",
+            "Solve practical volume problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH9_CH11",
+      "chapter": "Statistics",
+      "concepts": [
+        {
+          "concept_id": "MATH9_STATISTICS",
+          "concept": "Collection and Presentation of Data",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand collection of data",
+            "Represent data using tables and graphs"
+          ]
+        },
+        {
+          "concept_id": "MATH9_HISTOGRAM",
+          "concept": "Histograms",
+          "prerequisites": [
+            "MATH9_STATISTICS"
+          ],
+          "learning_outcomes": [
+            "Construct and interpret histograms"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH9_CH12",
+      "chapter": "Probability",
+      "concepts": [
+        {
+          "concept_id": "MATH9_PROBABILITY",
+          "concept": "Probability",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand basic probability",
+            "Calculate probability of simple events"
+          ]
+        }
+      ]
+    }
+  ]
+}

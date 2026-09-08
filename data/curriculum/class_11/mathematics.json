@@ -1,0 +1,322 @@
+{
+  "curriculum_version": "2026-27",
+  "board": "CBSE",
+  "class": 11,
+  "subject": "Mathematics",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 11 Mathematics"
+  },
+  "chapters": [
+    {
+      "chapter_id": "MATH11_CH01",
+      "chapter": "Sets",
+      "concepts": [
+        {
+          "concept_id": "MATH11_SETS",
+          "concept": "Sets and Their Representations",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand the concept of sets",
+            "Represent sets in different forms"
+          ]
+        },
+        {
+          "concept_id": "MATH11_SET_OPERATIONS",
+          "concept": "Operations on Sets",
+          "prerequisites": [
+            "MATH11_SETS"
+          ],
+          "learning_outcomes": [
+            "Understand union and intersection",
+            "Apply set operations to problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH02",
+      "chapter": "Relations and Functions",
+      "concepts": [
+        {
+          "concept_id": "MATH11_RELATIONS",
+          "concept": "Relations",
+          "prerequisites": [
+            "MATH11_SETS"
+          ],
+          "learning_outcomes": [
+            "Understand relations between sets",
+            "Represent relations using ordered pairs"
+          ]
+        },
+        {
+          "concept_id": "MATH11_FUNCTIONS",
+          "concept": "Functions",
+          "prerequisites": [
+            "MATH11_RELATIONS"
+          ],
+          "learning_outcomes": [
+            "Understand the concept of a function",
+            "Identify domain, codomain and range"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH03",
+      "chapter": "Trigonometric Functions",
+      "concepts": [
+        {
+          "concept_id": "MATH11_TRIG_FUNCTIONS",
+          "concept": "Trigonometric Functions",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand trigonometric functions",
+            "Evaluate basic trigonometric values"
+          ]
+        },
+        {
+          "concept_id": "MATH11_TRIG_IDENTITIES",
+          "concept": "Trigonometric Identities",
+          "prerequisites": [
+            "MATH11_TRIG_FUNCTIONS"
+          ],
+          "learning_outcomes": [
+            "Apply trigonometric identities",
+            "Simplify trigonometric expressions"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH04",
+      "chapter": "Complex Numbers and Quadratic Equations",
+      "concepts": [
+        {
+          "concept_id": "MATH11_COMPLEX_NUMBERS",
+          "concept": "Complex Numbers",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand complex numbers",
+            "Represent complex numbers in standard form"
+          ]
+        },
+        {
+          "concept_id": "MATH11_QUADRATIC",
+          "concept": "Quadratic Equations",
+          "prerequisites": [
+            "MATH11_COMPLEX_NUMBERS"
+          ],
+          "learning_outcomes": [
+            "Solve quadratic equations",
+            "Understand roots of quadratic equations"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH05",
+      "chapter": "Linear Inequalities",
+      "concepts": [
+        {
+          "concept_id": "MATH11_INEQUALITIES",
+          "concept": "Linear Inequalities",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand linear inequalities",
+            "Solve linear inequalities in one variable"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH06",
+      "chapter": "Permutations and Combinations",
+      "concepts": [
+        {
+          "concept_id": "MATH11_PERMUTATIONS",
+          "concept": "Permutations",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand arrangements",
+            "Calculate permutations"
+          ]
+        },
+        {
+          "concept_id": "MATH11_COMBINATIONS",
+          "concept": "Combinations",
+          "prerequisites": [
+            "MATH11_PERMUTATIONS"
+          ],
+          "learning_outcomes": [
+            "Understand selections",
+            "Calculate combinations"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH07",
+      "chapter": "Binomial Theorem",
+      "concepts": [
+        {
+          "concept_id": "MATH11_BINOMIAL",
+          "concept": "Binomial Theorem",
+          "prerequisites": [
+            "MATH11_COMBINATIONS"
+          ],
+          "learning_outcomes": [
+            "Understand binomial expansion",
+            "Apply the binomial theorem"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH08",
+      "chapter": "Sequences and Series",
+      "concepts": [
+        {
+          "concept_id": "MATH11_SEQUENCES",
+          "concept": "Sequences",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand sequences",
+            "Identify patterns in sequences"
+          ]
+        },
+        {
+          "concept_id": "MATH11_AP_GP",
+          "concept": "Arithmetic and Geometric Progressions",
+          "prerequisites": [
+            "MATH11_SEQUENCES"
+          ],
+          "learning_outcomes": [
+            "Find terms of AP and GP",
+            "Calculate sums of AP and GP"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH09",
+      "chapter": "Straight Lines",
+      "concepts": [
+        {
+          "concept_id": "MATH11_STRAIGHT_LINES",
+          "concept": "Straight Lines",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand equations of straight lines",
+            "Determine slope and intercept"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH10",
+      "chapter": "Conic Sections",
+      "concepts": [
+        {
+          "concept_id": "MATH11_CONIC",
+          "concept": "Conic Sections",
+          "prerequisites": [
+            "MATH11_STRAIGHT_LINES"
+          ],
+          "learning_outcomes": [
+            "Understand basic conic sections",
+            "Identify standard forms of conic equations"
+          ]
+        },
+        {
+          "concept_id": "MATH11_CIRCLE",
+          "concept": "Circle",
+          "prerequisites": [
+            "MATH11_CONIC"
+          ],
+          "learning_outcomes": [
+            "Understand the equation of a circle",
+            "Solve basic circle problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH11",
+      "chapter": "Introduction to Three Dimensional Geometry",
+      "concepts": [
+        {
+          "concept_id": "MATH11_3D_COORDINATES",
+          "concept": "Three Dimensional Coordinates",
+          "prerequisites": [
+            "MATH11_STRAIGHT_LINES"
+          ],
+          "learning_outcomes": [
+            "Understand coordinates in three dimensions",
+            "Locate points in three-dimensional space"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH12",
+      "chapter": "Limits and Derivatives",
+      "concepts": [
+        {
+          "concept_id": "MATH11_LIMITS",
+          "concept": "Limits",
+          "prerequisites": [
+            "MATH11_FUNCTIONS"
+          ],
+          "learning_outcomes": [
+            "Understand the concept of a limit",
+            "Evaluate basic limits"
+          ]
+        },
+        {
+          "concept_id": "MATH11_DERIVATIVES",
+          "concept": "Derivatives",
+          "prerequisites": [
+            "MATH11_LIMITS"
+          ],
+          "learning_outcomes": [
+            "Understand derivatives",
+            "Calculate derivatives of basic functions"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH13",
+      "chapter": "Statistics",
+      "concepts": [
+        {
+          "concept_id": "MATH11_STATISTICS",
+          "concept": "Statistics",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand statistical measures",
+            "Calculate measures of dispersion"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "MATH11_CH14",
+      "chapter": "Probability",
+      "concepts": [
+        {
+          "concept_id": "MATH11_PROBABILITY",
+          "concept": "Probability",
+          "prerequisites": [
+            "MATH11_SETS"
+          ],
+          "learning_outcomes": [
+            "Understand probability of events",
+            "Calculate probabilities using basic rules"
+          ]
+        }
+      ]
+    }
+  ]
+}
