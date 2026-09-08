@@ -1,0 +1,57 @@
+[
+  {
+    "question_id": "PHY10_ELEC_001",
+    "mappings": []
+  },
+  {
+    "question_id": "PHY10_ELEC_002",
+    "mappings": [
+      {
+        "wrong_answer": "Electric current",
+        "misconception_id": "PHY10_ELEC_MIS_002"
+      },
+      {
+        "wrong_answer": "Resistance",
+        "misconception_id": "PHY10_ELEC_MIS_002"
+      },
+      {
+        "wrong_answer": "Electric power",
+        "misconception_id": "PHY10_ELEC_MIS_002"
+      }
+    ]
+  },
+  {
+    "question_id": "PHY10_ELEC_003",
+    "mappings": [
+      {
+        "wrong_answer": "Current decreases",
+        "misconception_id": "PHY10_ELEC_MIS_003"
+      },
+      {
+        "wrong_answer": "Current remains unchanged",
+        "misconception_id": "PHY10_ELEC_MIS_003"
+      },
+      {
+        "wrong_answer": "Current becomes zero",
+        "misconception_id": "PHY10_ELEC_MIS_003"
+      }
+    ]
+  },
+  {
+    "question_id": "PHY10_ELEC_004",
+    "mappings": [
+      {
+        "wrong_answer": "Current increases",
+        "misconception_id": "PHY10_ELEC_MIS_004"
+      },
+      {
+        "wrong_answer": "Current remains the same",
+        "misconception_id": "PHY10_ELEC_MIS_004"
+      },
+      {
+        "wrong_answer": "Current becomes infinite",
+        "misconception_id": "PHY10_ELEC_MIS_004"
+      }
+    ]
+  }
+]

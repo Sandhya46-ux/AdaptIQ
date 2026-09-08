@@ -1,0 +1,81 @@
+[
+  {
+    "misconception_id": "PHY10_ELEC_MIS_001",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Electric Current",
+    "misconception": "Electric current is the same as the amount of electric charge.",
+    "correct_understanding": "Electric current is the rate of flow of electric charge through a conductor.",
+    "common_wrong_answer": "Current is the total charge present in a conductor.",
+    "severity": "medium",
+    "tags": [
+      "electric-current",
+      "charge",
+      "rate-of-flow"
+    ]
+  },
+  {
+    "misconception_id": "PHY10_ELEC_MIS_002",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Electric Potential Difference",
+    "misconception": "Voltage is the same thing as electric current.",
+    "correct_understanding": "Potential difference is the work done per unit charge, while current is the rate of flow of charge.",
+    "common_wrong_answer": "Voltage and current are the same physical quantity.",
+    "severity": "high",
+    "tags": [
+      "voltage",
+      "potential-difference",
+      "current"
+    ]
+  },
+  {
+    "misconception_id": "PHY10_ELEC_MIS_003",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Ohm's Law",
+    "misconception": "Ohm's law means that current is always constant.",
+    "correct_understanding": "For an ohmic conductor at constant temperature, current is directly proportional to potential difference.",
+    "common_wrong_answer": "Current remains constant regardless of voltage.",
+    "severity": "high",
+    "tags": [
+      "ohms-law",
+      "current",
+      "voltage"
+    ]
+  },
+  {
+    "misconception_id": "PHY10_ELEC_MIS_004",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Resistance",
+    "misconception": "A higher resistance always produces a higher current.",
+    "correct_understanding": "For a fixed potential difference, increasing resistance decreases current.",
+    "common_wrong_answer": "Current increases when resistance increases.",
+    "severity": "high",
+    "tags": [
+      "resistance",
+      "current",
+      "ohms-law"
+    ]
+  },
+  {
+    "misconception_id": "PHY10_ELEC_MIS_005",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Electric Power",
+    "misconception": "Electric power and electric energy are the same quantity.",
+    "correct_understanding": "Electric power is the rate at which electrical energy is consumed or transferred.",
+    "common_wrong_answer": "Power is the total electrical energy consumed.",
+    "severity": "medium",
+    "tags": [
+      "electric-power",
+      "electric-energy"
+    ]
+  }
+]
