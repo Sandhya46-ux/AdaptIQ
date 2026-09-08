@@ -1,5 +1,5 @@
 {
-  "curriculum_version": "2026-27",
+  "curriculum_version": "2027-28",
   "board": "CBSE",
   "class": 12,
   "subject": "Physics",
@@ -21,19 +21,25 @@
         {
           "concept_id": "PHY12_COULOMB",
           "concept": "Coulomb's Law",
-          "prerequisites": ["PHY12_ELECTRIC_CHARGE"],
+          "prerequisites": [
+            "PHY12_ELECTRIC_CHARGE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_ELECTRIC_FIELD",
           "concept": "Electric Field",
-          "prerequisites": ["PHY12_ELECTRIC_CHARGE"],
+          "prerequisites": [
+            "PHY12_ELECTRIC_CHARGE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_GAUSS_LAW",
           "concept": "Gauss's Law",
-          "prerequisites": ["PHY12_ELECTRIC_FIELD"],
+          "prerequisites": [
+            "PHY12_ELECTRIC_FIELD"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -45,25 +51,33 @@
         {
           "concept_id": "PHY12_POTENTIAL",
           "concept": "Electric Potential",
-          "prerequisites": ["PHY12_ELECTRIC_FIELD"],
+          "prerequisites": [
+            "PHY12_ELECTRIC_FIELD"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_POTENTIAL_DIFFERENCE",
           "concept": "Potential Difference",
-          "prerequisites": ["PHY12_POTENTIAL"],
+          "prerequisites": [
+            "PHY12_POTENTIAL"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_CAPACITANCE",
           "concept": "Capacitance",
-          "prerequisites": ["PHY12_POTENTIAL_DIFFERENCE"],
+          "prerequisites": [
+            "PHY12_POTENTIAL_DIFFERENCE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_CAPACITOR_COMBINATIONS",
           "concept": "Combination of Capacitors",
-          "prerequisites": ["PHY12_CAPACITANCE"],
+          "prerequisites": [
+            "PHY12_CAPACITANCE"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -75,25 +89,33 @@
         {
           "concept_id": "PHY12_CURRENT",
           "concept": "Electric Current",
-          "prerequisites": ["PHY12_ELECTRIC_CHARGE"],
+          "prerequisites": [
+            "PHY12_ELECTRIC_CHARGE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_RESISTANCE",
           "concept": "Resistance and Resistivity",
-          "prerequisites": ["PHY12_CURRENT"],
+          "prerequisites": [
+            "PHY12_CURRENT"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_KIRCHHOFF",
           "concept": "Kirchhoff's Laws",
-          "prerequisites": ["PHY12_RESISTANCE"],
+          "prerequisites": [
+            "PHY12_RESISTANCE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_WHEATSTONE",
           "concept": "Wheatstone Bridge",
-          "prerequisites": ["PHY12_KIRCHHOFF"],
+          "prerequisites": [
+            "PHY12_KIRCHHOFF"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -105,25 +127,33 @@
         {
           "concept_id": "PHY12_MAGNETIC_FORCE",
           "concept": "Magnetic Force",
-          "prerequisites": ["PHY12_CURRENT"],
+          "prerequisites": [
+            "PHY12_CURRENT"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_BIOT_SAVART",
           "concept": "Biot-Savart Law",
-          "prerequisites": ["PHY12_MAGNETIC_FORCE"],
+          "prerequisites": [
+            "PHY12_MAGNETIC_FORCE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_AMPERE_LAW",
           "concept": "Ampere's Circuital Law",
-          "prerequisites": ["PHY12_BIOT_SAVART"],
+          "prerequisites": [
+            "PHY12_BIOT_SAVART"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_CHARGED_PARTICLE",
           "concept": "Motion of Charged Particles in Magnetic Field",
-          "prerequisites": ["PHY12_MAGNETIC_FORCE"],
+          "prerequisites": [
+            "PHY12_MAGNETIC_FORCE"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -135,19 +165,25 @@
         {
           "concept_id": "PHY12_MAGNETIC_MATERIALS",
           "concept": "Magnetic Materials",
-          "prerequisites": ["PHY12_MAGNETIC_FORCE"],
+          "prerequisites": [
+            "PHY12_MAGNETIC_FORCE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_EARTH_MAGNETISM",
           "concept": "Earth's Magnetism",
-          "prerequisites": ["PHY12_MAGNETIC_MATERIALS"],
+          "prerequisites": [
+            "PHY12_MAGNETIC_MATERIALS"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_MAGNETIC_PROPERTIES",
           "concept": "Magnetic Properties of Materials",
-          "prerequisites": ["PHY12_MAGNETIC_MATERIALS"],
+          "prerequisites": [
+            "PHY12_MAGNETIC_MATERIALS"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -159,25 +195,33 @@
         {
           "concept_id": "PHY12_EMI",
           "concept": "Electromagnetic Induction",
-          "prerequisites": ["PHY12_MAGNETIC_FORCE"],
+          "prerequisites": [
+            "PHY12_MAGNETIC_FORCE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_FARADAY",
           "concept": "Faraday's Laws",
-          "prerequisites": ["PHY12_EMI"],
+          "prerequisites": [
+            "PHY12_EMI"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_LENZ",
           "concept": "Lenz's Law",
-          "prerequisites": ["PHY12_FARADAY"],
+          "prerequisites": [
+            "PHY12_FARADAY"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_INDUCTANCE",
           "concept": "Self and Mutual Inductance",
-          "prerequisites": ["PHY12_EMI"],
+          "prerequisites": [
+            "PHY12_EMI"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -189,25 +233,33 @@
         {
           "concept_id": "PHY12_AC",
           "concept": "Alternating Current",
-          "prerequisites": ["PHY12_CURRENT"],
+          "prerequisites": [
+            "PHY12_CURRENT"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_RMS",
           "concept": "RMS Value of AC",
-          "prerequisites": ["PHY12_AC"],
+          "prerequisites": [
+            "PHY12_AC"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_LCR",
           "concept": "LCR Circuit",
-          "prerequisites": ["PHY12_AC"],
+          "prerequisites": [
+            "PHY12_AC"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_RESONANCE",
           "concept": "Resonance in AC Circuit",
-          "prerequisites": ["PHY12_LCR"],
+          "prerequisites": [
+            "PHY12_LCR"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -219,13 +271,17 @@
         {
           "concept_id": "PHY12_EM_WAVES",
           "concept": "Electromagnetic Waves",
-          "prerequisites": ["PHY12_EMI"],
+          "prerequisites": [
+            "PHY12_EMI"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_EM_SPECTRUM",
           "concept": "Electromagnetic Spectrum",
-          "prerequisites": ["PHY12_EM_WAVES"],
+          "prerequisites": [
+            "PHY12_EM_WAVES"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -243,19 +299,25 @@
         {
           "concept_id": "PHY12_REFRACTION",
           "concept": "Refraction of Light",
-          "prerequisites": ["PHY12_REFLECTION"],
+          "prerequisites": [
+            "PHY12_REFLECTION"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_LENSES",
           "concept": "Lenses and Lens Formula",
-          "prerequisites": ["PHY12_REFRACTION"],
+          "prerequisites": [
+            "PHY12_REFRACTION"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_OPTICAL_INSTRUMENTS",
           "concept": "Optical Instruments",
-          "prerequisites": ["PHY12_LENSES"],
+          "prerequisites": [
+            "PHY12_LENSES"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -267,25 +329,33 @@
         {
           "concept_id": "PHY12_WAVEFRONT",
           "concept": "Wavefront and Huygens Principle",
-          "prerequisites": ["PHY12_REFRACTION"],
+          "prerequisites": [
+            "PHY12_REFRACTION"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_INTERFERENCE",
           "concept": "Interference of Light",
-          "prerequisites": ["PHY12_WAVEFRONT"],
+          "prerequisites": [
+            "PHY12_WAVEFRONT"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_DIFFRACTION",
           "concept": "Diffraction of Light",
-          "prerequisites": ["PHY12_INTERFERENCE"],
+          "prerequisites": [
+            "PHY12_INTERFERENCE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_POLARISATION",
           "concept": "Polarisation",
-          "prerequisites": ["PHY12_WAVEFRONT"],
+          "prerequisites": [
+            "PHY12_WAVEFRONT"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -297,19 +367,25 @@
         {
           "concept_id": "PHY12_PHOTOELECTRIC",
           "concept": "Photoelectric Effect",
-          "prerequisites": ["PHY12_EM_WAVES"],
+          "prerequisites": [
+            "PHY12_EM_WAVES"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_MATTER_WAVES",
           "concept": "Matter Waves",
-          "prerequisites": ["PHY12_PHOTOELECTRIC"],
+          "prerequisites": [
+            "PHY12_PHOTOELECTRIC"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_DEBROGLIE",
           "concept": "de Broglie Wavelength",
-          "prerequisites": ["PHY12_MATTER_WAVES"],
+          "prerequisites": [
+            "PHY12_MATTER_WAVES"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -321,19 +397,25 @@
         {
           "concept_id": "PHY12_ATOMIC_MODELS",
           "concept": "Atomic Models",
-          "prerequisites": ["PHY12_PHOTOELECTRIC"],
+          "prerequisites": [
+            "PHY12_PHOTOELECTRIC"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_BOHR",
           "concept": "Bohr's Model of Atom",
-          "prerequisites": ["PHY12_ATOMIC_MODELS"],
+          "prerequisites": [
+            "PHY12_ATOMIC_MODELS"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_SPECTRA",
           "concept": "Atomic Spectra",
-          "prerequisites": ["PHY12_BOHR"],
+          "prerequisites": [
+            "PHY12_BOHR"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -345,25 +427,33 @@
         {
           "concept_id": "PHY12_NUCLEAR_STRUCTURE",
           "concept": "Nuclear Structure",
-          "prerequisites": ["PHY12_ATOMIC_MODELS"],
+          "prerequisites": [
+            "PHY12_ATOMIC_MODELS"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_RADIOACTIVITY",
           "concept": "Radioactivity",
-          "prerequisites": ["PHY12_NUCLEAR_STRUCTURE"],
+          "prerequisites": [
+            "PHY12_NUCLEAR_STRUCTURE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_BINDING_ENERGY",
           "concept": "Nuclear Binding Energy",
-          "prerequisites": ["PHY12_NUCLEAR_STRUCTURE"],
+          "prerequisites": [
+            "PHY12_NUCLEAR_STRUCTURE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_NUCLEAR_FISSION",
           "concept": "Nuclear Fission and Fusion",
-          "prerequisites": ["PHY12_BINDING_ENERGY"],
+          "prerequisites": [
+            "PHY12_BINDING_ENERGY"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -375,25 +465,33 @@
         {
           "concept_id": "PHY12_SEMICONDUCTORS",
           "concept": "Semiconductors",
-          "prerequisites": ["PHY12_CURRENT"],
+          "prerequisites": [
+            "PHY12_CURRENT"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_PN_JUNCTION",
           "concept": "p-n Junction",
-          "prerequisites": ["PHY12_SEMICONDUCTORS"],
+          "prerequisites": [
+            "PHY12_SEMICONDUCTORS"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_DIODE",
           "concept": "Semiconductor Diode",
-          "prerequisites": ["PHY12_PN_JUNCTION"],
+          "prerequisites": [
+            "PHY12_PN_JUNCTION"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "PHY12_LOGIC_GATES",
           "concept": "Logic Gates",
-          "prerequisites": ["PHY12_SEMICONDUCTORS"],
+          "prerequisites": [
+            "PHY12_SEMICONDUCTORS"
+          ],
           "learning_outcomes": []
         }
       ]
