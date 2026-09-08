@@ -3,6 +3,13 @@ import { useNavigate } from "react-router-dom";
 function Dashboard() {
   const navigate = useNavigate();
 
+  // Get logged-in student information
+  const user = JSON.parse(
+    localStorage.getItem("adaptIQUser") || "{}"
+  );
+
+  const username = user.username || "Student";
+
   return (
     <div className="dashboard-page">
 
@@ -10,10 +17,12 @@ function Dashboard() {
 
       <nav className="dashboard-navbar">
 
+        {/* Logo */}
         <div className="dashboard-logo">
           Adapt<span>IQ</span> 🧠
         </div>
 
+        {/* Navigation */}
         <div className="nav-links">
 
           <button className="active">
@@ -40,9 +49,23 @@ function Dashboard() {
 
         </div>
 
-        <div className="student-info">
-          👩‍🎓 <span>Student</span>
-        </div>
+        {/* ================= CLICKABLE PROFILE ================= */}
+
+        <button
+          className="student-profile-button"
+          onClick={() => navigate("/learner-profile")}
+          title="Open your profile"
+        >
+
+          <div className="student-avatar">
+            👩‍🎓
+          </div>
+
+          <div className="student-profile-name">
+            {username}
+          </div>
+
+        </button>
 
       </nav>
 
@@ -51,14 +74,14 @@ function Dashboard() {
 
       <main className="dashboard-container">
 
-        {/* Welcome Section */}
+        {/* ================= WELCOME SECTION ================= */}
 
         <section className="welcome-section">
 
           <div>
 
             <p className="welcome-label">
-              Welcome back to AdaptIQ👋
+              Welcome back to AdaptIQ 👋
             </p>
 
             <h1>
@@ -87,6 +110,8 @@ function Dashboard() {
 
         <section className="stats-grid">
 
+          {/* Overall Mastery */}
+
           <div className="stat-card">
 
             <div className="stat-icon">
@@ -94,12 +119,21 @@ function Dashboard() {
             </div>
 
             <div>
-              <p>Overall Mastery</p>
-              <h2>72%</h2>
+
+              <p>
+                Overall Mastery
+              </p>
+
+              <h2>
+                72%
+              </h2>
+
             </div>
 
           </div>
 
+
+          {/* Topics Completed */}
 
           <div className="stat-card">
 
@@ -108,12 +142,21 @@ function Dashboard() {
             </div>
 
             <div>
-              <p>Topics Completed</p>
-              <h2>12</h2>
+
+              <p>
+                Topics Completed
+              </p>
+
+              <h2>
+                12
+              </h2>
+
             </div>
 
           </div>
 
+
+          {/* Learning Streak */}
 
           <div className="stat-card">
 
@@ -122,12 +165,21 @@ function Dashboard() {
             </div>
 
             <div>
-              <p>Learning Streak</p>
-              <h2>7 Days</h2>
+
+              <p>
+                Learning Streak
+              </p>
+
+              <h2>
+                7 Days
+              </h2>
+
             </div>
 
           </div>
 
+
+          {/* Quiz Accuracy */}
 
           <div className="stat-card">
 
@@ -136,8 +188,15 @@ function Dashboard() {
             </div>
 
             <div>
-              <p>Quiz Accuracy</p>
-              <h2>84%</h2>
+
+              <p>
+                Quiz Accuracy
+              </p>
+
+              <h2>
+                84%
+              </h2>
+
             </div>
 
           </div>
@@ -150,13 +209,14 @@ function Dashboard() {
         <section className="dashboard-grid">
 
 
-          {/* Current Learning */}
+          {/* ================= CURRENT LEARNING ================= */}
 
           <div className="dashboard-card">
 
             <div className="card-header">
 
               <div>
+
                 <p className="card-label">
                   CURRENT LEARNING
                 </p>
@@ -164,6 +224,7 @@ function Dashboard() {
                 <h2>
                   Linear Equations
                 </h2>
+
               </div>
 
               <span className="status-badge">
@@ -196,7 +257,9 @@ function Dashboard() {
 
               <div
                 className="progress-fill"
-                style={{ width: "72%" }}
+                style={{
+                  width: "72%"
+                }}
               ></div>
 
             </div>
@@ -214,13 +277,14 @@ function Dashboard() {
           </div>
 
 
-          {/* Recommended */}
+          {/* ================= AI RECOMMENDATION ================= */}
 
           <div className="dashboard-card">
 
             <div className="card-header">
 
               <div>
+
                 <p className="card-label">
                   AI RECOMMENDATION
                 </p>
@@ -228,6 +292,7 @@ function Dashboard() {
                 <h2>
                   Focus Areas
                 </h2>
+
               </div>
 
               <span className="ai-badge">
@@ -244,6 +309,8 @@ function Dashboard() {
             </p>
 
 
+            {/* Fractions */}
+
             <div className="recommendation-item">
 
               <div className="recommendation-icon">
@@ -251,6 +318,7 @@ function Dashboard() {
               </div>
 
               <div>
+
                 <strong>
                   Fractions
                 </strong>
@@ -258,6 +326,7 @@ function Dashboard() {
                 <p>
                   Prerequisite gap
                 </p>
+
               </div>
 
               <span className="weak-score">
@@ -267,6 +336,8 @@ function Dashboard() {
             </div>
 
 
+            {/* Algebra */}
+
             <div className="recommendation-item">
 
               <div className="recommendation-icon">
@@ -274,6 +345,7 @@ function Dashboard() {
               </div>
 
               <div>
+
                 <strong>
                   Algebraic Expressions
                 </strong>
@@ -281,6 +353,7 @@ function Dashboard() {
                 <p>
                   Practice recommended
                 </p>
+
               </div>
 
               <span className="medium-score">
@@ -334,6 +407,102 @@ function Dashboard() {
         </section>
 
       </main>
+
+
+      {/* ================= PROFILE STYLES ================= */}
+
+      <style>{`
+
+        /* Clickable student profile */
+
+        .student-profile-button {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          border: none;
+          background: transparent;
+
+          padding: 6px 10px;
+          border-radius: 12px;
+
+          cursor: pointer;
+
+          transition: all 0.2s ease;
+        }
+
+
+        .student-profile-button:hover {
+          background: #f1f5f9;
+          transform: translateY(-1px);
+        }
+
+
+        /* Student circular avatar */
+
+        .student-avatar {
+          width: 42px;
+          height: 42px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          border-radius: 50%;
+
+          background: #eef2ff;
+
+          font-size: 23px;
+
+          border: 2px solid #c7d2fe;
+
+          transition: all 0.2s ease;
+        }
+
+
+        .student-profile-button:hover .student-avatar {
+          background: #e0e7ff;
+          border-color: #818cf8;
+        }
+
+
+        /* Username */
+
+        .student-profile-name {
+          max-width: 130px;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          color: #475569;
+
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+          .student-profile-name {
+            display: none;
+          }
+
+          .student-profile-button {
+            padding: 4px;
+          }
+
+          .student-avatar {
+            width: 40px;
+            height: 40px;
+            font-size: 21px;
+          }
+
+        }
+
+      `}</style>
 
     </div>
   );
