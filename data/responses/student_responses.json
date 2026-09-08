@@ -1,0 +1,22 @@
+[
+  {
+    "student_id": "STUDENT_001",
+    "question_id": "PHY10_ELEC_003",
+    "selected_answer": "Current remains unchanged",
+    "correct_answer": "Current increases",
+    "is_correct": false,
+    "concept": "Ohm's Law",
+    "misconception_id": "PHY10_ELEC_MIS_003",
+    "misconception": "Ohm's law means that current is always constant."
+  },
+  {
+    "student_id": "STUDENT_001",
+    "question_id": "PHY10_ELEC_003",
+    "selected_answer": "Current increases",
+    "correct_answer": "Current increases",
+    "is_correct": true,
+    "concept": "Ohm's Law",
+    "misconception_id": null,
+    "misconception": null
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "id": "PHY10_ELEC_001",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Electric Current",
+    "difficulty": "easy",
+    "question": "What is the SI unit of electric current?",
+    "options": [
+      "Volt",
+      "Ampere",
+      "Ohm",
+      "Watt"
+    ],
+    "answer": "Ampere",
+    "explanation": "The SI unit of electric current is ampere (A).",
+    "tags": [
+      "electricity",
+      "current",
+      "SI-unit"
+    ],
+    "misconception_id": "PHY10_ELEC_MIS_001"
+  },
+  {
+    "id": "PHY10_ELEC_002",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Electric Potential Difference",
+    "difficulty": "easy",
+    "question": "Which physical quantity is defined as the work done per unit charge?",
+    "options": [
+      "Electric current",
+      "Resistance",
+      "Potential difference",
+      "Electric power"
+    ],
+    "answer": "Potential difference",
+    "explanation": "Potential difference is defined as the work done per unit charge.",
+    "tags": [
+      "electricity",
+      "voltage",
+      "potential-difference"
+    ],
+    "misconception_id": "PHY10_ELEC_MIS_002"
+  },
+  {
+    "id": "PHY10_ELEC_003",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Ohm's Law",
+    "difficulty": "medium",
+    "question": "According to Ohm's law, what happens to current when the voltage increases while resistance remains constant?",
+    "options": [
+      "Current increases",
+      "Current decreases",
+      "Current remains unchanged",
+      "Current becomes zero"
+    ],
+    "answer": "Current increases",
+    "explanation": "According to Ohm's law, current is directly proportional to voltage when resistance remains constant.",
+    "tags": [
+      "electricity",
+      "ohms-law",
+      "current",
+      "voltage"
+    ],
+    "misconception_id": "PHY10_ELEC_MIS_003"
+  },
+  {
+    "id": "PHY10_ELEC_004",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Resistance",
+    "difficulty": "medium",
+    "question": "If the resistance of a conductor increases while the voltage remains constant, what happens to the current?",
+    "options": [
+      "Current increases",
+      "Current decreases",
+      "Current remains the same",
+      "Current becomes infinite"
+    ],
+    "answer": "Current decreases",
+    "explanation": "According to Ohm's law, current is inversely proportional to resistance when voltage is constant.",
+    "tags": [
+      "electricity",
+      "resistance",
+      "current",
+      "ohms-law"
+    ],
+    "misconception_id": "PHY10_ELEC_MIS_004"
+  }
+]

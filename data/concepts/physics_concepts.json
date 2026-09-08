@@ -1,0 +1,37 @@
+[
+  {
+    "concept_id": "PHY10_ELEC_CURRENT",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Electric Current"
+  },
+  {
+    "concept_id": "PHY10_ELEC_POTENTIAL",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Electric Potential Difference"
+  },
+  {
+    "concept_id": "PHY10_ELEC_OHM",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Ohm's Law"
+  },
+  {
+    "concept_id": "PHY10_ELEC_RESISTANCE",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Resistance"
+  },
+  {
+    "concept_id": "PHY10_ELEC_POWER",
+    "class": 10,
+    "subject": "Physics",
+    "chapter": "Electricity",
+    "concept": "Electric Power"
+  }
+]
