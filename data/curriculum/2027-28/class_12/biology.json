@@ -1,5 +1,5 @@
 {
-  "curriculum_version": "2026-27",
+  "curriculum_version": "2027-28",
   "board": "CBSE",
   "class": 12,
   "subject": "Biology",
@@ -21,19 +21,25 @@
         {
           "concept_id": "BIO12_GAMETOPHYTES",
           "concept": "Male and Female Gametophytes",
-          "prerequisites": ["BIO12_FLOWER_REPRODUCTION"],
+          "prerequisites": [
+            "BIO12_FLOWER_REPRODUCTION"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_POLLINATION",
           "concept": "Pollination",
-          "prerequisites": ["BIO12_GAMETOPHYTES"],
+          "prerequisites": [
+            "BIO12_GAMETOPHYTES"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_FERTILISATION",
           "concept": "Fertilisation and Double Fertilisation",
-          "prerequisites": ["BIO12_POLLINATION"],
+          "prerequisites": [
+            "BIO12_POLLINATION"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -66,7 +72,9 @@
         {
           "concept_id": "BIO12_MENSTRUAL_CYCLE",
           "concept": "Menstrual Cycle",
-          "prerequisites": ["BIO12_FEMALE_REPRODUCTIVE"],
+          "prerequisites": [
+            "BIO12_FEMALE_REPRODUCTIVE"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -87,19 +95,25 @@
         {
           "concept_id": "BIO12_CONTRACEPTION",
           "concept": "Contraceptive Methods",
-          "prerequisites": ["BIO12_REPRODUCTIVE_HEALTH"],
+          "prerequisites": [
+            "BIO12_REPRODUCTIVE_HEALTH"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_ASSISTED_REPRODUCTION",
           "concept": "Assisted Reproductive Technologies",
-          "prerequisites": ["BIO12_REPRODUCTIVE_HEALTH"],
+          "prerequisites": [
+            "BIO12_REPRODUCTIVE_HEALTH"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_STIS",
           "concept": "Sexually Transmitted Infections",
-          "prerequisites": ["BIO12_REPRODUCTIVE_HEALTH"],
+          "prerequisites": [
+            "BIO12_REPRODUCTIVE_HEALTH"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -117,19 +131,25 @@
         {
           "concept_id": "BIO12_INHERITANCE_PATTERNS",
           "concept": "Patterns of Inheritance",
-          "prerequisites": ["BIO12_MENDEL"],
+          "prerequisites": [
+            "BIO12_MENDEL"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_CHROMOSOMAL_THEORY",
           "concept": "Chromosomal Theory of Inheritance",
-          "prerequisites": ["BIO12_MENDEL"],
+          "prerequisites": [
+            "BIO12_MENDEL"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_MUTATION",
           "concept": "Mutation and Genetic Variation",
-          "prerequisites": ["BIO12_INHERITANCE_PATTERNS"],
+          "prerequisites": [
+            "BIO12_INHERITANCE_PATTERNS"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -141,25 +161,33 @@
         {
           "concept_id": "BIO12_DNA_STRUCTURE",
           "concept": "DNA Structure",
-          "prerequisites": ["BIO12_MUTATION"],
+          "prerequisites": [
+            "BIO12_MUTATION"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_DNA_REPLICATION",
           "concept": "DNA Replication",
-          "prerequisites": ["BIO12_DNA_STRUCTURE"],
+          "prerequisites": [
+            "BIO12_DNA_STRUCTURE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_TRANSCRIPTION",
           "concept": "Transcription",
-          "prerequisites": ["BIO12_DNA_STRUCTURE"],
+          "prerequisites": [
+            "BIO12_DNA_STRUCTURE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_TRANSLATION",
           "concept": "Translation",
-          "prerequisites": ["BIO12_TRANSCRIPTION"],
+          "prerequisites": [
+            "BIO12_TRANSCRIPTION"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -177,19 +205,25 @@
         {
           "concept_id": "BIO12_EVIDENCE_EVOLUTION",
           "concept": "Evidence for Evolution",
-          "prerequisites": ["BIO12_ORIGIN_LIFE"],
+          "prerequisites": [
+            "BIO12_ORIGIN_LIFE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_DARWIN",
           "concept": "Darwin's Theory of Evolution",
-          "prerequisites": ["BIO12_EVIDENCE_EVOLUTION"],
+          "prerequisites": [
+            "BIO12_EVIDENCE_EVOLUTION"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_HUMAN_EVOLUTION",
           "concept": "Human Evolution",
-          "prerequisites": ["BIO12_DARWIN"],
+          "prerequisites": [
+            "BIO12_DARWIN"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -207,19 +241,25 @@
         {
           "concept_id": "BIO12_IMMUNITY",
           "concept": "Immune System and Immunity",
-          "prerequisites": ["BIO12_HEALTH_DISEASE"],
+          "prerequisites": [
+            "BIO12_HEALTH_DISEASE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_INFECTIOUS_DISEASE",
           "concept": "Infectious Diseases",
-          "prerequisites": ["BIO12_HEALTH_DISEASE"],
+          "prerequisites": [
+            "BIO12_HEALTH_DISEASE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_CANCER",
           "concept": "Cancer",
-          "prerequisites": ["BIO12_HEALTH_DISEASE"],
+          "prerequisites": [
+            "BIO12_HEALTH_DISEASE"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -237,19 +277,25 @@
         {
           "concept_id": "BIO12_FOOD_MICROBES",
           "concept": "Microbes in Food Production",
-          "prerequisites": ["BIO12_MICROBES"],
+          "prerequisites": [
+            "BIO12_MICROBES"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_INDUSTRIAL_MICROBES",
           "concept": "Microbes in Industrial Production",
-          "prerequisites": ["BIO12_MICROBES"],
+          "prerequisites": [
+            "BIO12_MICROBES"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_WASTE_TREATMENT",
           "concept": "Microbes in Sewage Treatment",
-          "prerequisites": ["BIO12_MICROBES"],
+          "prerequisites": [
+            "BIO12_MICROBES"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -261,25 +307,33 @@
         {
           "concept_id": "BIO12_BIOTECHNOLOGY",
           "concept": "Principles of Biotechnology",
-          "prerequisites": ["BIO12_DNA_STRUCTURE"],
+          "prerequisites": [
+            "BIO12_DNA_STRUCTURE"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_RECOMBINANT_DNA",
           "concept": "Recombinant DNA Technology",
-          "prerequisites": ["BIO12_BIOTECHNOLOGY"],
+          "prerequisites": [
+            "BIO12_BIOTECHNOLOGY"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_GENE_CLONING",
           "concept": "Gene Cloning",
-          "prerequisites": ["BIO12_RECOMBINANT_DNA"],
+          "prerequisites": [
+            "BIO12_RECOMBINANT_DNA"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_PCR",
           "concept": "Polymerase Chain Reaction",
-          "prerequisites": ["BIO12_RECOMBINANT_DNA"],
+          "prerequisites": [
+            "BIO12_RECOMBINANT_DNA"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -291,25 +345,33 @@
         {
           "concept_id": "BIO12_GM_CROPS",
           "concept": "Genetically Modified Organisms",
-          "prerequisites": ["BIO12_RECOMBINANT_DNA"],
+          "prerequisites": [
+            "BIO12_RECOMBINANT_DNA"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_GENE_THERAPY",
           "concept": "Gene Therapy",
-          "prerequisites": ["BIO12_GENE_CLONING"],
+          "prerequisites": [
+            "BIO12_GENE_CLONING"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_BIOTECH_MEDICINE",
           "concept": "Biotechnology in Medicine",
-          "prerequisites": ["BIO12_BIOTECHNOLOGY"],
+          "prerequisites": [
+            "BIO12_BIOTECHNOLOGY"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_BIOETHICS",
           "concept": "Biotechnology and Bioethics",
-          "prerequisites": ["BIO12_BIOTECHNOLOGY"],
+          "prerequisites": [
+            "BIO12_BIOTECHNOLOGY"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -327,19 +389,25 @@
         {
           "concept_id": "BIO12_POPULATION",
           "concept": "Population Attributes",
-          "prerequisites": ["BIO12_ORGANISM_ENVIRONMENT"],
+          "prerequisites": [
+            "BIO12_ORGANISM_ENVIRONMENT"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_POPULATION_GROWTH",
           "concept": "Population Growth",
-          "prerequisites": ["BIO12_POPULATION"],
+          "prerequisites": [
+            "BIO12_POPULATION"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_ADAPTATION",
           "concept": "Adaptations",
-          "prerequisites": ["BIO12_ORGANISM_ENVIRONMENT"],
+          "prerequisites": [
+            "BIO12_ORGANISM_ENVIRONMENT"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -351,25 +419,33 @@
         {
           "concept_id": "BIO12_ECOSYSTEM",
           "concept": "Ecosystem Structure",
-          "prerequisites": ["BIO12_ORGANISM_ENVIRONMENT"],
+          "prerequisites": [
+            "BIO12_ORGANISM_ENVIRONMENT"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_PRODUCTIVITY",
           "concept": "Productivity",
-          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "prerequisites": [
+            "BIO12_ECOSYSTEM"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_DECOMPOSITION",
           "concept": "Decomposition",
-          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "prerequisites": [
+            "BIO12_ECOSYSTEM"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_ENERGY_FLOW",
           "concept": "Energy Flow in Ecosystem",
-          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "prerequisites": [
+            "BIO12_ECOSYSTEM"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -381,25 +457,33 @@
         {
           "concept_id": "BIO12_BIODIVERSITY",
           "concept": "Biodiversity",
-          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "prerequisites": [
+            "BIO12_ECOSYSTEM"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_BIODIVERSITY_PATTERNS",
           "concept": "Patterns of Biodiversity",
-          "prerequisites": ["BIO12_BIODIVERSITY"],
+          "prerequisites": [
+            "BIO12_BIODIVERSITY"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_BIODIVERSITY_LOSS",
           "concept": "Biodiversity Loss",
-          "prerequisites": ["BIO12_BIODIVERSITY"],
+          "prerequisites": [
+            "BIO12_BIODIVERSITY"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_CONSERVATION",
           "concept": "Biodiversity Conservation",
-          "prerequisites": ["BIO12_BIODIVERSITY_LOSS"],
+          "prerequisites": [
+            "BIO12_BIODIVERSITY_LOSS"
+          ],
           "learning_outcomes": []
         }
       ]
@@ -411,25 +495,33 @@
         {
           "concept_id": "BIO12_AIR_POLLUTION",
           "concept": "Air Pollution",
-          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "prerequisites": [
+            "BIO12_ECOSYSTEM"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_WATER_POLLUTION",
           "concept": "Water Pollution",
-          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "prerequisites": [
+            "BIO12_ECOSYSTEM"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_SOLID_WASTE",
           "concept": "Solid Waste Management",
-          "prerequisites": ["BIO12_ECOSYSTEM"],
+          "prerequisites": [
+            "BIO12_ECOSYSTEM"
+          ],
           "learning_outcomes": []
         },
         {
           "concept_id": "BIO12_GLOBAL_WARMING",
           "concept": "Global Warming and Ozone Depletion",
-          "prerequisites": ["BIO12_AIR_POLLUTION"],
+          "prerequisites": [
+            "BIO12_AIR_POLLUTION"
+          ],
           "learning_outcomes": []
         }
       ]

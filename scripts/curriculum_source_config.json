@@ -1,0 +1,17 @@
+{
+  "current_version": "2026-27",
+  "next_version": "2027-28",
+  "board": "CBSE",
+  "source": {
+    "type": "official_document",
+    "organization": "CBSE/NCERT",
+    "requires_manual_download": true
+  },
+  "classes": [9, 10, 11, 12],
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Chemistry",
+    "Biology"
+  ]
+}

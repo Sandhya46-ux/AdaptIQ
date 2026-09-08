@@ -1,0 +1,393 @@
+{
+  "curriculum_version": "2027-28",
+  "board": "CBSE",
+  "class": 11,
+  "subject": "Physics",
+  "source": {
+    "type": "NCERT",
+    "reference": "Class 11 Physics"
+  },
+  "chapters": [
+    {
+      "chapter_id": "PHY11_CH01",
+      "chapter": "Units and Measurements",
+      "concepts": [
+        {
+          "concept_id": "PHY11_UNITS",
+          "concept": "Units and Physical Quantities",
+          "prerequisites": [],
+          "learning_outcomes": [
+            "Understand physical quantities and units",
+            "Differentiate fundamental and derived quantities"
+          ]
+        },
+        {
+          "concept_id": "PHY11_MEASUREMENTS",
+          "concept": "Measurement and Errors",
+          "prerequisites": [
+            "PHY11_UNITS"
+          ],
+          "learning_outcomes": [
+            "Understand measurement errors",
+            "Apply significant figures in measurements"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY11_CH02",
+      "chapter": "Motion in a Straight Line",
+      "concepts": [
+        {
+          "concept_id": "PHY11_POSITION",
+          "concept": "Position and Displacement",
+          "prerequisites": [
+            "PHY11_UNITS"
+          ],
+          "learning_outcomes": [
+            "Understand position and displacement",
+            "Differentiate distance and displacement"
+          ]
+        },
+        {
+          "concept_id": "PHY11_VELOCITY",
+          "concept": "Velocity and Acceleration",
+          "prerequisites": [
+            "PHY11_POSITION"
+          ],
+          "learning_outcomes": [
+            "Calculate velocity and acceleration",
+            "Interpret motion using equations"
+          ]
+        },
+        {
+          "concept_id": "PHY11_MOTION_GRAPHS",
+          "concept": "Motion Graphs",
+          "prerequisites": [
+            "PHY11_VELOCITY"
+          ],
+          "learning_outcomes": [
+            "Interpret position-time graphs",
+            "Interpret velocity-time graphs"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY11_CH03",
+      "chapter": "Motion in a Plane",
+      "concepts": [
+        {
+          "concept_id": "PHY11_VECTORS",
+          "concept": "Vectors",
+          "prerequisites": [
+            "PHY11_UNITS"
+          ],
+          "learning_outcomes": [
+            "Understand scalar and vector quantities",
+            "Perform basic vector operations"
+          ]
+        },
+        {
+          "concept_id": "PHY11_PROJECTILE",
+          "concept": "Projectile Motion",
+          "prerequisites": [
+            "PHY11_VECTORS",
+            "PHY11_VELOCITY"
+          ],
+          "learning_outcomes": [
+            "Understand projectile motion",
+            "Solve basic projectile-motion problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY11_CH04",
+      "chapter": "Laws of Motion",
+      "concepts": [
+        {
+          "concept_id": "PHY11_FORCE",
+          "concept": "Force and Inertia",
+          "prerequisites": [
+            "PHY11_VELOCITY"
+          ],
+          "learning_outcomes": [
+            "Understand force and inertia",
+            "Identify forces acting on an object"
+          ]
+        },
+        {
+          "concept_id": "PHY11_NEWTON_LAWS",
+          "concept": "Newton's Laws of Motion",
+          "prerequisites": [
+            "PHY11_FORCE"
+          ],
+          "learning_outcomes": [
+            "State Newton's laws",
+            "Apply Newton's laws to physical situations"
+          ]
+        },
+        {
+          "concept_id": "PHY11_FRICTION",
+          "concept": "Friction",
+          "prerequisites": [
+            "PHY11_NEWTON_LAWS"
+          ],
+          "learning_outcomes": [
+            "Understand friction",
+            "Differentiate static and kinetic friction"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY11_CH05",
+      "chapter": "Work, Energy and Power",
+      "concepts": [
+        {
+          "concept_id": "PHY11_WORK",
+          "concept": "Work",
+          "prerequisites": [
+            "PHY11_FORCE"
+          ],
+          "learning_outcomes": [
+            "Understand work done by a force",
+            "Calculate work in simple cases"
+          ]
+        },
+        {
+          "concept_id": "PHY11_ENERGY",
+          "concept": "Kinetic and Potential Energy",
+          "prerequisites": [
+            "PHY11_WORK"
+          ],
+          "learning_outcomes": [
+            "Understand kinetic and potential energy",
+            "Calculate mechanical energy"
+          ]
+        },
+        {
+          "concept_id": "PHY11_POWER",
+          "concept": "Power",
+          "prerequisites": [
+            "PHY11_WORK"
+          ],
+          "learning_outcomes": [
+            "Understand power",
+            "Calculate power from work and time"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY11_CH06",
+      "chapter": "System of Particles and Rotational Motion",
+      "concepts": [
+        {
+          "concept_id": "PHY11_CENTER_MASS",
+          "concept": "Centre of Mass",
+          "prerequisites": [
+            "PHY11_VECTORS"
+          ],
+          "learning_outcomes": [
+            "Understand centre of mass",
+            "Calculate centre of mass for simple systems"
+          ]
+        },
+        {
+          "concept_id": "PHY11_MOMENTUM",
+          "concept": "Linear Momentum",
+          "prerequisites": [
+            "PHY11_NEWTON_LAWS"
+          ],
+          "learning_outcomes": [
+            "Understand linear momentum",
+            "Apply conservation of momentum"
+          ]
+        },
+        {
+          "concept_id": "PHY11_ROTATION",
+          "concept": "Rotational Motion",
+          "prerequisites": [
+            "PHY11_CENTER_MASS"
+          ],
+          "learning_outcomes": [
+            "Understand angular motion",
+            "Relate angular and linear quantities"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY11_CH07",
+      "chapter": "Gravitation",
+      "concepts": [
+        {
+          "concept_id": "PHY11_GRAVITATION",
+          "concept": "Universal Law of Gravitation",
+          "prerequisites": [
+            "PHY11_FORCE"
+          ],
+          "learning_outcomes": [
+            "Understand universal gravitation",
+            "Apply Newton's law of gravitation"
+          ]
+        },
+        {
+          "concept_id": "PHY11_GRAVITY",
+          "concept": "Acceleration Due to Gravity",
+          "prerequisites": [
+            "PHY11_GRAVITATION"
+          ],
+          "learning_outcomes": [
+            "Understand acceleration due to gravity",
+            "Solve basic gravitational problems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY11_CH08",
+      "chapter": "Properties of Bulk Matter",
+      "concepts": [
+        {
+          "concept_id": "PHY11_ELASTICITY",
+          "concept": "Mechanical Properties of Solids",
+          "prerequisites": [
+            "PHY11_FORCE"
+          ],
+          "learning_outcomes": [
+            "Understand elasticity",
+            "Understand stress and strain"
+          ]
+        },
+        {
+          "concept_id": "PHY11_FLUIDS",
+          "concept": "Mechanical Properties of Fluids",
+          "prerequisites": [
+            "PHY11_FORCE"
+          ],
+          "learning_outcomes": [
+            "Understand pressure in fluids",
+            "Apply basic fluid principles"
+          ]
+        },
+        {
+          "concept_id": "PHY11_THERMAL",
+          "concept": "Thermal Properties of Matter",
+          "prerequisites": [
+            "PHY11_ENERGY"
+          ],
+          "learning_outcomes": [
+            "Understand thermal expansion",
+            "Understand heat transfer"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY11_CH09",
+      "chapter": "Thermodynamics",
+      "concepts": [
+        {
+          "concept_id": "PHY11_THERMODYNAMICS",
+          "concept": "Laws of Thermodynamics",
+          "prerequisites": [
+            "PHY11_ENERGY",
+            "PHY11_THERMAL"
+          ],
+          "learning_outcomes": [
+            "Understand the laws of thermodynamics",
+            "Apply thermodynamic principles"
+          ]
+        },
+        {
+          "concept_id": "PHY11_HEAT_ENGINE",
+          "concept": "Heat Engines",
+          "prerequisites": [
+            "PHY11_THERMODYNAMICS"
+          ],
+          "learning_outcomes": [
+            "Understand heat engines",
+            "Understand conversion of heat into work"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY11_CH10",
+      "chapter": "Kinetic Theory",
+      "concepts": [
+        {
+          "concept_id": "PHY11_KINETIC_THEORY",
+          "concept": "Kinetic Theory of Gases",
+          "prerequisites": [
+            "PHY11_THERMODYNAMICS"
+          ],
+          "learning_outcomes": [
+            "Understand kinetic theory",
+            "Relate microscopic motion to gas properties"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY11_CH11",
+      "chapter": "Oscillations",
+      "concepts": [
+        {
+          "concept_id": "PHY11_SHM",
+          "concept": "Simple Harmonic Motion",
+          "prerequisites": [
+            "PHY11_MOTION_GRAPHS"
+          ],
+          "learning_outcomes": [
+            "Understand simple harmonic motion",
+            "Identify characteristics of SHM"
+          ]
+        },
+        {
+          "concept_id": "PHY11_SHM_ENERGY",
+          "concept": "Energy in Oscillations",
+          "prerequisites": [
+            "PHY11_SHM",
+            "PHY11_ENERGY"
+          ],
+          "learning_outcomes": [
+            "Understand energy changes during oscillation",
+            "Apply energy conservation to oscillatory systems"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "PHY11_CH12",
+      "chapter": "Waves",
+      "concepts": [
+        {
+          "concept_id": "PHY11_WAVE_MOTION",
+          "concept": "Wave Motion",
+          "prerequisites": [
+            "PHY11_SHM"
+          ],
+          "learning_outcomes": [
+            "Understand wave motion",
+            "Differentiate transverse and longitudinal waves"
+          ]
+        },
+        {
+          "concept_id": "PHY11_SOUND_WAVES",
+          "concept": "Sound Waves",
+          "prerequisites": [
+            "PHY11_WAVE_MOTION"
+          ],
+          "learning_outcomes": [
+            "Understand characteristics of sound waves",
+            "Relate frequency, wavelength and wave speed"
+          ]
+        }
+      ]
+    }
+  ]
+}
