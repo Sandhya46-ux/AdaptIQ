@@ -7,24 +7,28 @@ from pathlib import Path
 from google import genai
 
 
-# ==========================================
+# ============================================================
 # CONFIGURATION
-# ==========================================
+# ============================================================
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CONCEPTS_FILE = (
+CONFIG_FILE = (
     BASE_DIR
-    / "data"
-    / "concepts"
-    / "physics_concepts.json"
+    / "scripts"
+    / "curriculum_source_config.json"
 )
 
-QUESTIONS_FILE = (
+CURRICULUM_DIR = (
+    BASE_DIR
+    / "data"
+    / "curriculum"
+)
+
+QUESTIONS_DIR = (
     BASE_DIR
     / "data"
     / "questions"
-    / "physics_questions.json"
 )
 
 # Gemini models in fallback order
@@ -34,110 +38,167 @@ MODELS = [
     "gemini-3.6-flash"
 ]
 
+SUBJECT_FILES = {
+    "Mathematics": "math_questions.json",
+    "Physics": "physics_questions.json",
+    "Chemistry": "chemistry_questions.json",
+    "Biology": "biology_questions.json"
+}
 
-# ==========================================
+
+# ============================================================
 # GEMINI CLIENT
-# ==========================================
+# ============================================================
 
 API_KEY = os.getenv("GEMINI_API_KEY")
 
 if not API_KEY:
-    print("❌ GEMINI_API_KEY is not set.")
     print(
-        "Please set your Gemini API key "
-        "as a Windows environment variable."
+        "ERROR: GEMINI_API_KEY environment variable "
+        "is not set."
     )
-    exit(1)
+    raise SystemExit(1)
 
-client = genai.Client(api_key=API_KEY)
-
-
-# ==========================================
-# LOAD CONCEPTS
-# ==========================================
-
-def load_concepts():
-
-    with open(
-        CONCEPTS_FILE,
-        "r",
-        encoding="utf-8"
-    ) as file:
-
-        return json.load(file)
+client = genai.Client(
+    api_key=API_KEY
+)
 
 
-# ==========================================
-# LOAD EXISTING QUESTIONS
-# ==========================================
+# ============================================================
+# LOAD CONFIGURATION
+# ============================================================
 
-def load_questions():
+def load_config():
 
-    if not QUESTIONS_FILE.exists():
-        return []
+    if not CONFIG_FILE.exists():
 
-    with open(
-        QUESTIONS_FILE,
-        "r",
-        encoding="utf-8"
-    ) as file:
+        print(
+            f"ERROR: Configuration file not found:\n"
+            f"{CONFIG_FILE}"
+        )
 
-        return json.load(file)
+        raise SystemExit(1)
+
+    try:
+
+        with open(
+            CONFIG_FILE,
+            "r",
+            encoding="utf-8"
+        ) as file:
+
+            return json.load(file)
+
+    except Exception as error:
+
+        print(
+            f"ERROR: Could not load configuration: "
+            f"{error}"
+        )
+
+        raise SystemExit(1)
 
 
-# ==========================================
-# GENERATE QUESTION ID
-# ==========================================
+# ============================================================
+# LOAD CURRICULUM
+# ============================================================
 
-def generate_id(
+def load_curriculum(
+    version,
     class_num,
-    chapter,
-    existing_questions
+    subject
 ):
 
-    chapter_code = re.sub(
-        r"[^A-Za-z]",
-        "",
-        chapter
-    ).upper()[:4]
+    subject_file = subject.lower() + ".json"
 
-    existing_numbers = []
-
-    for question in existing_questions:
-
-        question_id = question.get(
-            "id",
-            ""
-        )
-
-        match = re.search(
-            r"_(\d+)$",
-            question_id
-        )
-
-        if match:
-
-            existing_numbers.append(
-                int(match.group(1))
-            )
-
-    next_number = (
-        max(existing_numbers, default=0)
-        + 1
+    curriculum_file = (
+        CURRICULUM_DIR
+        / version
+        / f"class_{class_num}"
+        / subject_file
     )
 
-    return (
-        f"PHY{class_num}_"
-        f"{chapter_code}_"
-        f"{next_number:03d}"
+    # Mathematics filename is different
+    if subject == "Mathematics":
+
+        curriculum_file = (
+            CURRICULUM_DIR
+            / version
+            / f"class_{class_num}"
+            / "mathematics.json"
+        )
+
+    if not curriculum_file.exists():
+
+        print()
+        print(
+            "ERROR: Curriculum file not found:"
+        )
+
+        print(curriculum_file)
+
+        raise SystemExit(1)
+
+    try:
+
+        with open(
+            curriculum_file,
+            "r",
+            encoding="utf-8"
+        ) as file:
+
+            data = json.load(file)
+
+    except Exception as error:
+
+        print(
+            f"ERROR: Could not read curriculum: "
+            f"{error}"
+        )
+
+        raise SystemExit(1)
+
+    return data
+
+
+# ============================================================
+# GET CHAPTERS
+# ============================================================
+
+def get_chapters(
+    curriculum
+):
+
+    return curriculum.get(
+        "chapters",
+        []
     )
 
 
-# ==========================================
-# CLEAN GEMINI RESPONSE
-# ==========================================
+# ============================================================
+# GET CONCEPTS
+# ============================================================
 
-def clean_json_response(text):
+def get_concepts(
+    chapter
+):
+
+    return chapter.get(
+        "concepts",
+        []
+    )
+
+
+# ============================================================
+# CLEAN GEMINI JSON
+# ============================================================
+
+def clean_json_response(
+    text
+):
+
+    if not text:
+        return ""
 
     text = text.strip()
 
@@ -156,7 +217,6 @@ def clean_json_response(text):
         text
     )
 
-    # Remove ending ```
     text = re.sub(
         r"\s*```$",
         "",
@@ -166,12 +226,13 @@ def clean_json_response(text):
     return text.strip()
 
 
-# ==========================================
+# ============================================================
 # VALIDATE GENERATED QUESTIONS
-# ==========================================
+# ============================================================
 
 def validate_generated_questions(
-    questions
+    questions,
+    expected_concept
 ):
 
     errors = []
@@ -192,46 +253,50 @@ def validate_generated_questions(
         "tags"
     ]
 
-    # --------------------------------------
+    # --------------------------------------------------------
     # Check list
-    # --------------------------------------
+    # --------------------------------------------------------
 
     if not isinstance(
         questions,
         list
     ):
 
-        print(
-            "❌ Generated data is not a list."
-        )
+        return [
+            "Generated response is not a list."
+        ]
 
-        return False
+    if len(questions) == 0:
 
-    # --------------------------------------
-    # Check every question
-    # --------------------------------------
+        return [
+            "No questions were generated."
+        ]
+
+    # --------------------------------------------------------
+    # Validate each question
+    # --------------------------------------------------------
+
+    seen_questions = set()
 
     for index, question in enumerate(
         questions,
         start=1
     ):
 
-        # Make sure question is object
         if not isinstance(
             question,
             dict
         ):
 
             errors.append(
-                f"Question {index}: "
-                "must be a JSON object"
+                f"Question {index} is not an object."
             )
 
             continue
 
-        # ----------------------------------
+        # ----------------------------------------------------
         # Required fields
-        # ----------------------------------
+        # ----------------------------------------------------
 
         for field in required_fields:
 
@@ -239,80 +304,67 @@ def validate_generated_questions(
 
                 errors.append(
                     f"Question {index}: "
-                    f"missing '{field}'"
+                    f"missing '{field}'."
                 )
 
-        # If fields are missing, skip
-        # deeper validation
         if any(
             field not in question
             for field in required_fields
         ):
-
             continue
 
-        # ----------------------------------
+        # ----------------------------------------------------
         # Concept
-        # ----------------------------------
+        # ----------------------------------------------------
 
-        if not isinstance(
-            question["concept"],
-            str
-        ):
+        if question["concept"] != expected_concept:
 
             errors.append(
-                f"Question {index}: "
-                "concept must be text"
+                f"Question {index}: concept "
+                f"'{question['concept']}' does not match "
+                f"'{expected_concept}'."
             )
 
-        elif not question[
-            "concept"
-        ].strip():
-
-            errors.append(
-                f"Question {index}: "
-                "concept is empty"
-            )
-
-        # ----------------------------------
+        # ----------------------------------------------------
         # Difficulty
-        # ----------------------------------
+        # ----------------------------------------------------
 
-        if question[
-            "difficulty"
-        ] not in valid_difficulties:
+        if question["difficulty"] not in valid_difficulties:
 
             errors.append(
-                f"Question {index}: "
-                "invalid difficulty"
+                f"Question {index}: invalid difficulty "
+                f"'{question['difficulty']}'."
             )
 
-        # ----------------------------------
+        # ----------------------------------------------------
         # Question text
-        # ----------------------------------
+        # ----------------------------------------------------
 
-        if not isinstance(
-            question["question"],
-            str
-        ):
+        question_text = str(
+            question["question"]
+        ).strip()
 
-            errors.append(
-                f"Question {index}: "
-                "question must be text"
-            )
-
-        elif not question[
-            "question"
-        ].strip():
+        if not question_text:
 
             errors.append(
-                f"Question {index}: "
-                "question is empty"
+                f"Question {index}: question is empty."
             )
 
-        # ----------------------------------
+        normalized = question_text.lower()
+
+        if normalized in seen_questions:
+
+            errors.append(
+                f"Question {index}: duplicate question."
+            )
+
+        seen_questions.add(
+            normalized
+        )
+
+        # ----------------------------------------------------
         # Options
-        # ----------------------------------
+        # ----------------------------------------------------
 
         options = question["options"]
 
@@ -322,8 +374,7 @@ def validate_generated_questions(
         ):
 
             errors.append(
-                f"Question {index}: "
-                "options must be a list"
+                f"Question {index}: options must be a list."
             )
 
             continue
@@ -331,84 +382,54 @@ def validate_generated_questions(
         if len(options) != 4:
 
             errors.append(
-                f"Question {index}: "
-                "must have exactly 4 options"
+                f"Question {index}: expected exactly "
+                f"4 options, got {len(options)}."
             )
 
-        # Check empty options
-        for option_number, option in enumerate(
-            options,
-            start=1
+        # ----------------------------------------------------
+        # Duplicate options
+        # ----------------------------------------------------
+
+        normalized_options = [
+            str(option).strip().lower()
+            for option in options
+        ]
+
+        if len(normalized_options) != len(
+            set(normalized_options)
         ):
 
-            if not isinstance(
-                option,
-                str
-            ) or not option.strip():
+            errors.append(
+                f"Question {index}: duplicate options."
+            )
 
-                errors.append(
-                    f"Question {index}: "
-                    f"option {option_number} "
-                    "is empty"
-                )
-
-        # Check duplicate options
-        if len(options) == 4:
-
-            normalized_options = [
-                option.strip().lower()
-                for option in options
-            ]
-
-            if len(
-                set(normalized_options)
-            ) != 4:
-
-                errors.append(
-                    f"Question {index}: "
-                    "duplicate options found"
-                )
-
-        # ----------------------------------
+        # ----------------------------------------------------
         # Answer
-        # ----------------------------------
+        # ----------------------------------------------------
 
-        if question[
-            "answer"
-        ] not in options:
+        if question["answer"] not in options:
 
             errors.append(
-                f"Question {index}: "
-                "answer is not present "
-                "in options"
+                f"Question {index}: answer "
+                f"'{question['answer']}' is not one "
+                f"of the options."
             )
 
-        # ----------------------------------
+        # ----------------------------------------------------
         # Explanation
-        # ----------------------------------
+        # ----------------------------------------------------
 
-        if not isinstance(
-            question["explanation"],
-            str
-        ):
-
-            errors.append(
-                f"Question {index}: "
-                "explanation must be text"
-            )
-
-        elif not question[
-            "explanation"
-        ].strip():
+        if not str(
+            question["explanation"]
+        ).strip():
 
             errors.append(
-                f"Question {index}: "
-                "explanation is empty"
+                f"Question {index}: explanation is empty."
             )
 
-        # ----------------------------------
+        # ----------------------------------------------------
         # Tags
-        # ----------------------------------
+        # ----------------------------------------------------
 
         if not isinstance(
             question["tags"],
@@ -416,46 +437,63 @@ def validate_generated_questions(
         ):
 
             errors.append(
-                f"Question {index}: "
-                "tags must be a list"
+                f"Question {index}: tags must be a list."
             )
 
-    # ======================================
-    # RESULT
-    # ======================================
+    return errors
 
-    if errors:
+
+# ============================================================
+# LOAD EXISTING QUESTIONS
+# ============================================================
+
+def load_existing_questions(
+    questions_file
+):
+
+    if not questions_file.exists():
+
+        return []
+
+    try:
+
+        with open(
+            questions_file,
+            "r",
+            encoding="utf-8"
+        ) as file:
+
+            data = json.load(file)
+
+        if isinstance(
+            data,
+            list
+        ):
+
+            return data
+
+        return []
+
+    except Exception as error:
 
         print(
-            "\n❌ Generated data "
-            "failed validation:"
+            f"WARNING: Could not read existing "
+            f"questions: {error}"
         )
 
-        for error in errors:
-
-            print(
-                f"   → {error}"
-            )
-
-        return False
-
-    print(
-        f"\n✓ Generated "
-        f"{len(questions)} questions "
-        "passed validation."
-    )
-
-    return True
+        return []
 
 
-# ==========================================
+# ============================================================
 # GENERATE QUESTIONS USING GEMINI
-# ==========================================
+# ============================================================
 
 def generate_questions(
     class_num,
+    subject,
     chapter,
     concept,
+    concept_id,
     count
 ):
 
@@ -464,14 +502,15 @@ You are an educational question generator
 for the AdaptIQ project.
 
 Generate exactly {count} multiple-choice
-Physics questions.
+questions.
 
 Educational information:
 
 Class: {class_num}
-Subject: Physics
+Subject: {subject}
 Chapter: {chapter}
 Concept: {concept}
+Concept ID: {concept_id}
 
 Requirements:
 
@@ -481,8 +520,9 @@ Requirements:
 2. Questions must specifically test:
    "{concept}".
 
-3. Questions must be scientifically
-   correct.
+3. Questions must be scientifically/
+   mathematically correct according to
+   the subject.
 
 4. Include conceptual and numerical
    questions where appropriate.
@@ -536,19 +576,11 @@ Return exactly this structure:
 ]
 """
 
-    # ======================================
-    # TRY MODELS
-    # ======================================
-
     for model in MODELS:
 
         print(
             f"\nTrying model: {model}"
         )
-
-        # ==================================
-        # RETRY MODEL
-        # ==================================
 
         for attempt in range(1, 4):
 
@@ -558,7 +590,6 @@ Return exactly this structure:
                     f"Attempt {attempt}/3..."
                 )
 
-                # Current Gemini Interactions API
                 interaction = (
                     client.interactions.create(
                         model=model,
@@ -573,469 +604,241 @@ Return exactly this structure:
                 if not text:
 
                     print(
-                        "❌ Empty response "
-                        "from Gemini."
+                        "No output received."
                     )
 
                     continue
 
-                # Clean response
                 text = clean_json_response(
                     text
                 )
 
-                # Convert JSON text
-                generated = json.loads(
+                questions = json.loads(
                     text
                 )
 
-                # Make sure list
-                if not isinstance(
-                    generated,
-                    list
-                ):
+                errors = (
+                    validate_generated_questions(
+                        questions,
+                        concept
+                    )
+                )
+
+                if errors:
 
                     print(
-                        "❌ Gemini response "
-                        "is not a JSON list."
+                        "\nGenerated questions "
+                        "failed validation:"
                     )
+
+                    for error in errors:
+
+                        print(
+                            f"   -> {error}"
+                        )
 
                     continue
 
                 print(
-                    f"✓ Successfully "
-                    f"generated "
-                    f"{len(generated)} "
-                    "questions."
+                    f"\nGenerated "
+                    f"{len(questions)} questions "
+                    "passed validation."
                 )
 
-                return generated
-
-            # --------------------------------
-            # Invalid JSON
-            # --------------------------------
+                return questions
 
             except json.JSONDecodeError as error:
 
                 print(
-                    "❌ Gemini returned "
-                    "invalid JSON."
+                    f"Invalid JSON returned by "
+                    f"{model}: {error}"
                 )
-
-                print(error)
-
-            # --------------------------------
-            # API errors
-            # --------------------------------
 
             except Exception as error:
 
-                error_text = str(error)
-
-                print(
-                    f"⚠️ Generation failed:"
+                error_text = str(
+                    error
                 )
 
                 print(
-                    error_text
+                    f"Error: {error_text}"
                 )
 
-                # Temporary API problems
-                temporary_error = (
+                if (
                     "503" in error_text
-                    or
-                    "UNAVAILABLE"
-                    in error_text
-                    or
-                    "429" in error_text
-                    or
-                    "RESOURCE_EXHAUSTED"
-                    in error_text
-                )
+                    or "429" in error_text
+                    or "unavailable" in error_text.lower()
+                    or "overloaded" in error_text.lower()
+                ):
 
-                if temporary_error:
+                    wait_time = 2 * attempt
 
-                    if attempt < 3:
+                    print(
+                        f"Temporary error. "
+                        f"Waiting {wait_time} seconds..."
+                    )
 
-                        wait_time = (
-                            attempt * 3
-                        )
-
-                        print(
-                            f"Waiting "
-                            f"{wait_time} "
-                            "seconds..."
-                        )
-
-                        time.sleep(
-                            wait_time
-                        )
+                    time.sleep(
+                        wait_time
+                    )
 
                 else:
 
-                    # Don't retry permanent
-                    # configuration errors
                     break
 
-        # Move to next model
+    print(
+        "\nERROR: All Gemini models failed."
+    )
+
+    return None
+
+
+# ============================================================
+# SAVE QUESTIONS
+# ============================================================
+
+def save_questions(
+    questions,
+    class_num,
+    subject,
+    chapter,
+    concept,
+    concept_id,
+    version
+):
+
+    QUESTIONS_DIR.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    filename = SUBJECT_FILES.get(
+        subject
+    )
+
+    if not filename:
+
         print(
-            "⚠️ Moving to fallback model..."
+            f"ERROR: Unsupported subject: {subject}"
         )
 
-    # Nothing worked
-    return []
+        return False
 
+    questions_file = (
+        QUESTIONS_DIR / filename
+    )
 
-# ==========================================
-# MAIN PROGRAM
-# ==========================================
+    existing_questions = (
+        load_existing_questions(
+            questions_file
+        )
+    )
 
-def main():
+    # --------------------------------------------------------
+    # Existing IDs
+    # --------------------------------------------------------
 
-    print("""
-============================
-   ADAPTIQ QUESTION GENERATOR
-============================
-""")
+    existing_ids = {
+        item.get("id")
+        for item in existing_questions
+        if isinstance(item, dict)
+    }
 
-    # ======================================
-    # CLASS
-    # ======================================
+    # --------------------------------------------------------
+    # Generate ID prefix
+    # --------------------------------------------------------
 
-    try:
+    subject_prefix = {
+        "Mathematics": "MATH",
+        "Physics": "PHY",
+        "Chemistry": "CHEM",
+        "Biology": "BIO"
+    }[subject]
 
-        class_num = int(
-            input(
-                "Enter class (9-12): "
+    chapter_code = re.sub(
+        r"[^A-Z0-9]+",
+        "_",
+        chapter.upper()
+    ).strip("_")
+
+    # Shorten chapter code if needed
+    chapter_code = chapter_code[:20]
+
+    # --------------------------------------------------------
+    # Add generated questions
+    # --------------------------------------------------------
+
+    added = []
+
+    for question in questions:
+
+        number = 1
+
+        while True:
+
+            question_id = (
+                f"{subject_prefix}"
+                f"{class_num}_"
+                f"{chapter_code}_"
+                f"{number:03d}"
             )
-        )
 
-    except ValueError:
-
-        print(
-            "❌ Class must be a number."
-        )
-
-        return
-
-    if class_num not in [
-        9,
-        10,
-        11,
-        12
-    ]:
-
-        print(
-            "❌ Invalid class."
-        )
-
-        return
-
-    # ======================================
-    # SUBJECT
-    # ======================================
-
-    subject = input(
-        "Enter subject: "
-    ).strip()
-
-    if subject.lower() != "physics":
-
-        print(
-            "❌ Currently only Physics "
-            "is supported."
-        )
-
-        return
-
-    # ======================================
-    # CHAPTER
-    # ======================================
-
-    chapter = input(
-        "Enter chapter: "
-    ).strip()
-
-    if not chapter:
-
-        print(
-            "❌ Chapter cannot be empty."
-        )
-
-        return
-
-    # ======================================
-    # LOAD CONCEPTS
-    # ======================================
-
-    try:
-
-        concepts = load_concepts()
-
-    except Exception as error:
-
-        print(
-            f"❌ Could not load concepts:"
-        )
-
-        print(error)
-
-        return
-
-    # ======================================
-    # FIND MATCHING CONCEPTS
-    # ======================================
-
-    matching_concepts = [
-        concept
-        for concept in concepts
-        if (
-            concept["class"] == class_num
-            and
-            concept["chapter"].lower()
-            == chapter.lower()
-        )
-    ]
-
-    if not matching_concepts:
-
-        print(
-            "\n❌ No concepts found "
-            "for this class and chapter."
-        )
-
-        print(
-            "\nCheck:"
-        )
-
-        print(
-            "data/concepts/"
-            "physics_concepts.json"
-        )
-
-        return
-
-    # ======================================
-    # DISPLAY CONCEPTS
-    # ======================================
-
-    print(
-        "\nAvailable concepts:"
-    )
-
-    for index, concept in enumerate(
-        matching_concepts,
-        start=1
-    ):
-
-        print(
-            f"{index}. "
-            f"{concept['concept']}"
-        )
-
-    # ======================================
-    # SELECT CONCEPT
-    # ======================================
-
-    try:
-
-        choice = int(
-            input(
-                "\nChoose concept: "
-            )
-        )
-
-    except ValueError:
-
-        print(
-            "❌ Invalid concept choice."
-        )
-
-        return
-
-    if (
-        choice < 1
-        or
-        choice > len(matching_concepts)
-    ):
-
-        print(
-            "❌ Invalid concept choice."
-        )
-
-        return
-
-    selected_concept = (
-        matching_concepts[
-            choice - 1
-        ]["concept"]
-    )
-
-    # ======================================
-    # QUESTION COUNT
-    # ======================================
-
-    try:
-
-        count = int(
-            input(
-                "Number of questions: "
-            )
-        )
-
-    except ValueError:
-
-        print(
-            "❌ Number of questions "
-            "must be a number."
-        )
-
-        return
-
-    if count < 1 or count > 20:
-
-        print(
-            "❌ Enter between "
-            "1 and 20 questions."
-        )
-
-        return
-
-    # ======================================
-    # GENERATE
-    # ======================================
-
-    print(
-        "\n============================"
-    )
-
-    print(
-        "GENERATING QUESTIONS"
-    )
-
-    print(
-        "============================"
-    )
-
-    print(
-        f"Class: {class_num}"
-    )
-
-    print(
-        f"Chapter: {chapter}"
-    )
-
-    print(
-        f"Concept: {selected_concept}"
-    )
-
-    print(
-        f"Number: {count}"
-    )
-
-    generated = generate_questions(
-        class_num,
-        chapter,
-        selected_concept,
-        count
-    )
-
-    # ======================================
-    # GENERATION FAILED
-    # ======================================
-
-    if not generated:
-
-        print(
-            """
-❌ No questions generated.
-
-Possible causes:
-- Gemini temporary overload
-- API quota/rate limit
-- Network issue
-- Invalid API key
-- Model temporarily unavailable
-"""
-        )
-
-        return
-
-    # ======================================
-    # VALIDATE BEFORE SAVING
-    # ======================================
-
-    print(
-        "\nValidating generated questions..."
-    )
-
-    if not validate_generated_questions(
-        generated
-    ):
-
-        print(
-            "\n❌ Questions were NOT saved."
-        )
-
-        return
-
-    # ======================================
-    # LOAD EXISTING QUESTIONS
-    # ======================================
-
-    try:
-
-        existing_questions = (
-            load_questions()
-        )
-
-    except Exception as error:
-
-        print(
-            "❌ Could not load existing "
-            "question data."
-        )
-
-        print(error)
-
-        return
-
-    # ======================================
-    # ADD IDs AND METADATA
-    # ======================================
-
-    for question in generated:
-
-        question["id"] = generate_id(
-            class_num,
-            chapter,
-            existing_questions
-        )
-
-        question["class"] = (
-            class_num
-        )
-
-        question["subject"] = (
-            "Physics"
-        )
-
-        question["chapter"] = (
-            chapter
-        )
+            if question_id not in existing_ids:
+
+                break
+
+            number += 1
+
+        question_record = {
+            "id": question_id,
+            "class": class_num,
+            "subject": subject,
+            "chapter": chapter,
+            "concept": concept,
+            "concept_id": concept_id,
+            "difficulty": question[
+                "difficulty"
+            ],
+            "question": question[
+                "question"
+            ],
+            "options": question[
+                "options"
+            ],
+            "answer": question[
+                "answer"
+            ],
+            "explanation": question[
+                "explanation"
+            ],
+            "tags": question[
+                "tags"
+            ],
+            "source": {
+                "type": "curriculum",
+                "curriculum_version": version,
+                "concept_id": concept_id
+            },
+            "generated_by": "Gemini",
+            "review_status": "pending"
+        }
 
         existing_questions.append(
-            question
+            question_record
         )
 
-    # ======================================
-    # SAVE
-    # ======================================
+        existing_ids.add(
+            question_id
+        )
+
+        added.append(
+            question_record
+        )
 
     try:
 
         with open(
-            QUESTIONS_FILE,
+            questions_file,
             "w",
             encoding="utf-8"
         ) as file:
@@ -1050,51 +853,330 @@ Possible causes:
     except Exception as error:
 
         print(
-            "❌ Failed to save questions."
+            f"ERROR: Could not save questions: "
+            f"{error}"
         )
 
-        print(error)
+        return False
 
-        return
-
-    # ======================================
-    # SUCCESS
-    # ======================================
-
+    print()
     print(
-        "\n============================"
+        f"Saved {len(added)} questions to:"
     )
 
     print(
-        "GENERATION COMPLETE ✓"
+        questions_file
+    )
+
+    return True
+
+
+# ============================================================
+# DISPLAY MENU
+# ============================================================
+
+def select_from_list(
+    items,
+    label
+):
+
+    print()
+    print(label)
+    print("-" * 40)
+
+    for index, item in enumerate(
+        items,
+        start=1
+    ):
+
+        print(
+            f"{index}. {item}"
+        )
+
+    while True:
+
+        try:
+
+            choice = int(
+                input(
+                    "\nEnter number: "
+                )
+            )
+
+            if 1 <= choice <= len(items):
+
+                return items[
+                    choice - 1
+                ]
+
+            print(
+                "Please select a valid number."
+            )
+
+        except ValueError:
+
+            print(
+                "Please enter a number."
+            )
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
+def main():
+
+    print()
+    print("=" * 50)
+    print(
+        "       ADAPTIQ QUESTION GENERATOR"
+    )
+    print("=" * 50)
+
+    config = load_config()
+
+    version = config.get(
+        "current_version",
+        "2026-27"
+    )
+
+    subjects = config.get(
+        "subjects",
+        list(SUBJECT_FILES.keys())
+    )
+
+    print()
+    print(
+        f"CURRICULUM VERSION: {version}"
+    )
+
+    # --------------------------------------------------------
+    # Class
+    # --------------------------------------------------------
+
+    class_num = select_from_list(
+        [9, 10, 11, 12],
+        "SELECT CLASS"
+    )
+
+    # --------------------------------------------------------
+    # Subject
+    # --------------------------------------------------------
+
+    available_subjects = [
+        subject
+        for subject in subjects
+        if subject in SUBJECT_FILES
+    ]
+
+    subject = select_from_list(
+        available_subjects,
+        "SELECT SUBJECT"
+    )
+
+    # --------------------------------------------------------
+    # Load curriculum
+    # --------------------------------------------------------
+
+    curriculum = load_curriculum(
+        version,
+        class_num,
+        subject
+    )
+
+    chapters = get_chapters(
+        curriculum
+    )
+
+    if not chapters:
+
+        print(
+            "ERROR: No chapters found "
+            "in curriculum."
+        )
+
+        return 1
+
+    # --------------------------------------------------------
+    # Chapter
+    # --------------------------------------------------------
+
+    chapter_names = [
+        chapter.get(
+            "chapter"
+        )
+        for chapter in chapters
+    ]
+
+    chapter_name = select_from_list(
+        chapter_names,
+        "SELECT CHAPTER"
+    )
+
+    selected_chapter = next(
+        chapter
+        for chapter in chapters
+        if chapter.get("chapter")
+        == chapter_name
+    )
+
+    # --------------------------------------------------------
+    # Concept
+    # --------------------------------------------------------
+
+    concepts = get_concepts(
+        selected_chapter
+    )
+
+    if not concepts:
+
+        print(
+            "ERROR: No concepts found "
+            "for this chapter."
+        )
+
+        return 1
+
+    concept_names = [
+        concept.get(
+            "concept"
+        )
+        for concept in concepts
+    ]
+
+    concept_name = select_from_list(
+        concept_names,
+        "SELECT CONCEPT"
+    )
+
+    selected_concept = next(
+        concept
+        for concept in concepts
+        if concept.get("concept")
+        == concept_name
+    )
+
+    concept_id = selected_concept.get(
+        "concept_id",
+        ""
+    )
+
+    # --------------------------------------------------------
+    # Number of questions
+    # --------------------------------------------------------
+
+    while True:
+
+        try:
+
+            count = int(
+                input(
+                    "\nNumber of questions: "
+                )
+            )
+
+            if count > 0:
+
+                break
+
+            print(
+                "Enter a number greater than 0."
+            )
+
+        except ValueError:
+
+            print(
+                "Please enter a valid number."
+            )
+
+    # --------------------------------------------------------
+    # Display selection
+    # --------------------------------------------------------
+
+    print()
+    print("=" * 50)
+    print("GENERATION SETTINGS")
+    print("=" * 50)
+
+    print(
+        f"Curriculum : {version}"
     )
 
     print(
-        "============================"
+        f"Class      : {class_num}"
     )
 
     print(
-        f"\nGenerated: "
-        f"{len(generated)} questions"
+        f"Subject    : {subject}"
     )
 
     print(
-        f"Concept: "
-        f"{selected_concept}"
+        f"Chapter    : {chapter_name}"
     )
 
     print(
-        f"Saved to:"
+        f"Concept    : {concept_name}"
     )
 
     print(
-        QUESTIONS_FILE
+        f"Concept ID : {concept_id}"
     )
 
+    print(
+        f"Questions  : {count}"
+    )
 
-# ==========================================
-# PROGRAM ENTRY POINT
-# ==========================================
+    # --------------------------------------------------------
+    # Generate
+    # --------------------------------------------------------
+
+    questions = generate_questions(
+        class_num,
+        subject,
+        chapter_name,
+        concept_name,
+        concept_id,
+        count
+    )
+
+    if questions is None:
+
+        return 1
+
+    # --------------------------------------------------------
+    # Save
+    # --------------------------------------------------------
+
+    success = save_questions(
+        questions,
+        class_num,
+        subject,
+        chapter_name,
+        concept_name,
+        concept_id,
+        version
+    )
+
+    if not success:
+
+        return 1
+
+    print()
+    print("=" * 50)
+    print(
+        "QUESTION GENERATION COMPLETE"
+    )
+    print("=" * 50)
+
+    return 0
+
+
+# ============================================================
+# ENTRY POINT
+# ============================================================
 
 if __name__ == "__main__":
-    main()
+
+    raise SystemExit(
+        main()
+    )
